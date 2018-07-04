@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title> OM :: {{title}}</title>
+
+        <!--Core CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/bulma.css">
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <link rel="stylesheet" href="/assets/css/dashboard.css">
+        <link rel="stylesheet" href="/assets/css/icons.min.css">
+        
+
+    </head>
+    <body>
+        {{> dashboard-pageloader}}
+        {{> sidebar-dark}}
+        {{> push-sidebar}}
+        {{> dashboard-navbar}}
+        {{> body}}
+        {{> dashboard-footer}}
+        {{> right-sidebar}}
+        {{> chat-sidebar}}
+        {{> search-modal}}
+        {{> reminder-modal}}
+        {{> dashboard-scripts}}
+    </body>  
+</html>

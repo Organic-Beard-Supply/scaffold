@@ -1,0 +1,57 @@
+/*! five.scss | OM */
+
+/* ==========================================================================
+Scaffold kit five core 
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. CSS Imports
+=============================================================================
+***/
+
+/* ==========================================================================
+0. CSS Imports
+========================================================================== */
+
+@import 'five/layout-colors';
+@import 'five/themes-om';
+@import 'five/layout-utils';
+@import 'five/layout-navbar';
+@import 'five/layout-sections';
+@import 'five/layout-hero';
+@import 'five/layout-footer';
+@import 'five/layout-animations';
+@import 'five/layout-navigation';
+@import 'five/layout-pageloader';
+@import 'five/components-accordion';
+@import 'five/components-buttons';
+@import 'five/components-cards';
+@import 'five/components-boxes';
+@import 'five/components-tabs';
+@import 'five/components-testimonials';
+@import 'five/components-dialogs';
+@import 'five/components-forms';
+@import 'five/components-tables';
+@import 'five/components-lists';
+@import 'five/components-labels';
+@import 'five/components-messages';
+@import 'five/components-pricing';
+@import 'five/components-dropdowns';
+@import 'five/extensions-checkboxes';
+@import 'five/extensions-badge';
+@import 'five/extensions-range';
+@import 'five/extensions-ribbon';
+@import 'five/extensions-slider';
+@import 'five/extensions-switch';
+@import 'five/extensions-timeline';
+@import 'five/extensions-uploader';
+@import 'five/pages-demo';
+@import 'five/pages-details';
+@import 'five/pages-auth';
+@import 'five/pages-landing-v4';
+@import 'five/layout-helpers';
+@import 'five/layout-responsive';
+
+

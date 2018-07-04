@@ -1,0 +1,128 @@
+/*! dashboard.scss | OM */
+
+/* ==========================================================================
+Dashboard core file 
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. CSS Imports
+1. Resets and base setup
+=============================================================================
+***/
+
+
+/* ==========================================================================
+0. CSS Imports
+========================================================================== */
+
+@import 'dashboard/colors';
+@import 'dashboard/dashboard';
+@import 'dashboard/pageloader';
+@import 'dashboard/tabs';
+@import 'dashboard/dropdowns';
+@import 'dashboard/buttons';
+@import 'dashboard/animations';
+@import 'dashboard/cards';
+@import 'dashboard/forms';
+@import 'dashboard/accordion';
+@import 'dashboard/dialogs';
+@import 'dashboard/labels';
+@import 'dashboard/lists';
+@import 'dashboard/tables';
+@import 'dashboard/messages';
+@import 'dashboard/dashboard-layout';
+@import 'dashboard/dashboard-sidebar';
+@import 'dashboard/dashboard-navbar';
+@import 'dashboard/dashboard-right-sidebar';
+@import 'dashboard/dashboard-feed';
+@import 'dashboard/dashboard-widgets';
+@import 'dashboard/dashboard-charts';
+@import 'dashboard/dashboard-projects';
+@import 'dashboard/dashboard-datatables';
+@import 'dashboard/dashboard-utils';
+@import 'dashboard/helpers';
+@import 'dashboard/quickview';
+@import 'dashboard/timeline';
+@import 'dashboard/switch';
+@import 'dashboard/extensions-checkboxes';
+@import 'dashboard/dashboard-responsive';
+
+
+/* ==========================================================================
+1. Resets and base setup
+========================================================================== */
+
+.no-touch .scrollable.hover {
+    overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+    overflow-y:auto;
+    overflow:visible;
+}
+
+a {
+    color: $secondary;
+    &:hover {
+        color: $accent;
+        text-decoration:none;
+    }
+    &:focus {
+        text-decoration:none;
+    }
+}
+
+nav {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+nav ul,nav li {
+    outline:0;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    overflow: hidden !important;
+    background-color: $dashboard-grey;
+    margin: 0 !important;
+    height: 100% !important;
+}
+
+@font-face {
+    font-family: 'Nexa Light';
+    src: url("../fonts/text/nexa/NexaLight.woff") format("woff"), url("../fonts/text/nexa/NexaLight.ttf")  format("truetype");
+}
+
+@font-face {
+    font-family: 'Nexa Bold';
+    font-weight: bold;
+    src: url("../fonts/text/nexa/NexaBold.woff") format("woff"), url("../fonts/text/nexa/NexaBold.ttf")  format("truetype");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

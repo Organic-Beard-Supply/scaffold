@@ -1,0 +1,140 @@
+/*! _dashboard-responsive.scss | OM */
+
+/* ==========================================================================
+Dashboard responsive styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Mobile
+1. Portrait Tablet
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Mobile
+========================================================================== */
+
+//Mobile media queries
+@media (max-width: 767px) {
+    //navbar
+    .logout-button i, .chat-button i {
+        //left: 10px;
+    }
+    .search-icon {
+        margin-left: auto !important;
+    }
+    .chat-button {
+        margin-left: 15px !important;
+        i {
+            margin-left: 5px !important;
+        }
+    }
+    //Mobile Layout
+    .main-menu {
+        width: 60px;
+    }
+    .child-menu {
+        left: 60px;
+    }
+    nav.dashboard-nav {
+        margin-left: 60px;
+        max-width: calc(100% - 60px);
+    }
+    .dashboard-wrapper {
+        margin-left: 60px;
+    }
+    .fab {
+        left: 6px !important;
+    }
+    .profile-container .inner {
+        margin-left: 60px;
+        .flex-card .card-body {
+            padding: 10px 10px;
+        }
+    }
+    //Profile overlay & content
+    .profile-heading {
+        text-align: center;
+        .avatar {
+            max-height: 90px;
+            max-width: 90px;
+        }
+    }
+    //profile card
+    #profile-view, #edit-view, #profile-notifications, #profile-team  {
+        padding: 0.75rem 1rem;
+        .flex-card.is-top {
+            margin-top: 0 !important;
+        }
+    }
+    //profile notifications
+    .notifications-center {
+        li {
+            margin-bottom: 10px;
+            .description {
+                margin-right: 0;
+            }
+        }
+    }
+    //Quickview
+    .quickview.is-active {
+        min-width: 100%;
+        z-index: 1001;
+        .user-list {
+            max-height: 346px !important;
+        }
+    }
+    .chat-quickview.is-active {
+        min-width: 100%;
+        z-index: 1002 !important;
+    }
+    footer {
+        margin-left: 60px !important;
+    }
+    // Reader mode (only mobile)
+    body.reader-mode {
+        .main-menu {
+            transform: translateX(-60px);
+        }
+        .child-menu {
+            transform: translateX(-311px);
+        }
+        nav.dashboard-nav {
+            margin-left: 0;
+            max-width: 100%;
+        }
+        .dashboard-wrapper {
+            margin-left: 0;
+        }
+        footer {
+            margin-left: 0 !important;
+        }
+    }
+    //cards
+    .card-body {
+        &.is-responsive {
+            padding: 10px !important;
+        }
+    }
+    //Typography
+    .responsive-title {
+        font-size: 1.35rem !important;
+    }
+}
+
+/* ==========================================================================
+1. Portrait Tablet
+========================================================================== */
+
+//repositionning chat quickview button on tablets with portrait orientation
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .chat-button {
+        margin-left: auto !important;
+    }
+    //Reader switch
+    .reader-switch {
+        display: none !important;
+    }
+}
