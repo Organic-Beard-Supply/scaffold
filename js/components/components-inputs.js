@@ -11,7 +11,7 @@ $(document).ready(function($) {
     //Basic autocomplete
     if ($('#basic-autocpl').length) {
         var options = {
-            url: "assets/data/persons.json",
+            url: "/assets/data/persons.json",
             getValue: function(element) {
                 return element.name;
             },
@@ -35,7 +35,7 @@ $(document).ready(function($) {
     //Description autocomplete
     if ($('#desc-autocpl').length) {
         var options = {
-            url: "assets/data/persons.json",
+            url: "/assets/data/persons.json",
             getValue: function(element) {
                 return element.name;
             },
@@ -65,7 +65,7 @@ $(document).ready(function($) {
     //Users autocomplete
     if ($('#users-autocpl').length) {
         var usersOptions = {
-            url: "assets/data/persons.json",
+            url: "/assets/data/persons.json",
             getValue: "name",
             template: {
                 type: "custom",

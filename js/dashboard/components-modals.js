@@ -77,7 +77,7 @@ $(document).ready(function($){
                 duration: 60, 
                 animTimingFunction: Vivus.EASE_OUT_BOUNCE,
                 selfDestroy: true,
-                file: 'assets/images/illustrations/icons/modals/success.svg'
+                file: '/assets/images/illustrations/icons/modals/success.svg'
             });
         })
         //Reset element with initial clone
@@ -95,7 +95,7 @@ $(document).ready(function($){
                 duration: 60, 
                 animTimingFunction: Vivus.EASE_OUT_BOUNCE,
                 selfDestroy: true,
-                file: 'assets/images/illustrations/icons/modals/error.svg'
+                file: '/assets/images/illustrations/icons/modals/error.svg'
             });
         })
         //Reset element with initial clone
@@ -113,7 +113,7 @@ $(document).ready(function($){
                 duration: 60, 
                 animTimingFunction: Vivus.EASE_OUT_BOUNCE,
                 selfDestroy: true,
-                file: 'assets/images/illustrations/icons/modals/warning.svg'
+                file: '/assets/images/illustrations/icons/modals/warning.svg'
             });
         })
         //Reset element with initial clone
@@ -131,7 +131,7 @@ $(document).ready(function($){
                 duration: 60, 
                 animTimingFunction: Vivus.EASE_OUT_BOUNCE,
                 selfDestroy: true,
-                file: 'assets/images/illustrations/icons/modals/info.svg'
+                file: '/assets/images/illustrations/icons/modals/info.svg'
             });
         })
         //Reset element with initial clone

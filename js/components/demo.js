@@ -35,224 +35,224 @@ $(document).ready(function($){
         //trigger svg animations
         new Vivus('buttons', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/buttons.svg'
+            file: '/assets/images/illustrations/components/buttons.svg'
         });
     }
     if ($('#tabs-ill').length) {
         //trigger svg animations
         new Vivus('tabs-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/tabs.svg'
+            file: '/assets/images/illustrations/components/tabs.svg'
         });
     }
     if ($('#inputs-ill').length) {
         //trigger svg animations
         new Vivus('inputs-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/inputs.svg'
+            file: '/assets/images/illustrations/components/inputs.svg'
         });
     }
     if ($('#cards-ill').length) {
         //trigger svg animations
         new Vivus('cards-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/cards.svg'
+            file: '/assets/images/illustrations/components/cards.svg'
         });
     }
     if ($('#modals-ill').length) {
         //trigger svg animations
         new Vivus('modals-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/modals.svg'
+            file: '/assets/images/illustrations/components/modals.svg'
         });
     }
     if ($('#accordion-ill').length) {
         //trigger svg animations
         new Vivus('accordion-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/accordion.svg'
+            file: '/assets/images/illustrations/components/accordion.svg'
         });
     }
     if ($('#dropdowns-ill').length) {
         //trigger svg animations
         new Vivus('dropdowns-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/dropdowns.svg'
+            file: '/assets/images/illustrations/components/dropdowns.svg'
         });
     }
     if ($('#lists-ill').length) {
         //trigger svg animations
         new Vivus('lists-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/lists.svg'
+            file: '/assets/images/illustrations/components/lists.svg'
         });
     }
     if ($('#badges-ill').length) {
         //trigger svg animations
         new Vivus('badges-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/badges.svg'
+            file: '/assets/images/illustrations/components/badges.svg'
         });
     }
     if ($('#popups-ill').length) {
         //trigger svg animations
         new Vivus('popups-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/popups.svg'
+            file: '/assets/images/illustrations/components/popups.svg'
         });
     }
     if ($('#tables-ill').length) {
         //trigger svg animations
         new Vivus('tables-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/tables.svg'
+            file: '/assets/images/illustrations/components/tables.svg'
         });
     }
     if ($('#timeline-ill').length) {
         //trigger svg animations
         new Vivus('timeline-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/timeline.svg'
+            file: '/assets/images/illustrations/components/timeline.svg'
         });
     }
     if ($('#boxes-ill').length) {
         //trigger svg animations
         new Vivus('boxes-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/boxes.svg'
+            file: '/assets/images/illustrations/components/boxes.svg'
         });
     }
     if ($('#messages-ill').length) {
         //trigger svg animations
         new Vivus('messages-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/messages.svg'
+            file: '/assets/images/illustrations/components/messages.svg'
         });
     }
     if ($('#calendar-ill').length) {
         //trigger svg animations
         new Vivus('calendar-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/calendar.svg'
+            file: '/assets/images/illustrations/components/calendar.svg'
         });
     }
     if ($('#controls-ill').length) {
         //trigger svg animations
         new Vivus('controls-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/controls.svg'
+            file: '/assets/images/illustrations/components/controls.svg'
         });
     }
     if ($('#forms-ill').length) {
         //trigger svg animations
         new Vivus('forms-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/forms.svg'
+            file: '/assets/images/illustrations/components/forms.svg'
         });
     }
     if ($('#steps-ill').length) {
         //trigger svg animations
         new Vivus('steps-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/steps.svg'
+            file: '/assets/images/illustrations/components/steps.svg'
         });
     }
     if ($('#uploader-ill').length) {
         //trigger svg animations
         new Vivus('uploader-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/uploader.svg'
+            file: '/assets/images/illustrations/components/uploader.svg'
         });
     }
     if ($('#icons-ill').length) {
         //trigger svg animations
         new Vivus('icons-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/icons.svg'
+            file: '/assets/images/illustrations/components/icons.svg'
         });
     }
     if ($('#iconpicker-ill').length) {
         //trigger svg animations
         new Vivus('iconpicker-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/iconpicker.svg'
+            file: '/assets/images/illustrations/components/iconpicker.svg'
         });
     }
     if ($('#features-ill').length) {
         //trigger svg animations
         new Vivus('features-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/features.svg'
+            file: '/assets/images/illustrations/components/features.svg'
         });
     }
     if ($('#pricing-ill').length) {
         //trigger svg animations
         new Vivus('pricing-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/pricing.svg'
+            file: '/assets/images/illustrations/components/pricing.svg'
         });
     }
     if ($('#team-ill').length) {
         //trigger svg animations
         new Vivus('team-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/team.svg'
+            file: '/assets/images/illustrations/components/team.svg'
         });
     }
     if ($('#testimonials-ill').length) {
         //trigger svg animations
         new Vivus('testimonials-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/testimonials.svg'
+            file: '/assets/images/illustrations/components/testimonials.svg'
         });
     }
     if ($('#clients-ill').length) {
         //trigger svg animations
         new Vivus('clients-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/clients.svg'
+            file: '/assets/images/illustrations/components/clients.svg'
         });
     }
     if ($('#counters-ill').length) {
         //trigger svg animations
         new Vivus('counters-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/counters.svg'
+            file: '/assets/images/illustrations/components/counters.svg'
         });
     }
     if ($('#carousel-ill').length) {
         //trigger svg animations
         new Vivus('carousel-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/carousel.svg'
+            file: '/assets/images/illustrations/components/carousel.svg'
         });
     }
     if ($('#grid-ill').length) {
         //trigger svg animations
         new Vivus('grid-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/grid.svg'
+            file: '/assets/images/illustrations/components/grid.svg'
         });
     }
     if ($('#footer-ill').length) {
         //trigger svg animations
         new Vivus('footer-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/footer.svg'
+            file: '/assets/images/illustrations/components/footer.svg'
         });
     }
     if ($('#typography-ill').length) {
         //trigger svg animations
         new Vivus('typography-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/typography.svg'
+            file: '/assets/images/illustrations/components/typography.svg'
         });
     }
     if ($('#colors-ill').length) {
         //trigger svg animations
         new Vivus('colors-ill', {
             duration: 300, 
-            file: 'assets/images/illustrations/components/colors.svg'
+            file: '/assets/images/illustrations/components/colors.svg'
         });
     }
 

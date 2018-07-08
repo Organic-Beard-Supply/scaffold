@@ -32,11 +32,11 @@ $(document).ready(function($){
     if ($('.vivus-svg').length) {
         new Vivus('chat-widget-ui', {
             duration: 150, 
-            file: 'assets/images/illustrations/drawings/chat-widget.svg'
+            file: '/assets/images/illustrations/drawings/chat-widget.svg'
         });
         new Vivus('chat-ui', {
             duration: 150, 
-            file: 'assets/images/illustrations/drawings/chat-profile.svg'
+            file: '/assets/images/illustrations/drawings/chat-profile.svg'
         });
     }
 
