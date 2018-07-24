@@ -54,7 +54,7 @@ transition: all 0.3s;
 ========================================================================== */
 .navbar-wrapper {
     width: 100%;
-    height: 4.6rem;
+    height: 5.6rem;
     //background: $white;
     position: fixed;
     top: 0;
@@ -109,7 +109,8 @@ transition: all 0.3s;
     .navbar-brand {
         align-items: center;
         img {
-            height: 28px;
+            height: 37px;
+            max-height: none;
             &.light-logo {
                 display: block;
             }
@@ -323,6 +324,12 @@ transition: all 0.3s;
 /* ==========================================================================
 4. Shared styles
 ========================================================================== */
+
+.navbar-item, .navbar-link {
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+}
+
 .navbar-wrapper {
     //Inverted navbar colors
     &.nav-reverse {
