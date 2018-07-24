@@ -27,6 +27,7 @@ gulp.task('watch', function() {
     gulp.watch('scss/**/*', ['compile-scss-five', browser.reload]);
     gulp.watch('scss/**/*', ['compile-scss-six', browser.reload]);
     gulp.watch('scss/**/*', ['compile-scss-seven', browser.reload]);
+    gulp.watch('scss/**/*', ['compile-scss-om', browser.reload]);
     gulp.watch('scss/**/*', ['compile-scss-components', browser.reload]);
     gulp.watch('scss/**/*', ['compile-scss-dashboard', browser.reload]);
     gulp.watch('sass/**/*', ['compile-sass', browser.reload]);
@@ -298,6 +299,31 @@ gulp.task('compile-scss-seven', function () {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./_site/assets/css/'));
 });
+gulp.task('compile-scss-om', function () {
+    var processors = [
+        mq4HoverShim.postprocessorFor({ hoverSelectorPrefix: '.is-true-hover ' }),
+        autoprefixer({
+            browsers: [
+                "Chrome >= 45",
+                "Firefox ESR",
+                "Edge >= 12",
+                "Explorer >= 10",
+                "iOS >= 9",
+                "Safari >= 9",
+                "Android >= 4.4",
+                "Opera >= 30"
+            ]
+        })//,
+        //cssnano(),
+    ];
+    //Watch me get Sassy
+    return gulp.src('./scss/om.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass(sassOptions).on('error', sass.logError))
+        .pipe(postcss(processors))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./_site/assets/css/'));
+});
 gulp.task('compile-scss-components', function () {
     var processors = [
         mq4HoverShim.postprocessorFor({ hoverSelectorPrefix: '.is-true-hover ' }),
@@ -364,6 +390,7 @@ gulp.task('compile-html', function() {
             'five': 'five',
             'six': 'six',
             'seven': 'seven',
+            'om': 'om',
             'components': 'components',
             'dashboard': 'dashboard',
             'docs': 'docs'
@@ -470,6 +497,6 @@ gulp.task('copy-images', function() {
 });
 
 gulp.task('init', ['setupBulma']);
-gulp.task('build', ['clean','copy', 'compile-js', 'compile-css', 'copy-js', 'compile-sass', 'compile-scss-one', 'compile-scss-two', 'compile-scss-three', 'compile-scss-four', 'compile-scss-five', 'compile-scss-six', 'compile-scss-seven', 'compile-scss-components', 'compile-scss-dashboard', 'compile-html', 'copy-images']);
+gulp.task('build', ['clean','copy', 'compile-js', 'compile-css', 'copy-js', 'compile-sass', 'compile-scss-one', 'compile-scss-two', 'compile-scss-three', 'compile-scss-four', 'compile-scss-five', 'compile-scss-six', 'compile-scss-seven', 'compile-scss-om', 'compile-scss-components', 'compile-scss-dashboard', 'compile-html', 'copy-images']);
 gulp.task('default', ['server', 'watch']);
-gulp.task('scss', ['compile-scss-one', 'compile-scss-two', 'compile-scss-three', 'compile-scss-four', 'compile-scss-five', 'compile-scss-six', 'compile-scss-seven', 'compile-scss-components', 'compile-scss-dashboard']);
+gulp.task('scss', ['compile-scss-one', 'compile-scss-two', 'compile-scss-three', 'compile-scss-four', 'compile-scss-five', 'compile-scss-six', 'compile-scss-seven', 'compile-scss-om', 'compile-scss-components', 'compile-scss-dashboard']);
