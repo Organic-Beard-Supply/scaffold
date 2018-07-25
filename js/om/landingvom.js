@@ -75,7 +75,7 @@ $(document).ready(function($){
         easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
         container: window.document.documentElement,
         mobile: true,
-        reset: false,
+        reset: true,
         useDelay: 'always',
         viewFactor: 0.4,
 
@@ -93,7 +93,7 @@ $(document).ready(function($){
         easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
         container: window.document.documentElement,
         mobile: true,
-        reset: false,
+        reset: true,
         useDelay: 'always',
         viewFactor: 0.4,
 
