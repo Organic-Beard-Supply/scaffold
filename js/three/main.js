@@ -470,26 +470,26 @@ $(document).ready(function($){
 
     //Vertical slick carousel (vertical testimonials)
     if ($('.vertical-testimonials').length) {
-        $('.vertical-testimonials').slick({
-            autoplay: true,
-            arrows: false,
-            dots: false,
-            slidesToShow: 4,
-            centerPadding: "0",
-            centerMode: true,
-            draggable: false,
-            infinite: true,
-            pauseOnHover: false,
-            swipe: false,
-            touchMove: false,
-            vertical: true,
-            speed: 1000,
-            autoplaySpeed: 2500,
-            useTransform: true,
-            cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
-            adaptiveHeight: true,
+        // $('.vertical-testimonials').slick({
+        //     autoplay: true,
+        //     arrows: false,
+        //     dots: false,
+        //     slidesToShow: 4,
+        //     centerPadding: "0",
+        //     centerMode: true,
+        //     draggable: false,
+        //     infinite: true,
+        //     pauseOnHover: false,
+        //     swipe: false,
+        //     touchMove: false,
+        //     vertical: true,
+        //     speed: 1000,
+        //     autoplaySpeed: 2500,
+        //     useTransform: true,
+        //     cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+        //     adaptiveHeight: true,
 
-        });
+        // });
     }
 
     //Flat slick carousel
