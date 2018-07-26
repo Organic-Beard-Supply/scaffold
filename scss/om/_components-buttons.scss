@@ -190,15 +190,27 @@ TABLE OF CONTENTS
     &.btn-more {
         text-decoration: none !important;
     }
-    &.color-primary {
+    i {
+      font-size: 9px;
+      margin-left: 10px;
+      position: relative;
+      top: 2px;
+      transition: all 0.5s;
+    }
+    &.color-primary, &.color-secondary, &.color-accent {
         i {
-            font-size: 9px;
-            margin-left: 10px;
-            position: relative;
-            top: 2px;
-            color: $primary !important;
-            transition: all 0.5s;
+          color: $primary !important;
         }
+    }
+    &.color-secondary {
+      i {
+        color: $secondary !important;
+      }
+    }
+    &.color-accent {
+      i {
+        color: $accent !important;
+      }
     }
     &:hover {
         background: $link-grey !important;
