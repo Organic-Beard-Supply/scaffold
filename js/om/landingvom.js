@@ -266,6 +266,5 @@ $(document).ready(function($){
             for (var e in elements)
                 elements[e].draw(ctx, time);
         }, 10);
-    }
-
+    }    
 })
