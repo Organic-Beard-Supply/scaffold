@@ -10,12 +10,13 @@ $(document).ready(function($){
     
     //Toggle the sign up button color when solid navbar comes in
     if ($('.navbar-light').length) {
+        const $signupButton = $('.button-signup');
         $(window).on('scroll', function () {    // this will work when your window scrolled.
             var height = $(window).scrollTop();  //getting the scrolling height of window
             if(height  > 80) {
-                $('.button-signup').removeClass('light-btn').addClass('secondary-btn');
+                $signupButton.removeClass('light-btn').removeClass('btn-outlined').addClass('secondary-btn');
             } else{
-                $('.button-signup').removeClass('secondary-btn').addClass('light-btn');
+                $signupButton.removeClass('secondary-btn').addClass('light-btn').addClass('btn-outlined');
             }
         }); 
     }

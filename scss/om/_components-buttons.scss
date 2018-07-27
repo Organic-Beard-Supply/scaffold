@@ -38,9 +38,13 @@ TABLE OF CONTENTS
     //CTA buttons
     &.button-cta {
         padding: 22px 40px !important;
+        
         &.btn-outlined.is-bold {
             border-width: 2px;
             font-weight: 600;
+        }
+        &.is-large {
+            padding: 30px 48px !important;
         }
     }
     //Line height fix class
