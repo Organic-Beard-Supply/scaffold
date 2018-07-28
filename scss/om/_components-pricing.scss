@@ -846,7 +846,7 @@ TABLE OF CONTENTS
         //features
         .plan-features {
             text-align: left;
-            padding: 10px 0;
+            padding: 10px 0 20px;
             //item
             li {
                 margin: 10px 40px;
@@ -1007,4 +1007,149 @@ TABLE OF CONTENTS
             }
         }
     }
+}
+
+/* ==========================================================================
+5. Flip card pricing
+========================================================================== */
+
+.switch-pricing-wrapper {
+    margin-top: -125px;
+    .pricing-container {
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        &.full-width {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    .pricing-switcher {
+        text-align: center;
+        .fieldset {
+            display: inline-block;
+            position: relative;
+            padding: 2px;
+            border-radius: 50em;
+            border: 2px solid #2d3e50;
+        }
+        label {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            float: left;
+            width: 90px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $white;
+        }
+        .switch {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            height: 40px;
+            width: 90px;
+            background-color: #2d3e50;
+            border-radius: 50em;
+            -webkit-transition: -webkit-transform 0.5s;
+            -moz-transition: -moz-transform 0.5s;
+            transition: transform 0.5s;
+        }
+    }
+
+    .pricing-switcher input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .pricing-switcher input[type="radio"]:checked + label + .switch,
+    .pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .switch {
+        -webkit-transform: translateX(90px);
+        -moz-transform: translateX(90px);
+        -ms-transform: translateX(90px);
+        -o-transform: translateX(90px);
+        transform: translateX(90px);
+    }
+
+    .no-js .pricing-switcher {
+        display: none;
+    }
+
+    .tables-wrap {
+        margin:  40px 0;
+        .flex-card {
+            padding: 20px;
+            border-radius: 8px;
+            .pricing-image-container {
+                position: relative;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                border: 2px solid rgba(0,0,0,0.05);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                img {
+                    height: 60px;
+                }
+                i {
+                    font-size: 60px;
+                }
+                .plan-price {
+                    position: absolute;
+                    bottom: 0;
+                    right: -52px;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: inset rgba(143,160,241,0.2) 0 0 0 1px, rgba(213,220,247,0.59) 0 10px 20px;
+                    transform: translateY(40px);
+                    opacity: 0;
+                    transition: all .4s ease-out;
+                    span {
+                        display: block;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        &:before {
+                            content: '$';
+                            font-size: 1rem;
+                        }
+                    }
+                    &.is-active {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+            .plan-name {
+                margin: 30px 0 0;
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+            }
+            .plan-features {
+                text-align: center;
+                padding: 10px 0;
+                li {
+                    padding: 10px 20px;
+                    // &:hover {
+                    //     background: $fade-grey;
+                    // }
+                }
+            }
+        }
+    }
+
 }
