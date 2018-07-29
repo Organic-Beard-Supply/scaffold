@@ -138,7 +138,8 @@ TABLE OF CONTENTS
         }
     }
     &.is-fullwidth {
-        // display: block !important;
+        display: block !important;
+        line-height: 0 !important;
         width: 100% !important;
         text-align: center !important;
     }
@@ -235,6 +236,7 @@ TABLE OF CONTENTS
     transition: all 0.5s;
     &:hover {
         color: $white;
+        background-color: darken($primary, 5%);
     }
     &.raised:hover {
         box-shadow: $primary-box-shadow;
@@ -265,6 +267,7 @@ TABLE OF CONTENTS
     transition: all 0.5s;
     &:hover {
         color: $white;
+        background-color: darken($secondary, 5%);
     }
     &.raised:hover {
         box-shadow: $secondary-box-shadow;
@@ -295,6 +298,7 @@ TABLE OF CONTENTS
     transition: all 0.5s;
     &:hover {
         color: $white;
+        background-color: darken($accent, 5%);
     }
     &.raised:hover {
         box-shadow: $accent-box-shadow;
@@ -325,6 +329,7 @@ TABLE OF CONTENTS
     transition: all 0.5s;
     &:hover {
         color: $white;
+        background-color: darken($green, 5%);
     }
     &.raised:hover {
         box-shadow: $green-box-shadow;
@@ -355,6 +360,7 @@ TABLE OF CONTENTS
     transition: all 0.5s;
     &:hover {
         color: $white;
+        background-color: darken($orange, 5%);
     }
     &.raised:hover {
         box-shadow: $orange-box-shadow;
@@ -385,6 +391,7 @@ TABLE OF CONTENTS
     transition: all 0.5s;
     &:hover {
         color: $white;
+        background-color: darken($red, 5%);
     }
     &.raised:hover {
         box-shadow: $red-box-shadow;
@@ -415,6 +422,7 @@ TABLE OF CONTENTS
     transition: all 0.5s;
     &:hover {
         color: $white;
+        background-color: darken($blue, 5%);
     }
     &.raised:hover {
         box-shadow: $blue-box-shadow;
