@@ -71,11 +71,13 @@ $(document).ready(function($){
 
     //Page loader
     if ($('.pageloader').length) {
-
+console.log('if')
         $('.pageloader').toggleClass('is-active');
-
+        console.log('toggle pageloader 1')
         $(window).on('load', function() {
             var pageloaderTimeout = setTimeout( function() {
+                console.log('toggle pageloader 2')
+                console.log('toggle infraloader 1')
                 $('.pageloader').toggleClass('is-active');
                 $('.infraloader').toggleClass('is-active')
                 clearTimeout( pageloaderTimeout );
