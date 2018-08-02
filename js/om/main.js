@@ -75,6 +75,7 @@ console.log('if')
         $('.pageloader').toggleClass('is-active');
         console.log('toggle pageloader 1')
         $(window).on('load', function() {
+            console.log('load')
             var pageloaderTimeout = setTimeout( function() {
                 console.log('toggle pageloader 2')
                 console.log('toggle infraloader 1')
