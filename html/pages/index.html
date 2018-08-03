@@ -1,6 +1,6 @@
 ---
 layout: om
-title: Organic Man | Find Your Balance
+title: Organic Man | Your Path To Self Realization
 ---
 
 <!-- Hero and nav -->
@@ -44,110 +44,21 @@ title: Organic Man | Find Your Balance
 <!-- /Hero and nav -->
 
 <!-- Mission -->
-<section id="mission" class="section is-medium has-text-centered">
-  <div class="container">
-      <div class="section-title-wrapper">
-          <h2 class="title dark-text text-bold main-title is-2 is-title-reveal">
-              <span class="is-block-mobile">🕊<span class="is-hidden-desktop">📿</span></span> Illuminate your path to self discovery <span class="is-hidden-mobile">📿</span>
-          </h2>
-          <h3 class="subtitle dark-text is-4">
-              There are lots of amazing and beneficial tools designed specifically, and intentionally, for men. Organic Man combines self care, positive affirmation, and guidance into a monthly box aimed to help men see and understand themselves more clearly. Then thrive in that understanding through wisdom, service, community-action, friendship, sharing, and vulnerability.
-          </h3>
-          <p class="is-left-reveal mt-15">
-            <a href="javascript:void(0)" data-sumome-listbuilder-id="ee8cf548-8051-4350-909c-b0264f74c715" class="button btn-align btn-more is-link color-secondary mb-5">
-                Join the OM Tribe <i class="sl sl-icon-arrow-right"></i>
-            </a>
-          </p>
-      </div>
-  </div>
-</section>
+{{> om-mission}}
 <!-- /Mission -->
 
 <!-- How it works section -->
-<section id="how-it-works" class="section is-medium section-feature-grey has-text-centered">
-  <!-- Title -->
-  <div class="section-title-wrapper no-padding-bottom no-padding-top">
-      <h2 class="title dark-text text-bold main-title is-2  no-padding-top">
-          How it works
-      </h2>
-      <h3 class="subtitle dark-text is-4 no-padding-bottom no-margin-bottom">
-          Discover new self care, understand your path,<br class="is-hidden-mobile" /> and get inspired to explore your true self.
-      </h3>
-  </div>
-  <!-- /Title -->
-  <div class="content-wrapper">
-      <div class="columns is-vcentered is-multiline">
-        <!-- Icon block -->
-        <div class="column is-4">
-          <div class="chat-icon-box">
-            <div class="is-icon-reveal levitate mb-40">
-              <i class="im im-icon-Green-Energy text-bold"></i>
-            </div>
-            <div class="box-title secondary-text">Discover</div>
-            <p class="box-content is-tablet-padded dark-text">
-              Your journey is your own. We are only here to help you illiminate your path with community, guidance, and self care to look within and connect with self.
-            </p>
-          </div>
-        </div>
-        <!-- /Icon block -->
-        <!-- Icon block -->
-        <div class="column is-4">
-          <div class="chat-icon-box">
-            <div class="is-icon-reveal levitate mb-40">
-                <i class="im im-icon-Flowerpot text-bold"></i>
-            </div>
-            <div class="box-title secondary-text">Connect</div>
-            <p class="box-content is-tablet-padded dark-text">
-              Gain direct access to a personalized tribal mentor, guided journey, powerful gatherings, and a thriving online community of like minded men.
-            </p>
-          </div>
-        </div>
-        <!-- /Icon block -->
-        <!-- Icon block -->
-        <div class="column is-4">
-          <div class="chat-icon-box">
-            <div class="is-icon-reveal levitate mb-40">
-              <i class="im im-icon-Spring text-bold"></i>
-            </div>
-            <div class="box-title secondary-text">Serve</div>
-            <p class="box-content is-tablet-padded dark-text">
-              Self realization begins within you and follows in your wake. Share your insight, challenges, and stories with the people around you as often as possible.
-            </p>
-          </div>
-        </div>
-        <!-- /Icon block -->
-      </div>
-      <div class="has-text-centered pt-40">
-        <a href="/pre-order.html" class="button button-cta accent-btn mb-5 mr-5">
-          Pre-Order Your Box*
-        </a>
-        <a href="javascript:void(0)" data-sumome-listbuilder-id="ee8cf548-8051-4350-909c-b0264f74c715" class="button button-cta secondary-btn raised">
-          Join The OM Tribe
-        </a>
-        <p class="light-grey-text pt-10">
-          <small><em>*Only 100 boxes/month available. Intended to arrive October 2018.</em></small>
-        </p>
-      </div>
-  </div>
-</section>
+{{> om-how-it-works}}
 <!-- /How it works -->
 
 <!-- Quote -->
-<section id="quote" class="section is-small section-primary has-background-image" data-background="/assets/images/bg/shapes/paisley-pattern.png" style="background-repeat: no-repeat; background-size: cover; background-position: center;">
-  <div class="colums">
-    <div class="column is-8 is-offset-2">
-        <div class="section-title-wrapper no-padding">
-            <!-- Title -->
-            <h2 class="title light-text text-bold main-title is-2">
-                "We can never obtain peace in the outer world until we make peace with ourselves."
-            </h2>
-            <h3 class="subtitle light-text is-4 no-padding no-margin-bottom">
-                —Tenzin Gyatso
-            </h3>
-        </div>
-    </div>
-  </div>
-</section>
+{{> om-quote 
+    class="section is-small section-primary"
+    background-image-url="/assets/images/bg/shapes/paisley-pattern.png"
+    background-style="background-repeat: no-repeat; background-size: cover; background-position: center;"
+    quote='"We can never obtain peace in the outer world until we make peace with ourselves."' 
+    cite="Tenzin Gyatso"
+}}
 <!-- /Quote -->
 
 <!-- Tools -->
@@ -155,129 +66,11 @@ title: Organic Man | Find Your Balance
 <!-- /Tools -->
 
 <!-- Social Proof (Testimonials) -->
-<section id="stories" class="section is-medium section-feature-grey">
-  <!-- Title -->  
-  <div class="section-title-wrapper no-padding-top has-text-centered">
-      <h2 class="title dark-text text-bold main-title is-2">
-          <span class="is-block-mobile">❤️<span class="is-hidden-desktop">🙏</span></span> Love and gratitude <span class="is-hidden-mobile">🙏</span>
-      </h2>
-      <h3 class="subtitle dark-text is-4 no-padding-bottom no-margin-bottom">
-          A growing community of like minded men that are finding their center, sharing their journeys, and supporting one another along the way - here are a few of the things they've shared with us.
-      </h3>
-  </div>
-  <!-- /Title -->
-  <!-- Vertical testimonials -->
-  <div class="columns">
-    <div class="column is-8 is-offset-2">
-        <div class="vertical-testimonials no-margin-top">
-            <!-- Testimonial item -->
-            <div class="flex-card vtestimonial-item light-bordered padding-10">
-                <div class="content content-flex">
-                    <img class="vt-avatar is-hidden-mobile" src="https://via.placeholder.com/250x250" alt="">
-                    <div class="vt-content">
-                        <div class="star-rating color-accent is-hidden-mobile">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h6 class="vt-name">Tim Gerth</h6>
-                        <div class="vt-text">
-                            It’s great on a personal level and the best interaction I’ve had purchasing men’s self care products
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Testimonial item -->
-            <!-- Testimonial item -->
-            <div class="flex-card vtestimonial-item light-bordered padding-10">
-                <div class="content content-flex">
-                    <img class="vt-avatar is-hidden-mobile" src="https://via.placeholder.com/250x250" alt="">
-                    <div class="vt-content">
-                        <div class="star-rating color-accent is-hidden-mobile">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h6 class="vt-name">Aidan Harvey</h6>
-                        <div class="vt-text">
-                            It’s great on a personal level and the best interaction I’ve had purchasing men’s self care products
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Testimonial item -->
-            <!-- Testimonial item -->
-            <div class="flex-card vtestimonial-item light-bordered padding-10">
-                <div class="content content-flex">
-                    <img class="vt-avatar is-hidden-mobile" src="https://via.placeholder.com/250x250" alt="">
-                    <div class="vt-content">
-                        <div class="star-rating color-accent is-hidden-mobile">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h6 class="vt-name">Add Another</h6>
-                        <div class="vt-text">
-                            Woke normcore tote bag quinoa elit. Put a bird on it hell of 90's la croix vaporware master cleanse slow-carb tumeric.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Testimonial item -->
-            <!-- Testimonial item -->
-            <div class="flex-card vtestimonial-item light-bordered padding-10">
-                <div class="content content-flex">
-                    <img class="vt-avatar is-hidden-mobile" src="https://via.placeholder.com/250x250" alt="">
-                    <div class="vt-content">
-                        <div class="star-rating color-accent is-hidden-mobile">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h6 class="vt-name">Add Another</h6>
-                        <div class="vt-text">
-                            Woke normcore tote bag quinoa elit. Put a bird on it hell of 90's la croix vaporware master cleanse slow-carb tumeric.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Testimonial item -->
-        </div>
-    </div>
-  </div>
-  <!-- Vertical testimonials -->
-</section>
+{{> om-social-proof}}
 <!-- /Social Proof (Testimonials) -->
 
 <!-- Subscribe -->
-<section id="subscribe" class="section is-small has-background-image has-text-centered" data-background="/assets/images/bg/dreamcatchers.jpg" style="background-repeat: no-repeat; background-size: cover;">
-  <div class="container">
-      <div class="section-title-wrapper">
-          <!-- Title -->
-          <h2 class="title dark-text text-bold main-title is-2">
-              The OM Tribe
-          </h2>
-          <h3 class="subtitle dark-text is-4">
-              A group of like minded men sharing their journeys and supporting one another along the way. Each tribe member gets direct access to a personalized tribal mentor, guided journey, powerful gatherings, and a thiving online community supporting each of its members.
-          </h3>
-          <!-- /Title -->
-          <p>
-            <a href="javascript:void(0)" data-sumome-listbuilder-id="ee8cf548-8051-4350-909c-b0264f74c715" class="button button-cta secondary-btn raised">Join The OM Tribe</a>
-          </p>
-          <p class="pt-10 light-grey-text">
-            <small><em>We respect you and your privacy - we will never share your information.</em></small>
-          </p>
-      </div>
-  </div>  
-</section>
+{{> om-subscribe}}
 <!-- /Subscribe -->
 
 <!-- Personalized Path - "Content" - image right -->
