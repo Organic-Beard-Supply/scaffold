@@ -20,7 +20,8 @@ TABLE OF CONTENTS
 10. Chat widget trigger button
 11. Chat widget
 12. Login and Sign up pages
-13. Tablet media queries (portrait orientation)
+13. Tablet media queries (portrait orientation
+14. Shopify button override
 =============================================================================
 ***/
 
@@ -781,4 +782,11 @@ body #bulchat div {
         padding: 0 20%;
     }
 
+}
+
+/* ==========================================================================
+14. Shopify button override
+========================================================================== */
+.shopify-buy-frame.shopify-buy-frame--product:not(.buy-button) {
+    display: none;
 }

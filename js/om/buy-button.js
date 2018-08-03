@@ -42,98 +42,116 @@
 
     function createComponent(ui, element) {
       const $element = $(element),
-            variantId = $element.attr('data-variant-id') || 'all',
-            buttonText = $element.attr('data-button-text') || 'Buy Now',
-            buttonClasses = $element.attr('data-variant-button-class') || 'shopify-buy__btn';
+          variantId = $element.attr('data-variant-id') || 'all',
+          productSettings = getProductSettings($element, variantId),
+          cartSettings = getCartSettings(),
+          toggleSettings = getToggleSettings(),
+          moneyFormat = '%24%7B%7Bamount%7D%7D',
+          id = [1397481242720];
 
       ui.createComponent('product', {
-        id: [1397481242720],
+        id,
         variantId,
         node: element,
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        moneyFormat,
         options: {
-          product: {
-            iframe: false,
-            variantId,
-            buttonDestination: "cart",
-            contents: {
-              img: false,
-              imgWithCarousel: false,
-              title: false,
-              variantTitle: false,
-              options: false,
-              price: false,
-              description: false,
-              buttonWithQuantity: false,
-              quantity: false
-            },
-            text: {
-              button: buttonText
-            },
-            classes: {
-              button: buttonClasses
-            }
-          },
-          cart: {
-            contents: {
-              button: true,
-            },
-            styles: {
-              button: {
-                "font-family": "BlinkMacSystemFont,-apple-system,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Helvetica','Arial',sans-serif",
-                "background-color": "#159097",
-                "border-color": "#159097",
-                "outline": "none",
-                "transition": "all 0.5s",
-                "color": "#ffffff",
-                "border-radius": "4px",
-                "padding": "22px 40px",
-                "border-width": "1px",
-                "font-size": "1rem",
-                "height": "2.25em",
-                "text-transform": "none",
-                "line-height": "0",
-                ":hover": {
-                  "background-color": "#e6e6e6",
-                  "color": "#000000"
-                },
-                ":focus": {
-                  "background-color": "#e6e6e6"
-                }
-              },
-              header: {
-                "border-bottom": "1px solid #EFF4F7"
-              },
-              footer: {
-                "background-color": "#EFF4F7"
-              }
-            }
-          },
-          toggle: {
-            styles: {
-              toggle: {
-                "font-family": "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'",
-                "background-color": "#159097",
-                ":hover": {
-                  "background-color": "#127b81"
-                },
-                ":focus": {
-                  "background-color": "#127b81"
-                }
-              },
-              count: {
-                "color": "#ffffff",
-                ":hover": {
-                  "color": "#ffffff"
-                },
-                "font-size": "1rem"
-              },
-              iconPath: {
-                "fill": "#ffffff"
-              }
-            }
-          }
+          product: productSettings,
+          cart: cartSettings,
+          toggle: toggleSettings
         }
       })
     }
-})();
+
+    function getProductSettings($element, variantId) {
+      const buttonText = $element.attr('data-button-text') || 'Buy Now',
+            buttonClasses = $element.attr('data-variant-button-class') || 'shopify-buy__btn';
+      return {
+        iframe: false,
+        variantId,
+        buttonDestination: "cart",
+        contents: {
+          img: false,
+          imgWithCarousel: false,
+          title: false,
+          variantTitle: false,
+          options: false,
+          price: false,
+          description: false,
+          buttonWithQuantity: false,
+          quantity: false
+        },
+        text: {
+          button: buttonText
+        },
+        classes: {
+          button: buttonClasses
+        }
+      }
+    }
+
+    function getCartSettings() {
+      return {
+        contents: {
+          button: true,
+        },
+        styles: {
+          button: {
+            "font-family": "BlinkMacSystemFont,-apple-system,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Helvetica','Arial',sans-serif",
+            "background-color": "#159097",
+            "border-color": "#159097",
+            "outline": "none",
+            "transition": "all 0.5s",
+            "color": "#ffffff",
+            "border-radius": "4px",
+            "padding": "22px 40px",
+            "border-width": "1px",
+            "font-size": "1rem",
+            "height": "2.25em",
+            "text-transform": "none",
+            "line-height": "0",
+            ":hover": {
+              "background-color": "#e6e6e6",
+              "color": "#000000"
+            },
+            ":focus": {
+              "background-color": "#e6e6e6"
+            }
+          },
+          header: {
+            "border-bottom": "1px solid #EFF4F7"
+          },
+          footer: {
+            "background-color": "#EFF4F7"
+          }
+        }
+      }
+    }
+
+    function getToggleSettings() {
+      return {
+        styles: {
+          toggle: {
+            "font-family": "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'",
+            "background-color": "#159097",
+            ":hover": {
+              "background-color": "#127b81"
+            },
+            ":focus": {
+              "background-color": "#127b81"
+            }
+          },
+          count: {
+            "color": "#ffffff",
+            ":hover": {
+              "color": "#ffffff"
+            },
+            "font-size": "1rem"
+          },
+          iconPath: {
+            "fill": "#ffffff"
+          }
+        }
+      }
+    } 
+  }
+)();
