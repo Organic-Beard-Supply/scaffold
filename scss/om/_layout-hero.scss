@@ -189,6 +189,14 @@ TABLE OF CONTENTS
     }
 }
 
+//Hero body adjustment on mobile
+@media (max-width: 767px) {
+    .hero-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 /* ==========================================================================
 2. Hero footer
 ========================================================================== */
