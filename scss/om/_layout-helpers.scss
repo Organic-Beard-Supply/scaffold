@@ -19,6 +19,7 @@ TABLE OF CONTENTS
 9. Icon helpers
 10. Image helpers
 11. Responsive helpers
+12. Emoji helpers
 =============================================================================
 ***/
 
@@ -685,4 +686,12 @@ TABLE OF CONTENTS
     .has-text-centered-mobile {
         text-align: center !important;
     }
+}
+
+/* ==========================================================================
+12. Emoji helpers
+========================================================================== */
+
+.emoji {
+    font-family: apple color emoji,segoe ui emoji,notocoloremoji,segoe ui symbol,android emoji,emojisymbols,emojione mozilla;
 }
