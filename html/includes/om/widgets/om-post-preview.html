@@ -1,0 +1,26 @@
+<!-- Event Card -->
+<a href="{{post-url}}" class="event-card">
+    <div class="card-date">
+        <div class="date">
+            <span class="day">{{publish-day}}</span>
+            <span class="month">{{publish-month}}</span>
+        </div>
+    </div>
+    <div class="img-container">
+        <img src="{{img-src}}" alt="{{img-alt}}">
+    </div>
+    <div class="card-text">
+        <div class="text text-container">
+            <div class="text text-header">
+                <p class="text text-subtitle {{post-category-class}}">{{post-category}}</p>
+                <h2 class="text dark-text text-title">{{post-title}}</h2>
+            </div>
+            <div class="text text-details">
+                <p class="text text-description">
+                    {{post-excerpt}}
+                </p>
+            </div>
+        </div>
+    </div>
+</a>
+<!-- /Event Card -->
