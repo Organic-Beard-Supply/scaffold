@@ -114,10 +114,10 @@ TABLE OF CONTENTS
     }
     //colors
     &.is-primary {
-        background: $primary;
+        background: $primary !important;
         color: $white;
         &.is-outlined {
-            background: transparent;
+            background: transparent !important;
             border: 1px solid $primary;
             color: $primary;
         }
