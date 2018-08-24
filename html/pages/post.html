@@ -3,6 +3,15 @@ layout: om
 title: Organic Man | Same self care. Just a lower price.
 ---
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=358983987786447&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 {{> om-navbar-fade-dark}}
 
 <!-- Hero and nav -->
@@ -12,13 +21,16 @@ title: Organic Man | Same self care. Just a lower price.
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-8 is-offset-2">
+          <h2 class="subtitle is-5 info-text pb-20 has-text-centered is-spaced">
+            Category
+          </h2>
           <h1 class="title is-landing is-1 pb-20 has-text-centered">
               Same self care. Just a lower price.
           </h1>
           <div class="columns">
             <div class="column is-7" style="margin-left: auto; margin-right: auto;">
               <div class="author" style="text-align: center;">
-                <img class="author-avatar" src="https://via.placeholder.com/250x250" alt="" style="vertical-align: top;
+                <img class="author-avatar" src="https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B" alt="" style="vertical-align: top;
                   width: 48px;
                   height: 48px;
                   border-radius: 100%;
@@ -71,7 +83,7 @@ title: Organic Man | Same self care. Just a lower price.
     left: 0;"></div>
 </div>
 
-<!-- Post section -->
+<!-- Post and comment section -->
 <section class="section blog-section">
     <div class="container">
         <div class="columns">
@@ -155,127 +167,31 @@ title: Organic Man | Same self care. Just a lower price.
                           </a>
                         </p>
                         <p>Once accepted, we’ll send you a custom link that you can share directly with your friends giving them access to valuable stories (like this one!), product recommendations, personalized self care products, and 25% off their first purchase.</p>
-                        <hr/>
-                        <div class="has-text-centered">
-                          <a data-sumome-share-id=8bac370e-52fc-4ba5-b3df-4ab53dcff97e></a>
+                        <!-- /Post content -->
+                        <!-- Post comment -->
+                        <div class="pt-50">
+                          <div class="fb-comments"
+                            data-href="https://store.organicman.eco/blogs/news/same-self-care-just-a-lower-price"
+                            data-width="100%"
+                            data-numposts="10">
+                          </div>
                         </div>
+                        <!-- /Post comment -->
                     </div>
                 </div>
                 <!-- /Post -->
-
-                <!-- Show comments box -->
-                {{!
-                <div class="flex-card comment-count light-bordered">
-                    <i class="im im-icon-Speach-Bubble11"></i>
-                    <div class="text"><span class="count-number">3</span> <span class="is-hidden-mobile">comments</span></div>
-                    <button id="show-comments" class="button is-link primary-text">Show all</button>
-                </div>
-              }}
-                <!-- /Show comments box -->
-
-                <!-- Comments list -->
-                {{!<div class="flex-card comments-list light-bordered animated preFadeInUp fadeInUp is-hidden">
-                    <!-- Comment -->
-                    <div class="media">
-                        <figure class="media-left">
-                            <p class="image is-48x48">
-                                <img src="https://via.placeholder.com/250x250" alt="">
-                            </p>
-                        </figure>
-                        <div class="media-content">
-                            <div class="content">
-                                <strong>Barbara Middleton</strong>
-                                <span class="timestamp">2 hours ago</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.</p>
-                                <small>
-                                    <a><i class="fa fa-heart"></i></a> 
-                                    <span class="count">9</span>  
-                                    <span class="reply"><a href="#">Reply</a></span> 
-                                </small>
-                            </div>
-
-                            <!-- Nested answer 1 -->
-                            <div class="media">
-                                <figure class="media-left">
-                                    <p class="image is-32x32">
-                                        <img src="https://via.placeholder.com/250x250" alt="">
-                                    </p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <strong>Sean Brown</strong>
-                                        <span class="timestamp">30 minutes ago</span>
-                                        <p>Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.</p>
-                                        <small>
-                                            <a><i class="fa fa-heart"></i></a> 
-                                            <span class="count">5</span>  
-                                            <span class="reply"><a href="#">Reply</a></span> 
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Nested answer 2 -->
-                            <div class="media">
-                                <figure class="media-left">
-                                    <p class="image is-32x32">
-                                        <img src="https://via.placeholder.com/250x250" alt="">
-                                    </p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <strong>Kayli Eunice </strong>
-                                        <span class="timestamp">15 minutes ago</span>
-                                        <p>Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.</p>
-                                        <small>
-                                            <a><i class="fa fa-heart"></i></a> 
-                                            <span class="count">2</span>  
-                                            <span class="reply"><a href="#">Reply</a></span> 
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Comments -->
-                </div>}}
-                <!-- /Comments list -->
-
-                <!-- Write comment textarea -->
-                {{!<div class="flex-card compose-card light-bordered">
-                    <figure class="avatar image is-64x64 is-hidden-mobile">
-                        <img class="img-circle" src="https://via.placeholder.com/250x250" alt="">
-                    </figure>
-                    <!-- textarea -->
-                    <div class="control-wrapper">
-                        <div class="control">
-                            <textarea class="textarea is-button" placeholder="Write something..."></textarea>
-                            <div class="textarea-button">
-                                <button class="button primary-btn btn-align raised">Publish</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Textarea -->
-                </div>}}
-                <!-- /Write comment textarea -->
             </div>
         </div>
     </div>
 </section>
-<!-- /Post section -->
-
-<!-- Comments -->
-<section class="section is-small has-text-centered">
-  Facebook comments
-</section>
-<!-- /Comments -->
+<!-- /Post and comment section -->
 
 <!-- About the author -->
 <section class="section is-small section-feature-grey-accent">
   <div class="columns">
     <div class="column is-3 is-offset-2">
         <div class="author" style="text-align: center;">
-            <img class="author-avatar" src="https://via.placeholder.com/250x250" alt="" style="vertical-align: top;
+            <img class="author-avatar" src="https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B" alt="" style="vertical-align: top;
               width: 48px;
               height: 48px;
               border-radius: 100%;
@@ -383,7 +299,7 @@ title: Organic Man | Same self care. Just a lower price.
       <div class="section-title-wrapper">
           <!-- Title -->
           <h2 class="title dark-text text-bold main-title is-2">
-              More stories just like this one
+              Get more stories like this one
           </h2>
           <h3 class="subtitle dark-text is-4">
             Join our mailing list to have guidance, positive affirmation, and self care tips delivered directly to your inbox.
