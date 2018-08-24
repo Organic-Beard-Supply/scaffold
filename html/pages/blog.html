@@ -5,8 +5,8 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
 
 <!-- Hero (Parallax) and nav -->
 <div class="hero has-background-image is-cover is-relative is-default is-bold" data-background="https://via.placeholder.com/1920x1080" data-color="#000" data-color-opacity="0.3">
-    
-  {{> om-navbar-fade}}
+  
+  {{> om-navbar-static-light}}
 
   <!-- Hero image -->
   <div id="main-hero" class="hero-body">
@@ -17,12 +17,12 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
           <div class="flex-card media-card media-card-left light-bordered light-raised">
             <div class="columns is-gapless is-desktop">
               <div class="column is-4 media-stretch">
-                <div class="media-card-image" data-background="https://source.unsplash.com/1080x810/?meditate" style="background-image: url('https://source.unsplash.com/1080x810/?meditate');"></div>
+                <a href="/post.html"><div class="media-card-image" data-background="https://source.unsplash.com/1080x1080/?meditate" style="background-image: url('https://source.unsplash.com/1080x810/?meditate');"></div></a>
               </div>
               <div class="column content-column">
                 <div class="mcard-content">
                   <h2 class="mcard-title">
-                    <a href="#">The Absurdity of Expression</a>
+                    <a href="/post.html">The Absurdity of Expression</a>
                   </h2>
                   <p class="mcard-description is-hidden-touch">If one examines Marxist socialism, one is faced with a choice: either accept cultural discourse or conclude that narrativity is capable of significance. <a href="/post.html">read more</a></p>
                 </div>
@@ -31,7 +31,7 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
                     <img src="https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B" alt="">
                   </div>
                   <div class="mcard-info">
-                    <span><a href="#">Joel Serino</a></span> 
+                    <span>Joel Serino</span>
                     <div><span>10 Mar</span> <i class="fa fa-circle"></i>  <span><a href="#" class="success-text">Category</a></span></div>
                   </div>
                 </div>
@@ -46,133 +46,105 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
 </div>
 <!-- /Hero and nav -->
 
+<!-- Scrollnav -->
+<div id="scrollnav" class="scroll-nav-wrapper">
+    <div class="container">
+        <div class="tabs scrollnav-tabs is-centered">
+            <ul>
+                <li class="scrollnav-item"><a class="success-text" href="#">Category</a></li>
+                <li class="scrollnav-item"><a class="warning-text" href="#">Category</a></li>
+                <li class="scrollnav-item"><a class="info-text" href="#">Category</a></li>
+                <li class="scrollnav-item"><a class="danger-text" href="#">Category</a></li>
+            </ul>
+        </div>
+    </div>  
+</div>
+<!-- /Scrollnav -->
+
 <!-- Blog post list section -->
-<section class="section is-medium blog-section section-light-grey">
-    <div>
+<section class="section is-medium blog-section">
+    <div class="container">
         <div class="columns">
-            <div class="column is-8 is-offset-2">
-                <!-- Blog post -->
-                <div class="flex-card is-post light-bordered">
-                    <!-- Post header -->
-                    <div class="header has-background-image" data-background="https://via.placeholder.com/1200x300">
-                        <div class="title-wrapper">
-                            <h2 class="post-title">How design has become critical in business Projects</h2>
-                            <h4 class="post-subtitle">Real insights about real businesses</h4>
-                        </div> 
-                        <div class="author-avatar"><img src="https://via.placeholder.com/250x250" alt=""></div>
-                        <button class="like fab-btn mini">
-                            <span class="like-wrapper">
-                                <i class="material-icons unliked">favorite_border</i>
-                                <i class="material-icons liked">favorite</i>
-                                <span class="like-overlay"></span>
-                            </span>
-                        </button>
-                        <!-- Header overlay -->
-                        <div class="header-overlay"></div>
-                    </div>
-                    <!-- Post body -->
-                    <div class="post-body">
-                        <div> <span>by</span> <a class="author-name" href="#"><b>Alan Maynard</b></a></div>
-                        <small>Posted in <a href="category.html">Web Design</a> on oct 20 2017</small>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia euismod urna, in gravida leo efficitur a. Sed tempus augue risus, eget faucibus urna hendrerit a. Donec pulvinar maximus dui ut porttitor. Nullam tristique tortor et ipsum tristique, ac lacinia diam faucibus. Nunc cursus massa eget consectetur laoreet ...</p>
-                        <div class="content-footer">
-                            <div class="footer-details">
-                                <a class="button is-link btn-upper" href="post.html">Read more</a>
-                                <div class="likes-count ml-auto">
-                                    <i class="im im-icon-Heart-2"></i>
-                                    <span class="stat">32</span>
-                                </div>
-                                <div class="comments-count">
-                                    <i class="im im-icon-Speach-Bubble11"></i>
-                                    <span class="stat">8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="column is-10 is-offset-1">
+              <!-- Title -->
+              <div class="section-title-wrapper no-padding-top has-text-centered">
+                <h2 class="title dark-text text-bold main-title is-2 no-padding-top">
+                  Featured Articles
+                </h2>
+              </div>
+              <!-- /Title -->
+              <div class="columns">
+                <div class="column is-6">
+                    {{> om-featured-post-preview
+                      img-src="https://source.unsplash.com/1200x300/?meditate"
+                      img-alt=""
+                      author-img-url="https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B"
+                      publish-day="19th"
+                      publish-month="May"
+                      publish-year="2018"
+                      post-title="Reinventing Surrealism"
+                      post-subtitle="Real insights about Surrealism"
+                      post-excerpt="If one examines subdialectic feminism, one is faced with a choice: either accept social realism or conclude that consciousness serves to reinforce sexism."
+                      post-author="Joel Serino"
+                      post-url="/post.html"
+                      post-category="Surrealism"
+                      post-category-class="info-text"
+                      post-category-url="/category.html" }}
                 </div>
-                <!-- /Blog post -->
-
-                <!-- Blog post -->
-                <div class="flex-card is-post light-bordered">
-                    <!-- Post header -->
-                    <div class="header has-background-image" data-background="https://via.placeholder.com/1200x300">
-                        <div class="title-wrapper">
-                            <h2 class="post-title">5 Things you should know when planning for a new online store</h2>
-                            <h4 class="post-subtitle">Pieces of advice that will help grow your business</h4>
-                        </div> 
-                        <div class="author-avatar"><img src="https://via.placeholder.com/250x250" alt=""></div>
-                        <button class="like fab-btn mini">
-                            <span class="like-wrapper">
-                                <i class="material-icons unliked">favorite_border</i>
-                                <i class="material-icons liked">favorite</i>
-                                <span class="like-overlay"></span>
-                            </span>
-                        </button>
-                        <!-- Header overlay -->
-                        <div class="header-overlay"></div>
-                    </div>
-                    <!-- Post body -->
-                    <div class="post-body">
-                        <div> <span>by</span> <a class="author-name" href="#"><b>Marjory Cambell</b></a></div>
-                        <small>Posted in <a href="category.html">Ecommerce</a> on <a href="post.html">oct 13 2017</a></small>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia euismod urna, in gravida leo efficitur a. Sed tempus augue risus, eget faucibus urna hendrerit a. Donec pulvinar maximus dui ut porttitor. Nullam tristique tortor et ipsum tristique, ac lacinia diam faucibus. Nunc cursus massa eget consectetur laoreet ...</p>
-                        <div class="content-footer">
-                            <div class="footer-details">
-                                <a class="button is-link btn-upper font-w-500" href="post.html">Read more</a>
-                                <div class="likes-count ml-auto">
-                                    <i class="im im-icon-Heart-2"></i>
-                                    <span class="stat">64</span>
-                                </div>
-                                <div class="comments-count">
-                                    <i class="im im-icon-Speach-Bubble11"></i>
-                                    <span class="stat">6</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="column is-6">
+                  {{> om-featured-post-preview
+                    img-src="https://source.unsplash.com/1200x300/?meditating"
+                    img-alt=""
+                    author-img-url="https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B"
+                    publish-day="19th"
+                    publish-month="May"
+                    publish-year="2018"
+                    post-title="Reinventing Surrealism"
+                    post-subtitle="Real insights about Surrealism"
+                    post-excerpt="If one examines subdialectic feminism, one is faced with a choice: either accept social realism or conclude that consciousness serves to reinforce sexism."
+                    post-author="Joel Serino"
+                    post-url="/post.html"
+                    post-category="Surrealism"
+                    post-category-class="info-text"
+                    post-category-url="/category.html" }}
                 </div>
-                <!-- /Blog post -->
-
-                <!-- Blog post -->
-                <div class="flex-card is-post light-bordered">
-                    <!-- Post header -->
-                    <div class="header has-background-image" data-background="https://via.placeholder.com/1200x300">
-                        <div class="title-wrapper">
-                            <h2 class="post-title">Power up your SPA developments by using Vue js</h2>
-                            <h4 class="post-subtitle">A javascript framework that simplifies everything</h4>
-                        </div> 
-                        <div class="author-avatar"><img src="https://via.placeholder.com/250x250" alt=""></div>
-                        <button class="like fab-btn mini">
-                            <span class="like-wrapper">
-                                <i class="material-icons unliked">favorite_border</i>
-                                <i class="material-icons liked">favorite</i>
-                                <span class="like-overlay"></span>
-                            </span>
-                        </button>
-                        <!-- Header overlay -->
-                        <div class="header-overlay"></div>
-                    </div>
-                    <!-- Post body -->
-                    <div class="post-body">
-                        <div> <span>by</span> <a class="author-name" href="#"><b>Marc Walters</b></a></div>
-                        <small>Posted in <a href="category.html">Javascript</a> on <a href="post.html">oct 09 2017</a></small>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia euismod urna, in gravida leo efficitur a. Sed tempus augue risus, eget faucibus urna hendrerit a. Donec pulvinar maximus dui ut porttitor. Nullam tristique tortor et ipsum tristique, ac lacinia diam faucibus. Nunc cursus massa eget consectetur laoreet ...</p>
-                        <div class="content-footer">
-                            <div class="footer-details">
-                                <a class="button is-link btn-upper font-w-500" href="post.html">Read more</a>
-                                <div class="likes-count ml-auto">
-                                    <i class="im im-icon-Heart-2"></i>
-                                    <span class="stat">17</span>
-                                </div>
-                                <div class="comments-count">
-                                    <i class="im im-icon-Speach-Bubble11"></i>
-                                    <span class="stat">2</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="columns">
+                <div class="column is-6">
+                  {{> om-featured-post-preview
+                    img-src="https://source.unsplash.com/1200x300/?meditation"
+                    img-alt=""
+                    author-img-url="https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B"
+                    publish-day="19th"
+                    publish-month="May"
+                    publish-year="2018"
+                    post-title="Reinventing Surrealism"
+                    post-subtitle="Real insights about Surrealism"
+                    post-excerpt="If one examines subdialectic feminism, one is faced with a choice: either accept social realism or conclude that consciousness serves to reinforce sexism."
+                    post-author="Joel Serino"
+                    post-url="/post.html"
+                    post-category="Surrealism"
+                    post-category-class="info-text"
+                    post-category-url="/category.html" }}
                 </div>
-                <!-- /Blog post -->
+                <div class="column is-6">
+                  {{> om-featured-post-preview
+                    img-src="https://source.unsplash.com/1200x300/?peace"
+                    img-alt=""
+                    author-img-url="https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B"
+                    publish-day="19th"
+                    publish-month="May"
+                    publish-year="2018"
+                    post-title="Reinventing Surrealism"
+                    post-subtitle="Real insights about Surrealism"
+                    post-excerpt="If one examines subdialectic feminism, one is faced with a choice: either accept social realism or conclude that consciousness serves to reinforce sexism."
+                    post-author="Joel Serino"
+                    post-url="/post.html"
+                    post-category="Surrealism"
+                    post-category-class="info-text"
+                    post-category-url="/category.html" }}
+                </div>
+              </div>
             </div>
         </div>
     </div>

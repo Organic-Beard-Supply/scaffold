@@ -1,0 +1,29 @@
+<!-- Blog post -->
+<div class="flex-card is-post light-bordered">
+    <!-- Post header -->
+    <a href="{{post-url}}" class="header has-background-image" data-background="{{img-src}}">
+        <div class="title-wrapper">
+            <h2 class="post-title">{{post-title}}</h2>
+            <h4 class="post-subtitle">{{post-subtitle}}</h4>
+        </div> 
+        <div class="author-avatar"><img src="{{author-img-url}}" alt="{{post-author}}"></div>
+        <!-- Header overlay -->
+        <div class="header-overlay"></div>
+      </a>
+    <!-- Post body -->
+    <div class="post-body">
+        <div> <span>by</span> <a class="author-name" href="#"><b>{{post-author}}</b></a></div>
+        <small>Posted in <a href="{{post-category-url}}" class="{{post-category-class}}">{{post-category}}</a> on {{publish-month}} {{publish-day}}, {{publish-year}}</small>
+        <p>{{post-excerpt}}</p>
+        <div class="content-footer">
+            <div class="footer-details">
+                <a class="button is-link btn-upper" href="{{post-url}}">Read more</a>
+                <div class="comments-count ml-auto">
+                    <i class="im im-icon-Speach-Bubble11"></i>
+                    <span class="stat">8</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<!-- /Blog post -->

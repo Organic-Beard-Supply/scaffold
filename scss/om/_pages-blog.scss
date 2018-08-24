@@ -876,6 +876,7 @@ TABLE OF CONTENTS
             font-weight: 500;
             padding: 0 20px;
             z-index: 1;
+            margin-bottom: 0;
         }
         h4.post-subtitle {
             position: relative;
@@ -901,6 +902,7 @@ TABLE OF CONTENTS
                 position: relative;
                 left: -0.5px;
                 transform: scale(1.02);
+                margin-top: 0;
             }
         }
         .header-overlay {

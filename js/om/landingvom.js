@@ -9,7 +9,7 @@ $(document).ready(function($){
     "use strict";
     
     //Toggle the sign up button color when solid navbar comes in
-    if ($('.navbar-light').length) {
+    if ($('.navbar-light:not(.is-static)').length) {
         const $signupButton = $('.button-signup');
         $(window).on('scroll', function () {    // this will work when your window scrolled.
             var height = $(window).scrollTop();  //getting the scrolling height of window
@@ -19,6 +19,17 @@ $(document).ready(function($){
                 $signupButton.removeClass('secondary-btn').addClass('light-btn').addClass('btn-outlined');
             }
         }); 
+    }
+
+    //Scrollspy nav init
+    if ($('#scrollnav').length) {
+        var sticky = new Waypoint.Sticky({
+            element: $('#scrollnav')[0]
+        })
+        $(".scrollnav-tabs").scrollspy({ 
+            offset: -25,
+            activeClass: 'is-active'
+        });
     }
     
     //This code shows and hides the chat widget

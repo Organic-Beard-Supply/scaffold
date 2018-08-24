@@ -15,7 +15,7 @@ var assetspath =  'assets/';
 
 // Starts a BrowerSync instance
 gulp.task('server', ['build'], function(){
-    browser.init({server: './_site', port: port});
+    browser.init({server: './_site', open: false, port: port});
 });
 
 // Watch files for changes
