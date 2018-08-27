@@ -23,7 +23,8 @@ TABLE OF CONTENTS
 13. Portfolio page
 14. Blog main page
 15. Blog post
-16. Media queries
+16. Categories
+17. Media queries
 =============================================================================
 ***/
 
@@ -1482,7 +1483,93 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-16. Media queries
+16. Categories
+========================================================================== */
+
+.navbar-item, .navbar-link {
+  color: $white;
+  &.is-slide {
+      border-bottom: 1px solid transparent;
+      &:after {
+          content: '';
+          display: block;
+          width: 0;
+          min-width: 0;
+          height: 1px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: $white;
+          transition: width .3s;
+      }
+      &:hover {
+          &:after {
+              width: 100%
+          }
+      }
+  }
+}
+
+
+.category {
+  position: relative;
+  border-bottom: 1px solid transparent;
+  color: $primary !important;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    min-width: 0;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $primary;
+    transition: width .3s;
+  }
+
+  &:hover {
+    &:after {
+        width: 100%
+    }
+  }
+
+  &.is-first {
+    color: $red !important;
+
+    &:after {
+      background: $red;
+    }
+  }
+  
+  &.is-second {
+    color: $blue !important;
+
+    &:after {
+      background: $blue;
+    }
+  }
+  
+  &.is-third {
+    color: $green !important;
+
+    &:after {
+      background: $green;
+    }
+  }
+  
+  &.is-fourth {
+    color: $orange !important;
+
+    &:after {
+      background: $orange;
+    }
+  }
+}
+
+/* ==========================================================================
+17. Media queries
 ========================================================================== */
 
 //Mobile

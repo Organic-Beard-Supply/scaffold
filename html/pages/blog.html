@@ -4,7 +4,10 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
 ---
 
 <!-- Hero (Parallax) and nav -->
-<div class="hero has-background-image is-cover is-relative is-default is-bold" data-background="https://via.placeholder.com/1920x1080" data-color="#000" data-color-opacity="0.3">
+
+<!-- Photo options: Space: https://source.unsplash.com/4flhKx1sUdE/1920x1080, Wood planks w/ ivy: https://source.unsplash.com/07uiqD9LS6U/1920x1080 -->
+
+<div class="hero has-background-image is-cover is-relative is-default is-bold" data-background="https://source.unsplash.com/4flhKx1sUdE/1920x1080" data-color="#000" data-color-opacity="0.3">
   
   {{> om-navbar-static-light}}
 
@@ -15,16 +18,18 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
         <div class="column is-8 is-offset-2">
           <span class="tag squared is-medium is-primary pb-5">Featured Article</span>
           <div class="flex-card media-card media-card-left light-bordered light-raised">
-            <div class="columns is-gapless is-desktop">
+            <div class="columns is-gapless is-desktop no-padding-right no-padding-left">
               <div class="column is-4 media-stretch">
-                <a href="/post.html"><div class="media-card-image" data-background="https://source.unsplash.com/1080x1080/?meditate" style="background-image: url('https://source.unsplash.com/1080x810/?meditate');"></div></a>
+                <a href="/post.html">
+                  <div class="media-card-image" data-background="https://source.unsplash.com/1080x1080/?meditate" style="background-image: url('https://source.unsplash.com/1080x810/?meditate');"></div>
+                </a>
               </div>
               <div class="column content-column">
                 <div class="mcard-content">
                   <h2 class="mcard-title">
                     <a href="/post.html">The Absurdity of Expression</a>
                   </h2>
-                  <p class="mcard-description is-hidden-touch">If one examines Marxist socialism, one is faced with a choice: either accept cultural discourse or conclude that narrativity is capable of significance. <a href="/post.html">read more</a></p>
+                  <p class="mcard-description">If one examines Marxist socialism, one is faced with a choice: either accept cultural discourse or conclude that narrativity is capable of significance. <a href="/post.html">read more</a></p>
                 </div>
                 <div class="mcard-controls">
                   <div class="mcard-avatar">
@@ -32,7 +37,7 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
                   </div>
                   <div class="mcard-info">
                     <span>Joel Serino</span>
-                    <div><span>10 Mar</span> <i class="fa fa-circle"></i>  <span><a href="#" class="success-text">Category</a></span></div>
+                    <div><span>10 Mar</span> <i class="fa fa-circle"></i>  <span><a href="#" class="category is-third">Category</a></span></div>
                   </div>
                 </div>
               </div>
@@ -51,10 +56,10 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
     <div class="container">
         <div class="tabs scrollnav-tabs is-centered">
             <ul>
-                <li class="scrollnav-item"><a class="success-text" href="#">Category</a></li>
-                <li class="scrollnav-item"><a class="warning-text" href="#">Category</a></li>
-                <li class="scrollnav-item"><a class="info-text" href="#">Category</a></li>
-                <li class="scrollnav-item"><a class="danger-text" href="#">Category</a></li>
+                <li class="scrollnav-item"><a class="category is-first" href="#">Category</a></li>
+                <li class="scrollnav-item"><a class="category is-second" href="#">Category</a></li>
+                <li class="scrollnav-item"><a class="category is-third" href="#">Category</a></li>
+                <li class="scrollnav-item"><a class="category is-fourth" href="#">Category</a></li>
             </ul>
         </div>
     </div>  

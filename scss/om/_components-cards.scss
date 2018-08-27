@@ -15,6 +15,7 @@ TABLE OF CONTENTS
 5. Ressource cards
 6. Card variations
 7. Media cards
+8. Media queries
 =============================================================================
 ***/
 
@@ -780,15 +781,18 @@ TABLE OF CONTENTS
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
+        background-clip: content-box;
+        padding: 15px;
     }
     //content
     .mcard-content {
         padding: 20px;
         .mcard-title {
             line-height: 1.2!important;
-            font-size: 20px!important;
+            font-size: 1.8em !important;
             font-weight: 600;
             color: $blue-grey;
+            margin-bottom: 15px;
             a {
                 color: $blue-grey;
             }
@@ -849,4 +853,31 @@ TABLE OF CONTENTS
     .content-column {
         position: relative;
     }
+}
+
+/* ==========================================================================
+8. Media queries
+========================================================================== */
+
+//Mobile & Tablet
+@media (max-width: 768px) {
+  .media-card {
+    
+    //content
+    .mcard-content {
+      padding: 15px;
+      
+      .mcard-title {
+        margin-bottom: 0;
+      }
+      .mcard-description {
+        max-height: initial !important;
+      }
+    }
+  }
+}
+
+//Tablet orientation portrait
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  
 }
