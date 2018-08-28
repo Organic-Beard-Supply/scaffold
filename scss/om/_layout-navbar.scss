@@ -327,8 +327,16 @@ transition: all 0.3s;
 ========================================================================== */
 
 .navbar-item, .navbar-link {
-  font-size: 16px;
-  padding: 0.5rem 1rem;
+    font-size: 16px;
+}
+
+.navbar-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-link {
+    padding-left: 1rem;
 }
 
 .navbar-wrapper {
