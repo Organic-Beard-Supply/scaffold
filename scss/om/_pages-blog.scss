@@ -952,7 +952,9 @@ TABLE OF CONTENTS
             background-color: $fade-grey;
         }
         a {
+          &:not(.category){
             color: $primary;
+          }
             &.button {
                 color: $muted-grey;
                 font-weight: 500;
@@ -1500,35 +1502,15 @@ TABLE OF CONTENTS
 16. Categories
 ========================================================================== */
 
-.navbar-item, .navbar-link {
-  color: $white;
-  &.is-slide {
-      border-bottom: 1px solid transparent;
-      &:after {
-          content: '';
-          display: block;
-          width: 0;
-          min-width: 0;
-          height: 1px;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          background: $white;
-          transition: width .3s;
-      }
-      &:hover {
-          &:after {
-              width: 100%
-          }
-      }
-  }
-}
-
+$paradigm-category: $red;
+$surrealism-category: $blue;
+$expression-category: $green;
+$stories-category: $orange;
 
 .category {
   position: relative;
   border-bottom: 1px solid transparent;
-  color: $primary !important;
+  color: $primary;
 
   &.is-slide {
     &:after {
@@ -1544,7 +1526,7 @@ TABLE OF CONTENTS
       transition: width .3s;
     }
 
-    &:hover {
+    &:hover, &.is-active {
       &:after {
           width: 100%
       }
@@ -1552,35 +1534,56 @@ TABLE OF CONTENTS
   }
 
   &.is-paradigm {
-    color: $red !important;
+    color: $paradigm-category !important;
 
     &:after {
-      background: $red;
+      background: $paradigm-category;
     }
   }
   
   &.is-surrealism {
-    color: $blue !important;
+    color: $surrealism-category !important;
 
     &:after {
-      background: $blue;
+      background: $surrealism-category;
     }
   }
   
   &.is-expression {
-    color: $green !important;
+    color: $expression-category !important;
 
     &:after {
-      background: $green;
+      background: $expression-category;
     }
   }
   
   &.is-stories {
-    color: $orange !important;
+    color: $stories-category !important;
 
     &:after {
-      background: $orange;
+      background: $stories-category;
     }
+  }
+
+  &.tag {
+    color: $white !important;
+
+    &.is-paradigm {
+      background-color: $paradigm-category;
+    }
+  
+    &.is-surrealism {
+      background-color: $surrealism-category;
+    }
+  
+    &.is-expression {
+      background-color: $expression-category;
+    }
+
+    &.is-stories {
+      background-color: $stories-category;
+    }
+
   }
 }
 
