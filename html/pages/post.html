@@ -22,10 +22,10 @@ title: Same self care. Just a lower price.
       <div class="columns is-vcentered">
         <div class="column is-8 is-offset-2">
           <h2 class="subtitle is-5 pb-20 has-text-centered is-spaced">
-            <a class="info-text" href="#">Category</a>
+            <a href="#" class="category is-expression" href="#">Expression</a>
           </h2>
           <h1 class="title is-landing is-1 pb-20 has-text-centered">
-              Same self care. Just a lower price.
+              The Absurdity of Expression
           </h1>
           <div class="columns">
             <div class="column is-7" style="margin-left: auto; margin-right: auto;">
@@ -252,7 +252,7 @@ title: Same self care. Just a lower price.
                 post-title="The Absurdity of Expression"
                 post-excerpt="If one examines Marxist socialism, one is faced with a choice: either accept cultural discourse or conclude that narrativity is capable of significance."
                 post-category="Expression"
-                post-category-class="success-text"
+                post-category-class="category is-expression"
                 post-url="#"
                 }}
             </div>
@@ -265,7 +265,7 @@ title: Same self care. Just a lower price.
                 post-title="Reinventing Surrealism"
                 post-excerpt="If one examines subdialectic feminism, one is faced with a choice: either accept social realism or conclude that consciousness serves to reinforce sexism."
                 post-category="Surrealism"
-                post-category-class="info-text"
+                post-category-class="category is-surrealism"
                 post-url="#"
                 }}
             </div>
@@ -276,11 +276,9 @@ title: Same self care. Just a lower price.
                 publish-day="5"
                 publish-month="July"
                 post-title="The Paradigm of Context"
-                post-excerpt="If one examines the cultural paradigm of context, one is faced with a
-                choice: either reject Lacanist obscurity or conclude that the Constitution is
-                part of the defining characteristic of sexuality."
+                post-excerpt="If one examines the cultural paradigm of context, one is faced with a choice: either reject Lacanist obscurity or conclude that the Constitution is part of the defining characteristic of sexuality."
                 post-category="Paradigm"
-                post-category-class="danger-text"
+                post-category-class="category is-paradigm"
                 post-url="#"
                 }}
             </div>
@@ -292,57 +290,11 @@ title: Same self care. Just a lower price.
 <!-- /You may also like -->
 
 <!-- Subscribe -->
-<section class="section is-small section-feature-grey has-text-centered">
-      <div class="section-title-wrapper">
-          <!-- Title -->
-          <h2 class="title dark-text text-bold main-title is-2">
-              Get more stories like this one
-          </h2>
-          <h3 class="subtitle dark-text is-4">
-            Join our mailing list to have guidance, positive affirmation, and self care tips delivered directly to your inbox.
-          </h3>
-          <!-- /Title -->
-          <div class="columns">
-            <div class="column is-3"></div>
-            <div class="column is-6">
-                <div class="field has-addons">
-                    <div class="control is-expanded">
-                      <input class="input is-large" type="text" placeholder="Email Address">
-                    </div>
-                    <div class="control">
-                      <a class="button accent-btn is-large">
-                        Submit
-                      </a>
-                    </div>
-                  </div>
-            </div>
-          </div>
-          <p class="pt-10 light-grey-text">
-            <small><em>We respect you and your privacy - we will never share your information.</em></small>
-          </p>
-      </div> 
-</section>
+{{> om-blog-subscribe}}
 <!-- /Subscribe -->
 
 <!-- Join OM tribe -->
-<section id="embark" class="section is-small section-primary has-background-image has-text-centered"  data-background="/assets/images/bg/shapes/paisley-pattern.png" style="background-repeat: no-repeat; background-size: cover;">
-  <div class="colums">
-    <div class="column is-8 is-offset-2">
-        <div class="section-title-wrapper no-padding">
-          <!-- Title -->
-          <h2 class="title light-text text-bold main-title is-1 no-padding-top">
-              Discover. Connect. Serve.
-          </h2>
-          <h3 class="subtitle light-text">
-              A tribe of like minded men empowering each other by sharing valuable insight, ideas, challenges, stories, and vulnerabilities.
-          </h3>
-          <p>
-            {{> om-click-trigger class="button button-cta secondary-btn is-large raised"}}
-          </p>
-        </div>
-    </div>
-  </div>
-</section>
+{{> om-blog-join-tribe}}
 <!-- Join OM tribe -->
 
 {{> om-footer-light}}
