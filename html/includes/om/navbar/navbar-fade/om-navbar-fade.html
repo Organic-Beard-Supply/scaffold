@@ -144,10 +144,16 @@
 
             <!-- Navbar end -->
             <div class="navbar-end">
-                <!-- Signup button -->
-                <div class="navbar-item">
-                    {{> om-click-trigger class="button button-signup btn-align btn-outlined light-btn"}}
-                </div>
+              <!-- Global search (visible on mobile only) -->
+              <div class="navbar-item nav-icon search-icon modal-trigger is-hidden-mobile" data-modal="search-modal">
+                <i class="sl sl-icon-magnifier"></i>
+              </div>
+              <!-- /Global search -->
+
+              <!-- Signup button -->
+              <div class="navbar-item">
+                  {{> om-click-trigger class="button button-signup btn-align btn-outlined light-btn"}}
+              </div>
             </div>
         </div>
     </div>

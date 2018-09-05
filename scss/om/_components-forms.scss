@@ -310,6 +310,9 @@ textarea.textarea {
     }
     //light colors
     &.is-light {
+        input {
+            color: $white;
+        }
         input.material-input:focus ~ label, input:valid ~ label, textarea:focus ~ label {
             color: $white;
         }
