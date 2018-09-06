@@ -554,21 +554,44 @@ box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
         ul {
             border-bottom: none;
         }
-        ul li a {
-            color: $title-grey;
+        ul li {
+            a {
+                color: $title-grey;
+            }
+
+            &.scrollnav-item {
+                &:hover a {
+                    color: $accent;
+                    border-bottom-color: $accent;
+                }
+
+                &.is-active a {
+                    color: $accent;
+                    border-bottom: 2px solid $accent;
+                }
+
+                a.there {
+                    color: $accent;
+                    border-bottom: 2px solid $accent;
+                }
+            }
         }
-        ul li:hover a {
-            color: $accent;
-            border-bottom-color: $accent;
-        }
-        ul li.is-active a {
-            color: $accent;
-            border-bottom: 2px solid $accent;
-        }
-        ul li a.there {
-            color: $accent;
-            border-bottom: 2px solid $accent;
-        }
+
+        // ul li a {
+        //     color: $title-grey;
+        // }
+        // ul li:hover a {
+        //     color: $accent;
+        //     border-bottom-color: $accent;
+        // }
+        // ul li.is-active a {
+        //     color: $accent;
+        //     border-bottom: 2px solid $accent;
+        // }
+        // ul li a.there {
+        //     color: $accent;
+        //     border-bottom: 2px solid $accent;
+        // }
     }
 }
 
