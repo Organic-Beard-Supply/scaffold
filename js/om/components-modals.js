@@ -7,22 +7,6 @@ Bulma modals implementation
 $(document).ready(function($){
     
     "use strict";
-
-    const $searchModal = $('#search-modal')
-    if ($searchModal) {
-        const $searchInput = $searchModal.find('input');
-        
-        $searchInput.on('keyup', function () {
-           if (this.value.length > 3) {
-            //- mimic a search by showing a loader
-            //- fade in UP so that the search input doesn't jump to top of results
-            //- set height of '.search-results' + search input (or, '.modal-content') based on screen height
-            $('.search-results').fadeIn();
-           } else {
-            $('.search-results').fadeOut();   
-           }
-        });
-    }
     
     //main variable
     var modalID;
