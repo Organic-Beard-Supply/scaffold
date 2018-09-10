@@ -1,23 +1,56 @@
-/*! components-modals.js | OM  */
+/*! search.js | OM  */
 
 /* ==========================================================================
-Bulma modals implementation
+Search implementation
 ========================================================================== */
+
+const parseQueryString = function() {
+  let str = window.location.search,
+      objURL = {};
+
+  str.replace(
+      new RegExp( "([^?=&]+)(=([^&]*))?", "g" ),
+      function( $0, $1, $2, $3 ){
+          objURL[ $1 ] = $3;
+      }
+  );
+  return objURL;
+};
+
+const $searchInput = $('#search-input');
+
+const setSearchVal = function(value) {
+  let params = parseQueryString(),
+      val = value || params && decodeURIComponent(params.q);
+  
+  if (val) {
+    $searchInput.val(val);
+    $searchInput.focus();
+  }
+}
 
 $(document).ready(function($){
     
   "use strict";
 
-  const $searchModal = $('#search-modal');
+  const $searchModal = $('#search-modal'),
+        location = window.location,
+        isSearchPage = !!location.pathname.includes('search');
+
+  if (isSearchPage) { setSearchVal(); }
 
   if ($searchModal) {
-    const $searchInput = $searchModal.find('input');
+    const $searchModuleInput = $searchModal.find('input');
     
-    $searchInput.on('keyup', function (e) {
+    $searchModuleInput.on('keyup', function (e) {
       if (e.keyCode == 13) {
         if (this.value.length > 0) {
-          //- add some kind of encode for search param
-          window.location.href = '/search.html?' + this.value;
+          // if (isSearchPage) {
+          //   setSearchVal(this.value);
+          // } else {
+            //- add some kind of encode for search param
+            window.location.href = '/search.html?q=' + encodeURIComponent(this.value);
+          // }
         }
       } else {
         if (this.value.length > 2) {
@@ -32,4 +65,20 @@ $(document).ready(function($){
     });
   }
 
+  if ($searchInput) {
+    const $searchResults = $('#featured-blog-articles'),
+          $pagination = $('#article-pagination');
+    $searchInput.on('keyup', _.debounce(function (e) {
+      if (this.value.length > 2) {
+        $pagination.hide();
+        $searchResults.fadeOut(400, () => {
+          setTimeout(()=> {
+            $searchResults.fadeIn();
+            $pagination.show();
+          }, 300);
+        });
+      }
+    }, 500))
+  }
+  
 })

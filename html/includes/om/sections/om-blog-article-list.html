@@ -10,7 +10,7 @@
               </div>
               <!-- /Title -->
               <!-- Featured Posts -->
-              <div class="columns is-multiline">
+              <div id="featured-blog-articles" class="columns is-multiline">
                 <div class="column is-6">
                     {{> om-featured-post-preview
                       img-src="https://source.unsplash.com/1200x300/?meditate"
@@ -151,25 +151,27 @@
               </div>
               <!-- /Featured Posts -->
               <!-- Pagination -->
-              <p class="has-text-centered pb-30">Showing 1 – 8 of 245 Articles</p>  
-              <div class="columns is-centered">
-                <div class="column is-narrow">
-                  <nav class="pagination is-centered is-medium" role="navigation" aria-label="pagination">
-                    <a class="pagination-previous">Previous</a>
-                    <ul class="pagination-list">
-                      <li><a class="pagination-link is-current" aria-label="Goto page 1">1</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 4">4</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 5">5</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 6">6</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 7">7</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 8">8</a></li>
-                      <li><a class="pagination-link" aria-label="Page 9" aria-current="page">9</a></li>
-                      <li><a class="pagination-link" aria-label="Goto page 10">10</a></li>
-                    </ul>
-                    <a class="pagination-next">Next page</a>
-                  </nav>
+              <div id="article-pagination">
+                <p class="has-text-centered pb-30">Showing 1 – 8 of 245 Articles</p>  
+                <div class="columns is-centered">
+                  <div class="column is-narrow">
+                    <nav class="pagination is-centered is-medium" role="navigation" aria-label="pagination">
+                      <a class="pagination-previous">Previous</a>
+                      <ul class="pagination-list">
+                        <li><a class="pagination-link is-current" aria-label="Goto page 1">1</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 4">4</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 5">5</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 6">6</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 7">7</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 8">8</a></li>
+                        <li><a class="pagination-link" aria-label="Page 9" aria-current="page">9</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 10">10</a></li>
+                      </ul>
+                      <a class="pagination-next">Next page</a>
+                    </nav>
+                  </div>
                 </div>
               </div>
               <!-- /Pagination -->
