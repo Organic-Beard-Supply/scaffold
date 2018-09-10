@@ -23,7 +23,7 @@ const setSearchVal = function(value) {
   let params = parseQueryString(),
       val = value || params && decodeURIComponent(params.q);
   
-  if (val) {
+  if (val && typeof val != 'undefined' && val !='undefined') {
     $searchInput.val(val);
     $searchInput.focus();
   }
