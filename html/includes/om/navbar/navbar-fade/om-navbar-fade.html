@@ -28,30 +28,132 @@
         <div class="navbar-menu">
             <!-- Navbar Start -->
             <div class="navbar-start">
-                <!-- Navbar item -->
-                <a class="navbar-item is-slide" href="/#mission">
-                    Mission
+                <!-- Dropdown (desktop) -->
+                <div class="navbar-item has-dropdown is-hoverable is-hidden-mobile">
+                  <a class="navbar-link" href="javascript:void(0);">
+                      About 
+                  </a>
+                  <div class="navbar-dropdown is-boxed is-medium">
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#mission">
+                      <span>Our Mission</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#how-it-works">
+                      <span>How It Works</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#stories">
+                      <span>Testimonials</span>
+                    </a>
+                  </div>
+                </div>
+        
+                <!-- Dropdown (desktop) -->
+                <div class="navbar-item has-dropdown is-hoverable is-hidden-mobile">
+                  <a class="navbar-link" href="javascript:void(0);">
+                      Discover 
+                  </a>
+                  <div class="navbar-dropdown is-boxed is-medium">
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#paths">
+                      <span>A Personal Path</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#journeys">
+                      <span>A Guided Journey</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#communities">
+                      <span>A Supportive Tribe</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#gatherings">
+                      <span>Powerful Gatherings</span>
+                    </a>
+                  </div>
+                </div>
+        
+                <!-- Dropdown (desktop) -->
+                {{!-- <div class="navbar-item has-dropdown is-hoverable is-hidden-mobile">
+                  <a class="navbar-link" href="/blog.html">
+                      Blog
+                  </a>
+                  <div class="navbar-dropdown is-boxed is-medium">
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/blog.html">
+                      <span>Featured Articles</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/category.html">
+                      <span>Paradigm</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/category.html">
+                      <span>Surrealism</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/category.html">
+                      <span>Expression</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/category.html">
+                      <span>Stories</span>
+                    </a>
+                  </div>
+                </div> --}}
+        
+                <!-- Dropdown (desktop) -->
+                <div class="navbar-item has-dropdown is-hoverable is-hidden-mobile">
+                  <a class="navbar-link" target="_blank" href="https://organic-man.kayako.com/">
+                    Support
+                  </a>
+                  <div class="navbar-dropdown is-boxed is-medium">
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu is-kayako-click-trigger" href="javascript:void(0)">
+                      <span>Live Chat</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" href="/#faq">
+                      <span>FAQ</span>
+                    </a>
+                    <!-- Dropdown item -->
+                    <a class="navbar-item is-menu" target="_blank" href="https://organic-man.kayako.com/">
+                      <span>Help Desk</span>
+                    </a>
+                  </div>
+                </div>
+        
+                <!-- Navbar item (mobile) -->
+                <a class="navbar-item is-hidden-desktop" href="/#mission">
+                  Our Mission
                 </a>
-                <!-- Navbar item -->
-                <a class="navbar-item is-slide" href="/#how-it-works">
-                    How It Works
+                <!-- Navbar item (mobile) -->
+                <a class="navbar-item is-hidden-desktop" href="/#how-it-works">
+                  How It Works
                 </a>
-                <!-- Navbar item -->
-                <a class="navbar-item is-slide" href="/#stories">
-                    Stories
+                <!-- Navbar item (mobile) -->
+                {{!-- <a class="navbar-item is-hidden-desktop" href="/blog.html">
+                  Blog
+                </a> --}}
+                <!-- Navbar item (mobile) -->
+                <a class="navbar-item is-hidden-desktop" href="/#stories">
+                  Testimonials
                 </a>
-                <!-- Navbar item -->
-                <a class="navbar-item is-slide" href="/#faq">
-                    FAQ
+                <!-- Navbar item (mobile) -->
+                <a class="navbar-item is-hidden-desktop" href="/#faq">
+                  FAQ
                 </a>
-            </div>
+              </div>
 
             <!-- Navbar end -->
             <div class="navbar-end">
-                <!-- Signup button -->
-                <div class="navbar-item">
-                    {{> om-click-trigger class="button button-signup btn-align btn-outlined light-btn"}}
-                </div>
+                {{!-- {{> om-search-modal-trigger is-navbar-item="true"}} --}}
+
+              <!-- Signup button -->
+              <div class="navbar-item">
+                  {{> om-click-trigger class="button button-signup btn-align btn-outlined light-btn"}}
+              </div>
             </div>
         </div>
     </div>

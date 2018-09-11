@@ -1,0 +1,49 @@
+---
+layout: om
+title: Organic Man Search | Guidance, positive affirmation, and self care tips
+---
+
+<!-- Hero and nav -->
+<div class="hero has-background-image is-cover is-relative is-default is-bold" style="background-position-y: 85%;" data-background="https://source.unsplash.com/gNYxek2hNx8/1920x1080" data-color="#000" data-color-opacity="0.3">
+  
+  {{> om-navbar-static-light}}
+
+    <!-- Search title -->
+    <div id="main-hero" class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered pt-20 pb-40">
+                <div class="column"></div>
+                <div class="column is-9">
+                    <div class="help-subheader">
+                        <h2 class="title light-text is-3">Intention creates our reality. What will you create?</h2>
+                    </div>
+                    <div class="help-search-wrapper">
+                      <input id="search-input" type="text" placeholder="Search articles">
+                      <i class="sl sl-icon-magnifier"></i>
+                    </div>
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /Search title -->
+</div>
+<!-- /Hero and nav -->
+
+<!-- Scrollnav -->
+{{> om-navbar-scroll-blog}}
+<!-- /Scrollnav -->
+
+<!-- Blog post list section -->
+{{> om-blog-article-list title="Search Results"}}
+<!-- /Blog post list section -->
+
+<!-- Subscribe -->
+{{> om-blog-subscribe}}
+<!-- /Subscribe -->
+
+<!-- Join OM tribe -->
+{{> om-blog-join-tribe}}
+<!-- Join OM tribe -->
+
+{{> om-footer-light}}

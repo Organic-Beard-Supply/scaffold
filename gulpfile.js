@@ -464,6 +464,7 @@ gulp.task('compile-js', function() {
         nodepath + 'chart.js/dist/Chart.bundle.min.js',
         nodepath + 'billboard.js/dist/billboard.min.js',
         nodepath + 'wallop/js/Wallop.min.js',
+        nodepath + 'lodash/dist/lodash.min.js',
         //Additional static js assets
         assetspath + 'js/highlight/highlight.min.js',
         assetspath + 'js/ggpopover/ggpopover.min.js',

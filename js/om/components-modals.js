@@ -10,14 +10,17 @@ $(document).ready(function($){
     
     //main variable
     var modalID;
-    
+
     //Triggering a modal
     $('.modal-trigger').on("click", function(){
         modalID = $(this).attr('data-modal');
-        $('#' + modalID).toggleClass('is-active');
-        $('#' + modalID + ' .modal-background').toggleClass('scaleInCircle');
-        $('#' + modalID + ' .modal-content').toggleClass('scaleIn');
-        $('#' + modalID + ' .modal-close').toggleClass('is-hidden');
+        let $modal = $('#' + modalID);
+
+        $modal.toggleClass('is-active');
+        $modal.find('.modal-background').toggleClass('scaleInCircle');
+        $modal.find('.modal-content').toggleClass('scaleIn');
+        $modal.find('.modal-close').toggleClass('is-hidden');
+
         //Prevent sticky fixed nav and backtotop from overlapping modal
         $('#scrollnav, #backtotop').toggleClass('is-hidden');
         //Prevent body from scrolling when scrolling inside modal
@@ -26,13 +29,18 @@ $(document).ready(function($){
                 $('body').addClass('is-fixed');
             }
         }, 700);
+
+        //Autofocus on first input
+        $modal.find('.modal-content').find('input:first').focus();
     });
 
     //Closing a modal
-    $('.modal-close, .modal-dismiss').on("click", function(){
-        $('#' + modalID + ' .modal-background').toggleClass('scaleInCircle');
-        $('#' + modalID + ' .modal-content').toggleClass('scaleIn');
-        $('#' + modalID + ' .modal-close').toggleClass('is-hidden');
+    $('.modal-close, .modal-dismiss').on("click", function() {
+        let $modal = $('#' + modalID);
+        $modal.find('.modal-background').toggleClass('scaleInCircle');
+        $modal.find('.modal-content').toggleClass('scaleIn');
+        $modal.find('.modal-close').toggleClass('is-hidden');
+
         //Restore native body scroll
         if ($('.dashboard-wrapper').length) {
             $('body').removeClass('is-fixed');

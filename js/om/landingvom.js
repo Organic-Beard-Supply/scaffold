@@ -22,6 +22,12 @@ $(document).ready(function($){
     }
 
     //Scrollspy nav init
+    if ($('#stickynav').length) {
+        var sticky = new Waypoint.Sticky({
+            element: $('#stickynav')[0]
+        })
+    }
+
     if ($('#scrollnav').length) {
         var sticky = new Waypoint.Sticky({
             element: $('#scrollnav')[0]

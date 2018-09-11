@@ -327,8 +327,16 @@ transition: all 0.3s;
 ========================================================================== */
 
 .navbar-item, .navbar-link {
-  font-size: 16px;
-  padding: 0.5rem 1rem;
+    font-size: 16px;
+}
+
+.navbar-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-link {
+    padding-left: 1rem;
 }
 
 .navbar-wrapper {
@@ -546,21 +554,44 @@ box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
         ul {
             border-bottom: none;
         }
-        ul li a {
-            color: $title-grey;
+        ul li {
+            a {
+                color: $title-grey;
+            }
+
+            &.scrollnav-item {
+                &:hover a {
+                    color: $accent;
+                    border-bottom-color: $accent;
+                }
+
+                &.is-active a {
+                    color: $accent;
+                    border-bottom: 2px solid $accent;
+                }
+
+                a.there {
+                    color: $accent;
+                    border-bottom: 2px solid $accent;
+                }
+            }
         }
-        ul li:hover a {
-            color: $accent;
-            border-bottom-color: $accent;
-        }
-        ul li.is-active a {
-            color: $accent;
-            border-bottom: 2px solid $accent;
-        }
-        ul li a.there {
-            color: $accent;
-            border-bottom: 2px solid $accent;
-        }
+
+        // ul li a {
+        //     color: $title-grey;
+        // }
+        // ul li:hover a {
+        //     color: $accent;
+        //     border-bottom-color: $accent;
+        // }
+        // ul li.is-active a {
+        //     color: $accent;
+        //     border-bottom: 2px solid $accent;
+        // }
+        // ul li a.there {
+        //     color: $accent;
+        //     border-bottom: 2px solid $accent;
+        // }
     }
 }
 
