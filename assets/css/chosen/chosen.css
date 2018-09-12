@@ -428,8 +428,8 @@ TABLE OF CONTENTS
     border: none !important;
     outline: none !important;
     display: none !important;
-    &:active, &:focus {
-        border: none !important;
-        outline: none !important;
-    }
+}
+.chosen-single .chosen-search-input:active, .chosen-single .chosen-search-input:focus {
+    border: none !important;
+    outline: none !important;
 }
