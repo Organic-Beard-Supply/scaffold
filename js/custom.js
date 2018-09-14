@@ -8,25 +8,27 @@ $(document).ready(function($){
     
     "use strict";
     
-    //Customize Kayako messenger and functionality
-    //IMPORTANT: These colors can be found in /scss/om/_theme-deep-blue.scss
-    const styles = { primaryColor: '#e4a36d', homeBackground: '#159097', homeTextColor: '#ffffff' }
-    kayako.config = { styles }
-
-    const toggleMessenger = e => {
-      if (kayako) {
-        kayako.visibility() === 'minimized' ? kayako.maximize() : kayako.minimize();
-      } else {
-        window.location.href = "mailto:hello@organicman.eco";
-      }
-      e.preventDefault()
-    }
-    
     if (kayako) {
-      kayako.ready(() => $('.is-kayako-click-trigger').on('click', e => toggleMessenger(e)))
+      kayako.config = { //colors can be found in /scss/om/themes/_om.scss
+        primaryColor: '#e4a36d',
+        homeBackground: '#159097',
+        homeTextColor: '#ffffff'
+      }
     }
 
-    //Toggle the sign up button color when solid navbar comes in
+    const $kayakoClickTrigger = $('.is-kayako-click-trigger');
+    if ($kayakoClickTrigger) {
+      $kayakoClickTrigger.on('click', e => {
+        e.preventDefault()
+        if (kayako) {
+          kayako.visibility() === 'minimized' ? kayako.maximize() : kayako.minimize();
+        } else {
+          window.location.href = "mailto:hello@organicman.eco";
+        }
+      })
+    }
+
+    //Toggle the nav CTA styling when scrolling navbar comes in
     if ($('.navbar-light:not(.is-static)').length) {
         const $signupButton = $('.button-signup');
         $(window).on('scroll', function () {    // this will work when your window scrolled.
@@ -55,17 +57,10 @@ $(document).ready(function($){
             activeClass: 'is-active'
         });
     }
-    
-    //This code shows and hides the chat widget
-    $('#bulchat div, .close-chat img').on("click", function(){
-        $('#chat-widget').slideToggle();
-        $('.chat-widget-body').toggleClass('is-opened is-closed');
-        $('#bulchat div').toggleClass('close open');
-        $('#bulchat, .close-chat img').toggleClass('close open');
-    })
+
 
     //Scroll reveal definitions
-    
+
     // Declaring defaults
     window.sr = ScrollReveal();
 
