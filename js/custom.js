@@ -1,13 +1,31 @@
-/*! landingv2.js | OM  */
+/*! custom.js | OM  */
 
 /* ==========================================================================
-Scaffold kit om JS file 
+Om landing page JS file 
 ========================================================================== */
 
 $(document).ready(function($){
     
     "use strict";
     
+    //Customize Kayako messenger and functionality
+    //IMPORTANT: These colors can be found in /scss/om/_theme-deep-blue.scss
+    const styles = { primaryColor: '#e4a36d', homeBackground: '#159097', homeTextColor: '#ffffff' }
+    kayako.config = { styles }
+
+    const toggleMessenger = e => {
+      if (kayako) {
+        kayako.visibility() === 'minimized' ? kayako.maximize() : kayako.minimize();
+      } else {
+        window.location.href = "mailto:hello@organicman.eco";
+      }
+      e.preventDefault()
+    }
+    
+    if (kayako) {
+      kayako.ready(() => $('.is-kayako-click-trigger').on('click', e => toggleMessenger(e)))
+    }
+
     //Toggle the sign up button color when solid navbar comes in
     if ($('.navbar-light:not(.is-static)').length) {
         const $signupButton = $('.button-signup');

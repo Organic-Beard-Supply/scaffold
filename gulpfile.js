@@ -131,25 +131,38 @@ gulp.task('compile-css', () => {
     .pipe(gulp.dest('./_site/assets/css/'));
 });
 
-// Compile js from node modules
-gulp.task('compile-js', () => {
-  const jsSource = [ 
+// Compile blocking js
+gulp.task('compile-blocking-js', () => {
+  const jsSource = [
     nodepath + 'jquery/dist/jquery.min.js', 
-    nodepath + 'slick-carousel/slick/slick.min.js', 
     nodepath + 'jquery-ui-dist/jquery-ui.min.js',
+    nodepath + 'lodash/dist/lodash.min.js',
+  ];
+
+  return gulp.src(jsSource)
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('./_site/assets/js/'));
+})
+
+// Compile js from node modules
+gulp.task('compile-vendor-js', () => {
+  const jsSource = [ 
+    nodepath + 'slick-carousel/slick/slick.min.js', 
     nodepath + 'scrollreveal/dist/scrollreveal.min.js',
     nodepath + 'waypoints/lib/jquery.waypoints.min.js',
     nodepath + 'waypoints/lib/shortcuts/sticky.min.js',
-    nodepath + 'lodash/dist/lodash.min.js',
     
     //Additional static js assets
     assetspath + 'js/ggpopover/ggpopover.min.js',
     assetspath + 'js/ggpopover/ggtooltip.js',
     assetspath + 'js/scrollspy/scrollspy.min.js',
+    assetspath + 'js/kayako/kayako.js',
+    assetspath + 'js/shopify/buy-button.js',
+    assetspath + 'js/sumome/sumome.js'
   ]; 
 
   return gulp.src(jsSource)
-    .pipe(concat('app.js'))
+    .pipe(concat('vendors.js'))
     .pipe(gulp.dest('./_site/assets/js/'));
 });
 
@@ -170,5 +183,5 @@ gulp.task('copy-images', () => {
 });
 
 gulp.task('init', ['setupBulma']);
-gulp.task('build', ['clean','copy', 'compile-js', 'compile-css', 'copy-js', 'compile-sass-bulma', 'compile-scss-om', 'compile-html', 'copy-images']);
+gulp.task('build', ['clean','copy', 'compile-blocking-js', 'compile-vendor-js', 'compile-css', 'copy-js', 'compile-sass-bulma', 'compile-scss-om', 'compile-html', 'copy-images']);
 gulp.task('default', ['server', 'watch']);

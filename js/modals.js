@@ -1,7 +1,7 @@
-/*! components-modals.js | OM  */
+/*! modals.js | OM  */
 
 /* ==========================================================================
-Bulma modals implementation
+Modals implementation
 ========================================================================== */
 
 $(document).ready(function($){
