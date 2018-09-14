@@ -68,6 +68,13 @@ TABLE OF CONTENTS
     }
     //Reverse slant on container
     .container {
+        padding-right: 15px;
+        background: $white;
+	    padding-left: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+	    width: 100%;
+
         z-index: 1;
         &.is-reverse-skewed-sm {
             transform: skew(0deg,3deg) translate(0,45px);
@@ -276,7 +283,3 @@ TABLE OF CONTENTS
         color: $placeholder;
     }
 }
-
-
-
-

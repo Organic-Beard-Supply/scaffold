@@ -50,29 +50,14 @@ gulp.task('setupBulma', function() {
     gulp.src([nodepath + 'bulma/**/*.sass']).pipe(gulp.dest('bulma/'));
 });
 
-// Copy Bulma extensions Sass into Bulma development folder
-gulp.task('extendBulma', function() {
-    gulp.src([nodepath + 'bulma-extensions/bulma-iconpicker/dist/bulma-iconpicker.sass']).pipe(gulp.dest('bulma/sass/extensions/'));
-    gulp.src([nodepath + 'bulma-extensions/bulma-divider/dist/bulma-divider.sass']).pipe(gulp.dest('bulma/sass/extensions/'));
-    gulp.src([nodepath + 'bulma-extensions/bulma-tagsinput/dist/bulma-tagsinput.sass']).pipe(gulp.dest('bulma/sass/extensions/'));
-    gulp.src([nodepath + 'bulma-extensions/bulma-steps/dist/bulma-steps.sass']).pipe(gulp.dest('bulma/sass/extensions/'));
-    gulp.src([nodepath + 'bulma-extensions/bulma-calendar/dist/bulma-calendar.sass']).pipe(gulp.dest('bulma/sass/extensions/'));
-});
-
 // Copy static assets
 gulp.task('copy', function() {
     gulp.src(['assets/css/icons.min.css']).pipe(gulp.dest('_site/assets/css/'));
-    //gulp.src([nodepath + 'bulma-extensions/bulma-iconpicker/dist/bulma-iconpicker.js']).pipe(gulp.dest('js/extensions/'));
     
     //Copy other external font and data assets
     gulp.src(['assets/fonts/**/*']).pipe(gulp.dest('_site/assets/fonts/'));
-    //gulp.src([nodepath + 'datedropper/dd-icon/**/*']).pipe(gulp.dest('_site/assets/css/dd-icon/'));
-    //gulp.src([nodepath + 'wickedpicker/fonts/**/*']).pipe(gulp.dest('_site/assets/fonts/'));
-    
     gulp.src([nodepath + 'slick-carousel/slick/fonts/**/*']).pipe(gulp.dest('_site/assets/css/fonts/'));
     gulp.src([nodepath + 'slick-carousel/slick/ajax-loader.gif']).pipe(gulp.dest('_site/assets/css/'));
-    
-    //gulp.src(['assets/data/**/*']).pipe(gulp.dest('_site/assets/data/'));
 });
 
 // Sass variables
@@ -149,23 +134,7 @@ gulp.task('compile-html', function() {
         .pipe(panini({
         root: 'html/pages/',
         layouts: 'html/layouts/',
-        pageLayouts: {
-            // ie - all pages inside pages/one will use the default.html layout
-            'one': 'one',
-            'two': 'two',
-            'three': 'three',
-            'four': 'four',
-            'five': 'five',
-            'six': 'six',
-            'seven': 'seven',
-            'om': 'om',
-            'components': 'components',
-            'dashboard': 'dashboard',
-            'docs': 'docs'
-        },
-        partials: 'html/includes/',
-        helpers: 'html/helpers/',
-        data: 'html/data/'
+        partials: 'html/includes/'
     }))
         .pipe(gulp.dest('_site'))
         .on('finish', browser.reload);
@@ -178,29 +147,14 @@ gulp.task('compile-html:reset', function(done) {
 
 // Compile css from node modules
 gulp.task('compile-css', function() {
-    return gulp.src([ 
-        //nodepath + 'izitoast/dist/css/iziToast.min.css', 
-        nodepath + 'slick-carousel/slick/slick.css',
-        nodepath + 'slick-carousel/slick/slick-theme.css',
-        //nodepath + 'wickedpicker/dist/wickedpicker.min.css',
-        //nodepath + 'billboard.js/dist/billboard.min.css',
-        //nodepath + 'datedropper/datedropper.min.css',
-        //nodepath + 'timedropper/timedropper.min.css',
-        nodepath + 'wallop/css/wallop.css',
-        //nodepath + 'easy-autocomplete/dist/easy-autocomplete.min.css',
-        nodepath + 'jquery-ui-dist/jquery-ui.min.css',
-        
-        //Additional static css assets
-        //assetspath + 'css/icons.min.css',
-        //assetspath + 'css/datepicker/datepicker.css',
-        //assetspath + 'css/chosen/chosen.css',
-        //assetspath + 'js/fileuploader/jquery.fileuploader.min.css',
-        //assetspath + 'css/docs/prettify.css',
-        //assetspath + 'css/docs/style.css',
-
-    ])
-        .pipe(concat('app.css'))
-        .pipe(gulp.dest('./_site/assets/css/'));
+  return gulp.src([ 
+    nodepath + 'slick-carousel/slick/slick.css',
+    nodepath + 'slick-carousel/slick/slick-theme.css',
+    nodepath + 'wallop/css/wallop.css',
+    nodepath + 'jquery-ui-dist/jquery-ui.min.css'
+  ])
+    .pipe(concat('app.css'))
+    .pipe(gulp.dest('./_site/assets/css/'));
 });
 
 // Compile js from node modules
@@ -208,49 +162,16 @@ gulp.task('compile-js', function() {
     return gulp.src([ 
         nodepath + 'jquery/dist/jquery.min.js', 
         nodepath + 'slick-carousel/slick/slick.min.js', 
-        //nodepath + 'izitoast/dist/js/iziToast.min.js',
-        //nodepath + 'chosen-js/chosen.jquery.min.js',
         nodepath + 'jquery-ui-dist/jquery-ui.min.js',
         nodepath + 'scrollreveal/dist/scrollreveal.min.js',
-        //nodepath + 'peity/jquery.peity.min.js',
-        //nodepath + 'vivus/dist/vivus.min.js',
-        //nodepath + 'covervid/covervid.min.js',
         nodepath + 'waypoints/lib/jquery.waypoints.min.js',
         nodepath + 'waypoints/lib/shortcuts/sticky.min.js',
-        //nodepath + 'jquery.counterup/jquery.counterup.min.js',
-        //nodepath + '@claviska/jquery-dropdown/jquery.dropdown.min.js',
-        //nodepath + '@fengyuanchen/datepicker/dist/datepicker.min.js',
-        //nodepath + 'wickedpicker/dist/wickedpicker.min.js',
-        //nodepath + 'datedropper/datedropper.min.js',
-        //nodepath + 'timedropper/timedropper.min.js',
-        //nodepath + 'easy-autocomplete/dist/jquery.easy-autocomplete.min.js',
-        //nodepath + 'jquery-tags-input/dist/jquery.tagsinput.min.js',
-        //nodepath + 'jqvmap/dist/jquery.vmap.min.js',
-        //nodepath + 'jqvmap/dist/maps/jquery.vmap.usa.js',
-        //nodepath + 'jqvmap/dist/data/jquery.vmap.sampledata.js',
-        //nodepath + 'paper/dist/paper-full.min.js',
-        //nodepath + 'd3/dist/d3.min.js',
-        //nodepath + 'chart.js/dist/Chart.bundle.min.js',
-        //nodepath + 'billboard.js/dist/billboard.min.js',
-        //nodepath + 'wallop/js/Wallop.min.js',
         nodepath + 'lodash/dist/lodash.min.js',
         
         //Additional static js assets
-        //assetspath + 'js/highlight/highlight.min.js',
         assetspath + 'js/ggpopover/ggpopover.min.js',
         assetspath + 'js/ggpopover/ggtooltip.js',
         assetspath + 'js/scrollspy/scrollspy.min.js',
-        //assetspath + 'js/fileuploader/jquery.fileuploader.min.js',
-        //assetspath + 'js/embed/embed.js',
-        //assetspath + 'js/gmap/gmap.min.js',
-        //assetspath + 'js/datatable/datatable.min.js',
-        //assetspath + 'js/docs/prettify.min.js',
-        
-        //Bulma Extensions js
-        //nodepath + 'bulma-extensions/bulma-iconpicker/dist/bulma-iconpicker.min.js',
-        //nodepath + 'bulma-extensions/bulma-tagsinput/dist/bulma-tagsinput.min.js',
-        //nodepath + 'bulma-extensions/bulma-steps/dist/bulma-steps.min.js',
-        //nodepath + 'bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js',
     ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./_site/assets/js/'));
