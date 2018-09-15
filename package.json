@@ -7,7 +7,6 @@
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.24.5",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.1.0",
     "gulp-sass": "^2.2.0",
@@ -15,7 +14,6 @@
     "jquery": "^3.3.1",
     "mq4-hover-shim": "^0.3.0",
     "panini": "^1.6.2",
-    "popper.js": "^1.12.3",
     "rimraf": "^2.5.2"
   },
   "engines": {
