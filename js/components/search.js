@@ -68,7 +68,7 @@ $(document).ready(function($){
   if ($searchInput) {
     const $searchResults = $('#featured-blog-articles'),
           $pagination = $('#article-pagination');
-    $searchInput.on('keyup', _.debounce(function (e) {
+    $searchInput.on('keyup', function (e) {
       if (this.value.length > 2) {
         $pagination.hide();
         $searchResults.fadeOut(400, () => {
@@ -78,7 +78,7 @@ $(document).ready(function($){
           }, 300);
         });
       }
-    }, 500))
+    })
   }
   
 })

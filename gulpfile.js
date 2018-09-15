@@ -135,8 +135,7 @@ gulp.task('compile-css', () => {
 gulp.task('compile-blocking-js', () => {
   const jsSource = [
     nodepath + 'jquery/dist/jquery.min.js', 
-    nodepath + 'jquery-ui-dist/jquery-ui.min.js',
-    nodepath + 'lodash/dist/lodash.min.js',
+    nodepath + 'jquery-ui-dist/jquery-ui.min.js'
   ];
 
   return gulp.src(jsSource)
