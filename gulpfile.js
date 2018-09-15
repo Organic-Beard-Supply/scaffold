@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 var mq4HoverShim = require('mq4-hover-shim');
 var rimraf = require('rimraf').sync;
 var browser = require('browser-sync');
@@ -83,7 +84,8 @@ var sassProcessors = [
       "Android >= 4.4",
       "Opera >= 30"
     ]
-  })
+  }),
+  cssnano()
 ];
 
 const compileSass = (file) => {
