@@ -1,13 +1,12 @@
 ---
-layout: om
 title: Organic Man Blog | Guidance, positive affirmation, and self care tips
 ---
 
-<!-- Hero (Parallax) and nav -->
+<!-- Hero and nav -->
 
 <!-- Photo options: Space: https://source.unsplash.com/4flhKx1sUdE/1920x1080, Wood planks w/ ivy: https://source.unsplash.com/07uiqD9LS6U/1920x1080 -->
 
-<div class="hero has-background-image is-cover is-relative is-default is-bold" data-background="https://source.unsplash.com/07uiqD9LS6U/1920x1080" data-color="#000" data-color-opacity="0.3">
+<div class="hero has-background-image is-cover is-relative is-default is-bold parallax" data-background="https://source.unsplash.com/07uiqD9LS6U/1920x1080" data-color="#000" data-color-opacity="0.3">
   
   {{> om-navbar-static-light}}
 
@@ -52,19 +51,19 @@ title: Organic Man Blog | Guidance, positive affirmation, and self care tips
 <!-- /Hero and nav -->
 
 <!-- Scrollnav -->
-{{> om-navbar-scroll-blog expression-is-active="true"}}
+{{> navbar-scroll-blog expression-is-active="true"}}
 <!-- /Scrollnav -->
 
 <!-- Blog post list section -->
-{{> om-blog-article-list title="Featured Articles"}}
+{{> blog-article-list title="Featured Articles"}}
 <!-- /Blog post list section -->
 
 <!-- Subscribe -->
-{{> om-blog-subscribe}}
+{{> blog-subscribe}}
 <!-- /Subscribe -->
 
 <!-- Join OM tribe -->
-{{> om-blog-join-tribe}}
+{{> blog-join-tribe}}
 <!-- Join OM tribe -->
 
-{{> om-footer-light}}
+{{> footer-light}}

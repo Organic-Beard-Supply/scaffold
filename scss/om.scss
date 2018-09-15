@@ -7,45 +7,45 @@ Scaffold kit six core
 /***
 TABLE OF CONTENTS
 =============================================================================
-0. CSS Imports
+1. Imports
 =============================================================================
 ***/
 
 /* ==========================================================================
-0. CSS Imports
+1. Imports
 ========================================================================== */
 
-@import 'om/layout-colors';
-@import 'om/themes-deep-blue';
-@import 'om/layout-navbar';
-@import 'om/layout-sections';
-@import 'om/layout-hero';
-@import 'om/layout-footer';
-@import 'om/layout-animations';
-@import 'om/layout-navigation';
-@import 'om/layout-pageloader';
-@import 'om/components-accordion';
-@import 'om/components-buttons';
-@import 'om/components-cards';
-@import 'om/components-boxes';
-@import 'om/components-tabs';
-@import 'om/components-testimonials';
-@import 'om/components-dialogs';
-@import 'om/components-forms';
-@import 'om/components-tables';
-@import 'om/components-lists';
-@import 'om/components-labels';
-@import 'om/components-dropdowns';
-@import 'om/components-pricing';
-@import 'om/components-messages';
-@import 'om/extensions-badge';
-@import 'om/extensions-checkboxes';
-@import 'om/pages-blog';
-@import 'om/pages-details';
-@import 'om/pages-auth';
-@import 'om/pages-landing-v2';
-@import 'om/layout-utils';
-@import 'om/layout-helpers';
-@import 'om/layout-responsive';
+@import 'layout/colors';
+@import 'themes/om';
 
+@import 'layout/navbar';
+@import 'layout/sections';
+@import 'layout/hero';
+@import 'layout/footer';
+@import 'layout/animations';
 
+@import 'components/accordion';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/boxes';
+@import 'components/tabs';
+@import 'components/testimonials';
+@import 'components/dialogs';
+@import 'components/forms';
+@import 'components/tables';
+@import 'components/lists';
+@import 'components/labels';
+@import 'components/dropdowns';
+@import 'components/pricing';
+@import 'components/messages';
+
+@import 'vendors/badge';
+@import 'vendors/checkboxes';
+
+@import 'pages/blog';
+@import 'pages/details';
+@import 'pages/index';
+
+@import 'layout/utils';
+@import 'layout/helpers';
+@import 'layout/responsive';
