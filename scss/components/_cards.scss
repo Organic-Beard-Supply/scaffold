@@ -274,56 +274,56 @@ TABLE OF CONTENTS
             transform: translate(0,-10px);
         }
         &.first-card {
-            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65)),url(../images/illustrations/icons/landing-v1/chrono.svg);
+            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65));
             background-position: 0 0,-80px 20px;
             background-size: auto,200px;
             background-repeat: repeat,no-repeat;
             -webkit-transition: all 350ms ease;
             transition: all 350ms ease;
             &:hover {
-                background-image: linear-gradient(180deg,transparent,transparent),url(../images/illustrations/icons/landing-v1/chrono.svg);
+                background-image: linear-gradient(180deg,transparent,transparent);
                 background-position: 0 0,-80px -25px;
                 background-size: auto,200px;
                 background-repeat: repeat,no-repeat;
             }
         }
         &.second-card {
-            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65)),url(../images/illustrations/icons/landing-v1/tablet-dots.svg);
+            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65));
             background-position: 0 0,-80px 20px;
             background-size: auto,200px;
             background-repeat: repeat,no-repeat;
             -webkit-transition: all 350ms ease;
             transition: all 350ms ease;
             &:hover {
-                background-image: linear-gradient(180deg,transparent,transparent),url(../images/illustrations/icons/landing-v1/tablet-dots.svg);
+                background-image: linear-gradient(180deg,transparent,transparent);
                 background-position: 0 0,-80px -25px;
                 background-size: auto,200px;
                 background-repeat: repeat,no-repeat;
             }
         }
         &.third-card {
-            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65)),url(../images/illustrations/icons/landing-v1/cog.svg);
+            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65));
             background-position: 0 0,-80px 20px;
             background-size: auto,200px;
             background-repeat: repeat,no-repeat;
             -webkit-transition: all 350ms ease;
             transition: all 350ms ease;
             &:hover {
-                background-image: linear-gradient(180deg,transparent,transparent),url(../images/illustrations/icons/landing-v1/cog.svg);
+                background-image: linear-gradient(180deg,transparent,transparent);
                 background-position: 0 0,-80px -25px;
                 background-size: auto,200px;
                 background-repeat: repeat,no-repeat;
             }
         }
         &.fourth-card {
-            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65)),url(../images/illustrations/icons/landing-v1/plane.svg);
+            background-image: linear-gradient(180deg,hsla(0,0%,100%,.65),hsla(0,0%,100%,.65));
             background-position: 0 0,-80px 20px;
             background-size: auto,200px;
             background-repeat: repeat,no-repeat;
             -webkit-transition: all 350ms ease;
             transition: all 350ms ease;
             &:hover {
-                background-image: linear-gradient(180deg,transparent,transparent),url(../images/illustrations/icons/landing-v1/plane.svg);
+                background-image: linear-gradient(180deg,transparent,transparent);
                 background-position: 0 0,-80px -25px;
                 background-size: auto,200px;
                 background-repeat: repeat,no-repeat;

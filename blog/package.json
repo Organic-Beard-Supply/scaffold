@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-kit",
-  "description": "A set of starters for Gatsby.js v.2",
+  "name": "om",
+  "description": "organic man",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -43,7 +43,8 @@
     "react-emotion": "^9.2.9",
     "react-facebook": "^5.0.3",
     "react-feather": "^1.1.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0-rc.1",
@@ -59,6 +60,7 @@
     "eslint-plugin-react": "7.1.0",
     "jest": "^23.6.0",
     "js-yaml": "^3.12.0",
+    "jquery": "^3.3.1",
     "prettier": "^1.13.7",
     "react-testing-library": "^5.0.1",
     "yaml-loader": "^0.5.0"

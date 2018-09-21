@@ -9,6 +9,7 @@ var rimraf = require('rimraf').sync;
 var browser = require('browser-sync');
 var panini = require('panini');
 var concat = require('gulp-concat');
+var runSequence = require('run-sequence');
 var port = process.env.SERVER_PORT || 8080;
 var nodepath =  'node_modules/';
 var assetspath =  'assets/';
@@ -43,7 +44,7 @@ gulp.task('reset', () => {
 });
 
 // Erases the dist folder
-gulp.task('clean', () => { rimraf('_site') });
+gulp.task('clean', () => { return rimraf('_site') });
 
 // Copy Bulma files into Bulma development folder
 gulp.task('setupBulma', () => {
@@ -58,8 +59,9 @@ gulp.task('copy', () => {
   
   //Copy other external font and data assets
   gulp.src(['assets/fonts/**/*']).pipe(gulp.dest('_site/assets/fonts/'));
-  gulp.src([nodepath + 'slick-carousel/slick/fonts/**/*']).pipe(gulp.dest('_site/assets/css/fonts/'));
+  gulp.src([nodepath + 'slick-carousel/slick/fonts/**/*']).pipe(gulp.dest('_site/assets/fonts/'));
   gulp.src([nodepath + 'slick-carousel/slick/ajax-loader.gif']).pipe(gulp.dest('_site/assets/css/'));
+  return;
 });
 
 // Sass variables
@@ -97,12 +99,17 @@ const compileSass = (file) => {
     .pipe(gulp.dest('./_site/assets/css/'));
 }
 
-gulp.task('compile-sass-bulma', () => { compileSass('./bulma/bulma.sass') }); // Compile Bulma Sass
-gulp.task('compile-scss-om', () => { compileSass('./scss/om.scss') }); // Compile OM Scss
+gulp.task('compile-sass-bulma', () => { // Compile Bulma Sass
+  return compileSass('./bulma/bulma.sass')
+});
+
+gulp.task('compile-scss-om', () => { // Compile OM Scss
+  return compileSass('./scss/om.scss') 
+});
 
 // Compile Html
 gulp.task('compile-html', () => {
-  gulp.src('html/pages/**/*.html')
+  return gulp.src('html/pages/**/*.html')
     .pipe(
       panini({
         root: 'html/pages/',
@@ -123,9 +130,7 @@ gulp.task('compile-html:reset', (done) => {
 gulp.task('compile-css', () => {
   const cssSource = [ 
     nodepath + 'slick-carousel/slick/slick.css',
-    nodepath + 'slick-carousel/slick/slick-theme.css',
-    nodepath + 'wallop/css/wallop.css',
-    nodepath + 'jquery-ui-dist/jquery-ui.min.css'
+    nodepath + 'slick-carousel/slick/slick-theme.css'
   ];
 
   return gulp.src(cssSource)
@@ -136,8 +141,7 @@ gulp.task('compile-css', () => {
 // Compile blocking js
 gulp.task('compile-blocking-js', () => {
   const jsSource = [
-    nodepath + 'jquery/dist/jquery.min.js', 
-    nodepath + 'jquery-ui-dist/jquery-ui.min.js'
+    nodepath + 'jquery/dist/jquery.min.js'
   ];
 
   return gulp.src(jsSource)
@@ -146,7 +150,7 @@ gulp.task('compile-blocking-js', () => {
 })
 
 // Compile js from node modules
-gulp.task('compile-vendor-js', () => {
+gulp.task('compile-vendor-js', () => { 
   const jsSource = [ 
     nodepath + 'slick-carousel/slick/slick.min.js', 
     nodepath + 'scrollreveal/dist/scrollreveal.min.js',
@@ -183,6 +187,30 @@ gulp.task('copy-images', () => {
     .pipe(gulp.dest('./_site/assets/images/'));
 });
 
+// Erases blog static
+gulp.task('clean-blog', () => { 
+  return rimraf('blog/static/bulkit') 
+});
+
+// Copy bulkit assets to blog
+gulp.task('copy-blog', () => { 
+  return setTimeout(() => {
+    return gulp.src(['_site/assets/**/*']).pipe(gulp.dest('./blog/static/bulkit'));
+  }, 100) //timeout necessary to ensure all fonts are copied over
+});
+
 gulp.task('init', ['setupBulma']);
-gulp.task('build', ['clean','copy', 'compile-blocking-js', 'compile-vendor-js', 'compile-css', 'copy-js', 'compile-sass-bulma', 'compile-scss-om', 'compile-html', 'copy-images']);
+gulp.task('build', [
+    'clean',
+    'copy',
+    'compile-blocking-js', 
+    'compile-vendor-js', 
+    'compile-css', 
+    'copy-js', 
+    'compile-sass-bulma', 
+    'compile-scss-om', 
+    'compile-html', 
+    'copy-images'
+  ]);
+gulp.task('build-blog', (callback) => { runSequence('clean-blog', 'build', 'copy-blog', callback) });
 gulp.task('default', ['server', 'watch']);
