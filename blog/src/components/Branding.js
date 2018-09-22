@@ -11,9 +11,24 @@ const Branding = props => {
   const { themeStyle = style, customStyle = 'navbar-item', logoStyle = 'light-logo' } = props;
 
   return (
-    <Link className={cx(themeStyle, customStyle)} to="/">
-      <img src={logo} className={cx(logoStyle)} alt="Organic Man" />
-    </Link>
+    <div className={'navbar-brand'}>
+      <Link className={cx(themeStyle, customStyle)} to="/">
+        <img src={logo} className={cx(logoStyle)} alt="Organic Man" />
+      </Link>
+      <div className="custom-burger" data-target="">
+        <Link id="" className={'responsive-btn'} to="javascript:void(0);">
+            <span className={'menu-toggle'}>	
+              <span className={'icon-box-toggle'}>
+                <span className={'rotate'}>
+                  <i className={'icon-line-top'}></i>
+                  <i className={'icon-line-center'}></i>
+                  <i className={'icon-line-bottom'}></i> 
+                </span>
+              </span>
+            </span>
+          </Link>
+        </div>
+    </div>
   );
 };
 

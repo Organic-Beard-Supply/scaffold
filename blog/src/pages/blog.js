@@ -7,8 +7,10 @@ import TagIcon from 'react-feather/dist/icons/tag';
 
 import Article from 'components/Article';
 import Branding from 'components/Branding';
+import Hero1 from 'components/Hero1';
 import Header from 'components/Header';
 import Blog from 'components/Blog';
+import Button from 'components/Button';
 import Layout from 'components/Layout';
 import Menu from 'components/Menu';
 import Seo from 'components/Seo';
@@ -53,10 +55,17 @@ const BlogPage = props => {
 
   return (
     <Layout>
-      <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
-      </Header>
+      <Hero1>
+        <Header>
+          <Branding title={headerTitle} subTitle={headerSubTitle} />
+          <Menu items={menuItems} />
+          <div className={'navbar-end'}>
+            <div className={'navbar-item'}>
+              <Button />
+            </div>
+          </div>
+        </Header>
+      </Hero1>
       <Article>
         <Blog items={posts} author={'greg'} metaIcons={metaIcons} />
       </Article>

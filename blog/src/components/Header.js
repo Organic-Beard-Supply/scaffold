@@ -10,9 +10,7 @@ const Header = props => {
   return (
     <header className={cx(themeStyle, customStyle)}>
       <div className={'container'}>
-        <div className={'navbar-brand'}>
-          {children}
-        </div>
+        {children}
       </div>
     </header>
   );

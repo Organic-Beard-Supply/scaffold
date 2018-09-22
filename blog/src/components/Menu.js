@@ -6,24 +6,24 @@ import { cx } from 'emotion';
 import style from '../styles/menu';
 
 const Menu = props => {
-  const { items, themeStyle = style, customStyle = '' } = props;
+  const { items, themeStyle = style, customStyle = 'navbar-menu' } = props;
 
   return (
     <nav className={cx(themeStyle, customStyle)}>
-      <ul>
-        {items.map(item => {
-          const { label, to, icon: Icon, linkProps } = item;
-
-          return (
-            <li key={label}>
-              <Link to={to} activeClassName="active" {...linkProps}>
+      <div className={'navbar-start'}>
+        <div className={'navbar-item has-dropdown is-hoverable is-hidden-mobile'}>
+          {items.map((item, index) => {
+            const { label, to, icon: Icon, linkProps } = item;
+            
+            return (
+              <Link key={index} to={to} activeClassName="active" {...linkProps} className={'navbar-link'}>
                 {Icon && <Icon />}
                 <span>{label}</span>
               </Link>
-            </li>
-          );
-        })}
-      </ul>
+            );
+          })}
+        </div>
+      </div>
     </nav>
   );
 };
