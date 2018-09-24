@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import '@react-website-themes/default/styles/variables';
-import '@react-website-themes/default/styles/global';
+import '../styles/variables';
+import '../styles/global';
 
 import Article from '@react-website-themes/default/components/Article';
 import Bodytext from '@react-website-themes/default/components/Bodytext';

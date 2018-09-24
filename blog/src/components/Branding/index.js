@@ -2,10 +2,9 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { cx } from 'emotion';
-import logo from "../../static/bulkit/images/logos/organic-man-logo-white.png"
+import logo from "../../../static/bulkit/images/logos/organic-man-logo-white.png"
 
-
-import style from '../styles/branding';
+import style from './styles';
 
 const Branding = props => {
   const { themeStyle = style, customStyle = 'navbar-item', logoStyle = 'light-logo' } = props;

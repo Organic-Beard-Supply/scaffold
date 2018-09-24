@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'emotion';
 
-import style from '../styles/heading';
+import style from './styles';
 
 const Heading = props => {
   const { title, children, themeStyle = style, customStyle = '' } = props;

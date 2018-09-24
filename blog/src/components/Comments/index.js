@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FacebookProvider, { Comments as FBComments } from 'react-facebook';
 import { cx } from 'emotion';
 
-import style from '../styles/comments';
+import style from './styles';
 
 const Comments = props => {
   const { slug, siteUrl, themeStyle = style, customStyle = '' } = props;

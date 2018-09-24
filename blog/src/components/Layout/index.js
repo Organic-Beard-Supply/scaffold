@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { cx } from 'emotion';
 
-import style from '../styles/layout';
+import style from './styles';
 
 const Layout = props => {
   const { children, themeStyle = style, customStyle = '' } = props;

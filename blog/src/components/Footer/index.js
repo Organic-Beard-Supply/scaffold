@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { cx } from 'emotion';
 
-import style from '../styles/footer';
+import style from './styles';
 
 const Footer = props => {
   const { links, copyright, themeStyle = style, customStyle = '' } = props;

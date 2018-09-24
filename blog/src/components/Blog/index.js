@@ -3,9 +3,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { cx } from 'emotion';
 
-import Meta from './Meta';
+import Meta from '../Meta';
 
-import style from '../styles/blog';
+import style from './styles';
 
 const Blog = props => {
   const {

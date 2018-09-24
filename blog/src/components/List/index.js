@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { cx } from 'emotion';
 
-import style from '../styles/list';
+import style from './styles';
 
 const List = props => {
   const { items, themeStyle = style, customStyle = '' } = props;

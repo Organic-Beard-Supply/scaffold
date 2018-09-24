@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { cx } from 'emotion';
 
-import style from '../styles/page';
+import style from './styles';
 
 const Page = props => {
   const { children, themeStyle = style, customStyle = '' } = props;

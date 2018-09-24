@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'emotion';
 
-import style from '../styles/author';
+import style from './styles';
 
 const Author = props => {
   const { html, themeStyle = style, customStyle = '' } = props;

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import favicon from '../../../static/favicon.png';
 
 const Seo = props => {
   const { url, language = 'en', title, description } = props;
@@ -12,6 +13,7 @@ const Seo = props => {
       {/* General tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
+      <link rel="icon" type="image/png" href={favicon} />
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />

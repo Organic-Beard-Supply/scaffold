@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'emotion';
 
-import style from '../styles/hero1';
+import style from './styles';
 
-const Hero1 = props => {
+const Hero = props => {
   const { 
     children, 
     themeStyle = style, 
@@ -59,10 +59,10 @@ const Hero1 = props => {
   );
 };
 
-Hero1.propTypes = {
+Hero.propTypes = {
   children: PropTypes.node,
   themeStyle: PropTypes.string,
   customStyle: PropTypes.string,
 };
 
-export default Hero1;
+export default Hero;

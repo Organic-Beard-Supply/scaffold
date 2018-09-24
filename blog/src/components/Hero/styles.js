@@ -5,20 +5,19 @@ import { keyframes } from 'react-emotion';
 const breakpoints = [768, 1024];
 const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp}px)`));
 
-const breath = keyframes``;
-const hero1 = css``;
+const breath = keyframes`
+  from {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+`;
 
-// const breath = keyframes`
-//   from {
-//     transform: scale(1);
-//   }
-//   80% {
-//     transform: scale(1.2);
-//   }
-//   to {
-//     transform: scale(1);
-//   }
-// `;
+const hero = css``;
 
 // const hero = css`
 //   align-items: center;
@@ -70,4 +69,4 @@ const hero1 = css``;
 //   }
 // `;
 
-export default hero1;
+export default hero;

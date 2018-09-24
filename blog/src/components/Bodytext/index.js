@@ -2,30 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'emotion';
 
-import style from '../styles/hero';
+import style from './styles';
 
-const Hero = props => {
+const Bodytext = props => {
   const { html, children, themeStyle = style, customStyle = '' } = props;
 
   return (
     <React.Fragment>
       {html ? (
-        <section
+        <div
           className={cx(themeStyle, customStyle)}
           dangerouslySetInnerHTML={{ __html: html }}
         />
       ) : (
-        <section className={`${themeStyle}`}>{children}</section>
+        <div className={`${themeStyle}`}>{children}</div>
       )}
     </React.Fragment>
   );
 };
 
-Hero.propTypes = {
-  children: PropTypes.node,
+Bodytext.propTypes = {
   html: PropTypes.string,
   themeStyle: PropTypes.string,
   customStyle: PropTypes.string,
 };
 
-export default Hero;
+export default Bodytext;

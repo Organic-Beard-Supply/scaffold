@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'emotion';
 
-import style from '../styles/button';
+import style from './styles';
 
 const Heading = props => {
   const { title, children, themeStyle = style, customStyle = 'button button-signup btn-align btn-outlined light-btn' } = props;

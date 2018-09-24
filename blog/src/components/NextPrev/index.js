@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { cx } from 'emotion';
 
-import style from '../styles/nextPrev';
+import style from './styles';
 
 const NextPrev = props => {
   const {
