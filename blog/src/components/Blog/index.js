@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { cx } from 'emotion';
 
-import Meta from '../Meta';
+//import Meta from '../Meta';
 
 import style from './styles';
 
@@ -11,48 +11,84 @@ const Blog = props => {
   const {
     items,
     themeStyle = style,
-    customStyle = '',
+    customStyle = 'columns is-multiline',
     author,
-    metaIcons,
+    cover
   } = props;
+  
+  const cardStyle = { backgroundImage: 'url(' + cover + ')' };
 
   return (
     <div className={cx(themeStyle, customStyle)}>
-      <ul>
-        {items.map(item => {
-          const {
-            frontmatter: { title, categories },
-            fields: { slug, prefix },
-            excerpt,
-          } = item;
+      {items.map(item => {
+        const {
+          frontmatter: { title, categories, subTitle },
+          fields: { slug, prefix },
+          excerpt
+        } = item;
+        
+        return (
+          <div key={slug} className={'column is-6'}>
+            <div className={'flex-card is-post light-bordered is-card-reveal'}>
+              <Link to={slug} className={'header'} style={cardStyle} >
+                <div className={'title-wrapper'}>
+                  <h2 className={'post-title'}>{title}</h2>
+                  <h4 className={'post-subtitle'}>{subTitle}</h4>
+                </div>
+                <div className="author-avatar">
+                  <img src={author.img} alt={author.name} />
+                </div>
+                <div className="header-overlay"></div>
+              </Link>
+              <div className="post-body">
+                {/* Transfer meta data (author, date, category) to Meta */}
 
-          return (
-            <li key={slug}>
-              <Link to={slug}>
-                <h3>{title}</h3>
-                <Meta
+                {/* <Meta
                   categories={categories}
                   prefix={prefix}
                   author={author}
                   categoryLink={false}
                   icons={metaIcons}
-                />
+                /> */}
+                <div> <span>by</span> <Link className="author-name" to={'#'}><b>{author.name}</b></Link></div>
+                <small>
+                  Posted
+                  {categories && (
+                    <span> in {categories.map(category => {
+                      return <Link to={`/categories/${category}`} key={category} className={'category is-' + category}>
+                          {category}
+                        </Link>
+                      })}
+                    </span>
+                  )} 
+                  {prefix && ( <span> on {prefix}</span> )}
+                </small>
                 <p>{excerpt}</p>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+                <div className="content-footer">
+                  <div className="footer-details">
+                    <Link to={slug} className="button is-link btn-upper">Read more</Link>
+                    <div className="comments-count ml-auto">
+                      <i className="im im-icon-Speach-Bubble11"></i>
+                      <span className="stat">8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
 
 Blog.propTypes = {
   items: PropTypes.array.isRequired,
-  author: PropTypes.string,
+  cover: PropTypes.string,
+  author: PropTypes.object,
   themeStyle: PropTypes.string,
   customStyle: PropTypes.string,
-  metaIcons: PropTypes.object,
+  columnSize: PropTypes.string
 };
 
 export default Blog;

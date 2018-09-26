@@ -7,7 +7,11 @@ import style from './styles';
 const Article = props => {
   const { children, themeStyle = style, customStyle = '' } = props;
 
-  return <article className={cx(themeStyle, customStyle)}>{children}</article>;
+  return (
+    <article className={cx(themeStyle, customStyle)}>
+      {children}
+    </article>
+  );
 };
 
 Article.propTypes = {
