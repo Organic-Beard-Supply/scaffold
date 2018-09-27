@@ -5,9 +5,15 @@ const padding = {
   sectionPaddingLarge: '18rem 1.5rem'
 }
 
-const colors = {  
+const colors = {
+
+  //OM Color
+  primary: '#31204a',
+  primaryAccent: '#159097',
+  secondary: '#159097',
+  accent: '#e4a36d',
   
-  //OM Colors
+  //Colors
   white: '#fff',
   smokeWhite: '#fcfcfc',
   greyWhite: '#f2f2f2',

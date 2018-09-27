@@ -5,8 +5,9 @@ import CalendarIcon from 'react-feather/dist/icons/calendar';
 import UserIcon from 'react-feather/dist/icons/user';
 import TagIcon from 'react-feather/dist/icons/tag';
 
-import Article from 'components/Article';
 import Branding from 'components/Branding';
+import Button from 'components/Button';
+import Footer from 'components/Footer';
 import Heading from 'components/Heading';
 import Hero from 'components/Hero';
 import Header from 'components/Header';
@@ -104,6 +105,22 @@ const BlogPage = props => {
           </p>
         </div>
       </Section>
+      <Section size={'is-small'} customClass={'section-primary has-text-centered'}>
+        <div className={'columns is-centered'}>
+          <div className={'column is-8'}>
+            <div className={'section-title-wrapper no-padding'}>
+              <Heading title="Discover. Connect. Serve." customStyle={'title light-text text-bold main-title is-1 no-padding-top'} />
+            </div>
+            <h3 className={'subtitle light-text'}>
+            A tribe of like minded men empowering each other by sharing valuable insight, ideas, challenges, stories, and vulnerabilities.
+            </h3>
+            <p>
+              <Button customClass={'button button-cta secondary-btn is-large raised'}></Button>
+            </p>
+          </div>
+        </div>
+      </Section>
+      <Footer></Footer>
       <Seo
         url={siteUrl}
         language={siteLanguage}

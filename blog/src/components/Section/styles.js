@@ -37,7 +37,8 @@ const section = css`
       background-color: ${colors.sectionGreyAccent};
   }
   &.section-primary {
-      background-color: ${colors.primary};
+    background-color: ${colors.sectionGreyAccent};
+    background-color: ${colors.primary};
   }
   &.section-secondary {
       background-color: ${colors.secondary};

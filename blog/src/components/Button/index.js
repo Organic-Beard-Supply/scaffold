@@ -6,10 +6,10 @@ import { cx } from 'emotion';
 import style from './styles';
 
 const Heading = props => {
-  const { title, children, themeStyle = style, customStyle = 'button button-signup btn-align btn-outlined light-btn' } = props;
+  const { themeStyle = style, customStyle = '', customClass } = props;
 
   return (
-    <Link to="/" className={cx(themeStyle, customStyle)} data-sumome-listbuilder-id='2ddd0fec-63c8-476b-a2ac-a338290a63e0'>
+    <Link to="/" className={cx(themeStyle, customStyle, customClass)} data-sumome-listbuilder-id='2ddd0fec-63c8-476b-a2ac-a338290a63e0'>
       Join The OM Tribe
     </Link>
   );

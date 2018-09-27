@@ -51,7 +51,7 @@ const Menu = props => {
       </div>
       <div className={'navbar-end'}>
         <div className={'navbar-item'}>
-          <Button />
+          <Button customClass={'button button-signup btn-align btn-outlined light-btn'} />
         </div>
       </div>
     </nav>
