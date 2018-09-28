@@ -5,10 +5,16 @@ import { cx } from 'emotion';
 import style from './styles';
 
 const Section = props => {
-  const { children, themeStyle = style, customStyle = '', customClass, size } = props;
+  const { children, themeStyle = style, customStyle = '', customClass, size, backgroundImage } = props;
+
+  const backgroundStyle = backgroundImage ? {
+    backgroundImage: 'url(' + backgroundImage + ')',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+  } : {};
 
   return (
-    <section className={cx(themeStyle, customStyle, customClass, size)}>
+    <section className={cx(themeStyle, customStyle, customClass, size)} style={backgroundStyle}>
       {children}
     </section>
   );

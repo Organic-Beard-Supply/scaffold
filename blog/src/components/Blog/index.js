@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
 import { cx } from 'emotion';
-import { find, filter } from 'lodash';
+import { find } from 'lodash';
 
 import authors from '../../content/meta/authors'
 
@@ -24,14 +24,18 @@ const Blog = props => {
           frontmatter: { title, categories, subTitle, cover, authorName },
           fields: { slug, prefix },
           excerpt
-        } = item,
-        {
+        } = item;
+        
+        const {
           childImageSharp: {
             fluid: { src }
           }
-        } = cover,
-        cardStyle = { backgroundImage: 'url(' + src + ')'},
-        author = find(authors, ['name', authorName]);
+        } = cover;
+        
+        const author = find(authors, ['name', authorName]);
+
+        const cardStyle = { backgroundImage: 'url(' + src + ')'};
+
         
         return (
           <div key={slug} className={'column is-6'}>

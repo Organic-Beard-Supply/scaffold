@@ -1,8 +1,9 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Branding from 'components/Branding';
 import Button from 'components/Button';
+import FeaturedPost from 'components/FeaturedPost';
 import Footer from 'components/Footer';
 import Heading from 'components/Heading';
 import Hero from 'components/Hero';
@@ -29,8 +30,6 @@ const BlogPage = props => {
       posts: { edges },
     },
   } = props;
-  
-  console.log(edges);
 
   const posts = edges.map(edge => edge.node);
 
@@ -50,6 +49,7 @@ const BlogPage = props => {
           <Branding title={headerTitle} subTitle={headerSubTitle} />
           <Menu items={menuItems} />
         </Header>
+        <FeaturedPost item={posts[0]} />
       </Hero>
       <StickyNav items={categoryItems} />
       <Section size={'is-medium'} customClass={'blog-section'}>
@@ -90,7 +90,7 @@ const BlogPage = props => {
           </p>
         </div>
       </Section>
-      <Section size={'is-small'} customClass={'section-primary has-text-centered'}>
+      <Section size={'is-small'} customClass={'section-primary has-text-centered'} backgroundImage={'bulkit/images/bg/shapes/paisley-pattern.png'}>
         <div className={'columns is-centered'}>
           <div className={'column is-8'}>
             <div className={'section-title-wrapper no-padding'}>
@@ -126,7 +126,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 150)
           fields {
             slug
             prefix
