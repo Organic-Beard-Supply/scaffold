@@ -1,10 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import CalendarIcon from 'react-feather/dist/icons/calendar';
-import UserIcon from 'react-feather/dist/icons/user';
-import TagIcon from 'react-feather/dist/icons/tag';
-
 import Branding from 'components/Branding';
 import Button from 'components/Button';
 import Footer from 'components/Footer';
@@ -27,25 +23,14 @@ import '../../static/bulkit/css/bulma.css';
 import '../../static/bulkit/css/om.css';
 import '../../static/bulkit/css/icons.min.css';
 
-// import '../../static/bulkit/js/app.js';
-// import '../../static/bulkit/js/core.js';
-// import '../../static/bulkit/js/core.js';
-// import '../../static/bulkit/js/custom.js';
-// import '../../static/bulkit/js/components/modals.js';
-// import '../../static/bulkit/js/components/search.js';
-
-const metaIcons = {
-  calendar: CalendarIcon,
-  user: UserIcon,
-  tag: TagIcon,
-};
-
 const BlogPage = props => {
   const {
     data: {
       posts: { edges },
     },
   } = props;
+  
+  console.log(edges);
 
   const posts = edges.map(edge => edge.node);
 
@@ -74,7 +59,7 @@ const BlogPage = props => {
               <div className={'section-title-wrapper no-padding-top has-text-centered'}>
                 <Heading title="Featured Articles" customStyle={'title dark-text text-bold main-title is-2 no-padding-top'} />
               </div>
-              <Blog items={posts} cover={'https://source.unsplash.com/1200x300/?meditate'} author={{name: 'Joel Serino', img: 'https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B'}}/>
+              <Blog items={posts}/>
               <Pagination />
             </div>
           </div>
@@ -145,11 +130,20 @@ export const query = graphql`
           fields {
             slug
             prefix
+            source
           }
           frontmatter {
             title
-            categories
             subTitle
+            categories
+            authorName
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 525) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

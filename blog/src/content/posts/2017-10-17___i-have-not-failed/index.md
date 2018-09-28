@@ -2,6 +2,7 @@
 title: I have not failed. I've just found 10,000 ways that won't work
 categories: ["testimonies"]
 cover: photo-1463852247062-1bbca38f7805.jpg
+authorName: Michael Levitin
 ---
 
 Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.

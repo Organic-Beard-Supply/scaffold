@@ -78,6 +78,7 @@ exports.createPages = ({ graphql, actions }) => {
                 }
                 frontmatter {
                   title
+                  subTitle
                   categories
                 }
               }
@@ -91,6 +92,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const items = result.data.allMarkdownRemark.edges;
+
+        console.log('items:', items.frontmatter);
 
         const categorySet = new Set();
 

@@ -18,10 +18,10 @@ const Footer = props => {
               <div className={'footer-header'}>
                 <h3>Organic Man</h3>
               </div>
-              <ul class="link-list">
-                {/* <li>{{> click-trigger class="secondary-text"}}</li> */}
-                <li><a href="#" class="secondary-text">Join the OM Tribe</a></li>
-                <li><a href="/pre-order.html#hero" class="accent-text">Pre-order your box</a></li>
+              <ul className={'link-list'}>
+                {/* <li>{{> click-trigger className={'secondary-text'}}}</li> */}
+                <li><a href="#" className={'secondary-text'}>Join the OM Tribe</a></li>
+                <li><a href="/pre-order.html#hero" className={'accent-text'}>Pre-order your box</a></li>
                 <li><a href="/#mission">Our Mission</a></li>
                 <li><a href="/#paths">Personalized paths</a></li>
                 <li><a href="/#journeys">Guided journeys</a></li>
@@ -35,13 +35,13 @@ const Footer = props => {
               <div className={'footer-header'}>
                 <h3>About OM</h3>
               </div>
-              <ul class="link-list">
+              <ul className={'link-list'}>
                 <li><a href="/#how-it-works">How It Works</a></li>
                 <li><a href="/#stories">Stories</a></li>
                 <li><a href="javascript:void(0)" data-title="Coming soon!" data-toggle="tooltip" data-trigger="hover" data-placement="top">Blog</a></li>
                 <li><a href="/#faq">FAQs</a></li>
-                <li><a href="javascript:void(0)" class="modal-trigger" data-modal="basic-large-modal-terms">Terms</a></li>
-                <li><a href="javascript:void(0)" class="modal-trigger" data-modal="basic-large-modal-privacy">Privacy policy</a></li>
+                <li><a href="javascript:void(0)" className={'modal-trigger'} data-modal="basic-large-modal-terms">Terms</a></li>
+                <li><a href="javascript:void(0)" className={'modal-trigger'} data-modal="basic-large-modal-privacy">Privacy policy</a></li>
                 <li><a href="javascript:void(0)" data-title="Coming soon!" data-toggle="tooltip" data-trigger="hover" data-placement="top">Self discovery profile</a></li>
               </ul>
             </div>
@@ -51,9 +51,9 @@ const Footer = props => {
               <div className={'footer-header'}>
                 <h3>Contact Us</h3>
               </div>
-              <ul class="link-list">
+              <ul className={'link-list'}>
                 <li><a href="mailto:hello@organicman.eco">hello@organicman.eco</a></li>
-                <li><a href="javascript:void(0)" class="is-kayako-click-trigger">Send us a message</a></li>
+                <li><a href="javascript:void(0)" className={'is-kayako-click-trigger'}>Send us a message</a></li>
                 <li><a href="https://www.instagram.com/organicman.eco/" target="_blank">Instagram</a></li>
                 <li><a href="https://www.facebook.com/OrganicMan.eco/" target="_blank">Facebook</a></li>
                 {/* <li><a href="//#">Twitter</a></li> */}

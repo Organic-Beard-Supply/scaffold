@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
 import { cx } from 'emotion';
+import { find, filter } from 'lodash';
+
+import authors from '../../content/meta/authors'
 
 //import Meta from '../Meta';
 
@@ -11,21 +14,24 @@ const Blog = props => {
   const {
     items,
     themeStyle = style,
-    customStyle = 'columns is-multiline',
-    author,
-    cover
+    customStyle = 'columns is-multiline'
   } = props;
-  
-  const cardStyle = { backgroundImage: 'url(' + cover + ')' };
 
   return (
     <div className={cx(themeStyle, customStyle)}>
       {items.map(item => {
         const {
-          frontmatter: { title, categories, subTitle },
+          frontmatter: { title, categories, subTitle, cover, authorName },
           fields: { slug, prefix },
           excerpt
-        } = item;
+        } = item,
+        {
+          childImageSharp: {
+            fluid: { src }
+          }
+        } = cover,
+        cardStyle = { backgroundImage: 'url(' + src + ')'},
+        author = find(authors, ['name', authorName]);
         
         return (
           <div key={slug} className={'column is-6'}>
@@ -35,9 +41,11 @@ const Blog = props => {
                   <h2 className={'post-title'}>{title}</h2>
                   <h4 className={'post-subtitle'}>{subTitle}</h4>
                 </div>
-                <div className="author-avatar">
-                  <img src={author.img} alt={author.name} />
-                </div>
+                {author && (
+                  <div className="author-avatar">
+                    <img src={author.avatar} alt={author.name} />
+                  </div>
+                )}
                 <div className="header-overlay"></div>
               </Link>
               <div className="post-body">
@@ -50,7 +58,11 @@ const Blog = props => {
                   categoryLink={false}
                   icons={metaIcons}
                 /> */}
-                <div> <span>by</span> <Link className="author-name" to={'#'}><b>{author.name}</b></Link></div>
+                {author && (
+                  <div>
+                    <span>by</span> <Link className="author-name" to={'#'}><b>{author.name}</b></Link>
+                  </div>
+                )}
                 <small>
                   Posted
                   {categories && (

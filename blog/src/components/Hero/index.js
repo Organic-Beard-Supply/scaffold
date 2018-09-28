@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { Link, Img, graphql } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { cx } from 'emotion';
@@ -11,7 +11,6 @@ const Hero = props => {
     themeStyle = style, 
     customStyle = 'hero is-cover is-relative is-default is-bold',
     avatar = 'https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/37120066_10155609598123093_8439467181653098496_n.jpg?_nc_cat=0&oh=adb58392f3e9747460eaa6108146d5db&oe=5C01677B'
-
   } = props;
 
   return (
