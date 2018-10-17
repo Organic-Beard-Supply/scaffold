@@ -8,7 +8,7 @@ import Button from 'components/Button';
 import style from './styles';
 
 const Menu = props => {
-  const { items, themeStyle = style, customStyle = 'navbar-menu' } = props;
+  const { items, themeStyle = style, customStyle = 'navbar-menu', buttonStyle } = props;
 
   return (
     <nav className={cx(themeStyle, customStyle)}>
@@ -51,7 +51,7 @@ const Menu = props => {
       </div>
       <div className={'navbar-end'}>
         <div className={'navbar-item'}>
-          <Button customClass={'button button-signup btn-align btn-outlined light-btn'} />
+          <Button customClass={cx('button button-signup btn-align', buttonStyle)} />
         </div>
       </div>
     </nav>

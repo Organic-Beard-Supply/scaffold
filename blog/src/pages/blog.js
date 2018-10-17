@@ -20,6 +20,8 @@ import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
 import categoryItems from 'content/meta/categories';
 
+import logo from '../../static/bulkit/images/logos/organic-man-logo-white.png';
+
 import '../../static/bulkit/css/bulma.css';
 import '../../static/bulkit/css/om.css';
 import '../../static/bulkit/css/icons.min.css';
@@ -45,9 +47,9 @@ const BlogPage = props => {
   return (
     <Layout>
       <Hero>
-        <Header>
-          <Branding title={headerTitle} subTitle={headerSubTitle} />
-          <Menu items={menuItems} />
+        <Header light stuck dark>
+          <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
+          <Menu items={menuItems} buttonStyle={'btn-outlined light-btn'} />
         </Header>
         <FeaturedPost item={posts[0]} />
       </Hero>

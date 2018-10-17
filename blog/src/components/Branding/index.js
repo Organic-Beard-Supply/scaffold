@@ -2,17 +2,16 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { cx } from 'emotion';
-import logo from "../../../static/bulkit/images/logos/organic-man-logo-white.png"
 
 import style from './styles';
 
 const Branding = props => {
-  const { themeStyle = style, customStyle = 'navbar-item', logoStyle = 'light-logo' } = props;
+  const { themeStyle = style, customStyle = 'navbar-brand', logo } = props;
 
   return (
-    <div className={'navbar-brand'}>
-      <Link className={cx(themeStyle, customStyle)} to="/">
-        <img src={logo} className={cx(logoStyle)} alt="Organic Man" />
+    <div className={cx(themeStyle, customStyle)}>
+      <Link className={'navbar-item'} to="/">
+        <img src={logo} alt="Organic Man" />
       </Link>
       <div className="custom-burger" data-target="">
         <Link id="" className={'responsive-btn'} to="javascript:void(0);">
@@ -32,7 +31,7 @@ const Branding = props => {
 };
 
 Branding.propTypes = {
-  logo: PropTypes.node,
+  logo: PropTypes.node.isRequired,
   themeStyle: PropTypes.string,
   customStyle: PropTypes.string,
 };

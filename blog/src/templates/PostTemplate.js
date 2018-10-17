@@ -10,13 +10,13 @@ import { ShareButtonRectangle } from 'react-custom-share';
 
 import Article from '@react-website-themes/default/components/Article';
 import Author from '@react-website-themes/default/components/Author';
-import Branding from '@react-website-themes/default/components/Branding';
+import Branding from 'components/Branding';
 import Bodytext from '@react-website-themes/default/components/Bodytext';
 import Comments from '@react-website-themes/default/components/Comments';
-import Header from '@react-website-themes/default/components/Header';
+import Header from 'components/Header';
 import Heading from '@react-website-themes/default/components/Heading';
-import Layout from '@react-website-themes/default/components/Layout';
-import Menu from '@react-website-themes/default/components/Menu';
+import Layout from 'components/Layout';
+import Menu from 'components/Menu';
 import Meta from '@react-website-themes/default/components/Meta';
 import NextPrev from '@react-website-themes/default/components/NextPrev';
 import Seo from '@react-website-themes/default/components/Seo';
@@ -33,6 +33,8 @@ import NextIcon from 'react-feather/dist/icons/arrow-right';
 import FacebookIcon from 'react-feather/dist/icons/facebook';
 import TwitterIcon from 'react-feather/dist/icons/twitter';
 import EmailIcon from 'react-feather/dist/icons/mail';
+
+import logo from '../../static/bulkit/images/logos/organic-man-landscape-dark.png';
 
 const metaIcons = {
   calendar: CalendarIcon,
@@ -83,9 +85,9 @@ const PostTemplate = props => {
 
   return (
     <Layout>
-      <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
+      <Header dark stuck >
+        <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
+        <Menu items={menuItems} buttonStyle={'secondary-btn'} />
       </Header>
       <Article>
         <Heading title={title} />
