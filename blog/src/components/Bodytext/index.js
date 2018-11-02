@@ -5,8 +5,8 @@ import { cx } from 'emotion';
 import style from './styles';
 
 const Bodytext = props => {
-  const { html, children, themeStyle = style, customStyle = '' } = props;
-
+  const { html, children, themeStyle = style, customStyle = 'post-body content' } = props;
+  
   return (
     <React.Fragment>
       {html ? (

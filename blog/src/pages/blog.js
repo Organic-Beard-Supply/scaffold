@@ -99,7 +99,7 @@ const BlogPage = props => {
               <Heading title="Discover. Connect. Serve." customStyle={'title light-text text-bold main-title is-1 no-padding-top'} />
             </div>
             <h3 className={'subtitle light-text'}>
-            A tribe of like minded men empowering each other by sharing valuable insight, ideas, challenges, stories, and vulnerabilities.
+              A tribe of like minded men empowering each other by sharing valuable insight, ideas, challenges, stories, and vulnerabilities.
             </h3>
             <p>
               <Button customClass={'button button-cta secondary-btn is-large raised'}></Button>

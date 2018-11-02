@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
 import { cx } from 'emotion';
-import { find } from 'lodash';
-
-import authors from '../../content/meta/authors';
 
 import style from './styles';
+
+import Avatar from '../../components/Avatar'
 
 const FeaturedPost = props => {
   const {
@@ -27,8 +26,6 @@ const FeaturedPost = props => {
     }
   } = cover;
   
-  const author = find(authors, ['name', authorName]);
-  
   const imgStyle = { 
     backgroundImage: 'url(' + src + ')',
     backgroundClip: 'content-box',
@@ -40,9 +37,6 @@ const FeaturedPost = props => {
     padding: '15px',
     width: '100%'
   };
-  
-
-  const avatar = 'https://via.placeholder.com/300x300';
   
   return ( 
     <div className={cx(themeStyle, customStyle)}>
@@ -65,25 +59,7 @@ const FeaturedPost = props => {
                       </h2>
                       <p className={'mcard-description'}>{excerpt} <Link to={slug}>read more</Link></p>
                     </div>
-                    <div className={'mcard-controls'}>
-                      <div className={'mcard-avatar'}>
-                        <img src={author.avatar} alt={author.name} />
-                      </div>
-                      <div className={'mcard-info'}>
-                        <span>{author.name}</span>
-                        <div>
-                          {prefix && ( <span>{prefix}</span> )}
-                          {categories && (
-                            <span> <i className={'fa fa-circle'}></i> {categories.map(category => {
-                              return <Link to={`/categories/${category}`} key={category} className={'category is-' + category}>
-                                  {category}
-                                </Link>
-                              })}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
+                    <Avatar authorName={authorName} prefix={prefix} categories={categories} />
                   </div>
                 </div>
               </div>
