@@ -1,8 +1,9 @@
 ---
 title: Add a title (!required)
 subTitle: Add a sub title (optional)
-categories: ["add", "categories", "(!required)"]
-cover: example-post.jpg (!required)
+categories: ["add", "categories"]
+tags: ["add", "tags"]
+cover: example-post.jpg
 authorName: Add author name (!required)
 ---
 

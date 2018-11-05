@@ -1,10 +1,15 @@
-const _ = require('lodash');
+const { kebabCase, drop } = require('lodash');
 const path = require('path');
 const Promise = require('bluebird');
+const dotenv = require('dotenv');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const SLUG_SEPARATOR = '___';
+
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -59,6 +64,7 @@ exports.createPages = ({ graphql, actions }) => {
     const postTemplate = path.resolve('./src/templates/PostTemplate.js');
     const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
     const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
+    const tagTemplate = path.resolve('./src/templates/TagTemplate.js');
 
     resolve(
       graphql(`
@@ -80,6 +86,7 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   subTitle
                   categories
+                  tags
                 }
               }
             }
@@ -93,52 +100,72 @@ exports.createPages = ({ graphql, actions }) => {
 
         const items = result.data.allMarkdownRemark.edges;
 
-        console.log('items:', items.frontmatter);
+        console.log('items: ', items);
 
         const categorySet = new Set();
+        const tagSet = new Set();
 
         // Create category list
-        items.forEach(edge => {
+        items.map((edge) => {
           const {
             node: {
-              frontmatter: { categories },
+              frontmatter: { categories, tags },
             },
           } = edge;
 
           if (categories) {
-            categories.forEach(category => {
-              categorySet.add(category);
+            categories.map((category) => {
+              return categorySet.add(category);
             });
+          }
+
+          if (tags) {
+            tags.map((tag) => {
+              return tagSet.add(tag);
+            })
           }
         });
 
         // Create category pages
         const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
+        categoryList.map(category => {
           createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
+            path: `/${process.env.CATEGORY_PATH}/${kebabCase(category)}/`,
             component: categoryTemplate,
             context: {
               category,
-            },
+            }
           });
         });
 
+        // Create tag pages
+        const tagList = Array.from(tagSet);
+        tagList.map((tag) => {
+          createPage({
+            path: `/${process.env.TAG_PATH}/${kebabCase(tag)}/`,
+            component: tagTemplate,
+            context: {
+              tag
+            }
+          });
+        })
+
         // Create posts
         const posts = items.filter(item => item.node.fields.source === 'posts');
-        posts.forEach(({ node }, index) => {
+        
+        posts.map(({ node }) => {
           const slug = node.fields.slug;
-          const next = index === 0 ? undefined : posts[index - 1].node;
-          const prev =
-            index === posts.length - 1 ? undefined : posts[index + 1].node;
+          
+          //add more intelligence to this. i.e. same category, tag, etc.
+          const filtered = posts.filter(({node}) => node.fields.slug !== slug);
+          const suggested = drop(filtered, filtered.length - 3);
 
           createPage({
             path: slug,
             component: postTemplate,
             context: {
               slug,
-              prev,
-              next,
+              suggested
             },
           });
         });

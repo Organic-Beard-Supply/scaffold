@@ -12,12 +12,16 @@ const config = {
   siteLanguage: 'en',
 
   /* site header */
-  headerTitle: `${base.name}`,
+  headerTitle: base.name,
   headerSubTitle: '',
 
   /* url */
-  siteUrl: base.url
-  // pathPrefix: '',
+  siteUrl: base.url,
+  categoryPath: process.env.CATEGORY_PATH,
+  tagPath: process.env.TAG_PATH,
+
+  /* tokens */
+  fbAppId: process.env.OM_FACEBOOK_APPID
 };
 
 module.exports = config;

@@ -1,6 +1,7 @@
 ---
 title: Imperfection is beauty, madness is genius
 subTitle: And it's better to be absolutely ridiculous than absolutely boring 
+tags: []
 cover: photo-1469461084727-4bfb496cf55a.jpg
 authorName: Michael Levitin
 ---

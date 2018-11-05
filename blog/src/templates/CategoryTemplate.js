@@ -57,7 +57,7 @@ const PageTemplate = props => {
         <List items={items} />
       </Article>
       <Seo
-        url={`${siteUrl}/categories/${category}/`}
+        url={`${siteUrl}/${config.categoryPath}/${category}/`}
         language={siteLanguage}
         title={`Posts in category: ${category}${siteTitlePostfix}`}
         description={siteDescription}
@@ -94,11 +94,6 @@ export const query = graphql`
           }
         }
       }
-    }
-    copyright: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/copyright/" }
-    ) {
-      html
     }
   }
 `;

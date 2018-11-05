@@ -1,7 +1,8 @@
 ---
 title: Be who you are and say what you feel
 subTitle: Because those who mind don't matter, and those who matter don't mind
-categories: ["sayings"]
+categories: ["expression", "paradigm"]
+tags: ["sayings", "tag", "test"]
 cover: photo-1489824904134-891ab64532f1.jpg
 authorName: Tyler Goelz
 ---

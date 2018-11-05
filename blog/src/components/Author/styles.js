@@ -1,9 +1,14 @@
 import { css } from 'emotion';
 
-const author = css``;
-
-// const author = css`
-//   margin: 50px 0;
-// `;
+const author = css`
+  .tags {
+    .tag {
+      margin-bottom: 0;
+    }
+    p {
+      margin-right: 5px;
+    }
+  }
+`;
 
 export default author;

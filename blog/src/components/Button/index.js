@@ -5,7 +5,7 @@ import { cx } from 'emotion';
 
 import style from './styles';
 
-const Heading = props => {
+const Button = props => {
   const { themeStyle = style, customStyle = '', customClass } = props;
 
   return (
@@ -15,11 +15,11 @@ const Heading = props => {
   );
 };
 
-Heading.propTypes = {
+Button.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
   themeStyle: PropTypes.string,
   customStyle: PropTypes.string,
 };
 
-export default Heading;
+export default Button;

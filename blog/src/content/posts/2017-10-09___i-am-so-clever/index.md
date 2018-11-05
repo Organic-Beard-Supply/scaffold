@@ -1,6 +1,7 @@
 ---
 title: I am so clever that sometimes I don't understand a single word of what I am saying
 categories: ["testimonies"]
+tags: []
 cover: photo-1507124484497-b7f446e65519.jpg
 authorName: Ethan Tran
 ---

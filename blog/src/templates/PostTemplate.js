@@ -7,41 +7,26 @@ import '../styles/variables';
 import '../styles/global';
 
 import Article from 'components/Article';
-import Author from '@react-website-themes/default/components/Author';
+import Author from 'components/Author';
 import Avatar from 'components/Avatar';
 import Branding from 'components/Branding';
 import Bodytext from '@react-website-themes/default/components/Bodytext';
-// import Comments from 'components/Comments';
+import Comments from 'components/Comments';
+import Footer from 'components/Footer';
 import Header from 'components/Header';
 import Heading from '@react-website-themes/default/components/Heading';
 import Image from 'components/Image';
 import Layout from 'components/Layout';
 import Menu from 'components/Menu';
-import NextPrev from '@react-website-themes/default/components/NextPrev';
 import Section from 'components/Section';
 import Seo from '@react-website-themes/default/components/Seo';
+import Subscribe from 'components/Subscribe'
+import SuggestedPosts from 'components/SuggestPosts'
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
 
-import CalendarIcon from 'react-feather/dist/icons/calendar';
-import UserIcon from 'react-feather/dist/icons/user';
-import TagIcon from 'react-feather/dist/icons/tag';
-import PrevIcon from 'react-feather/dist/icons/arrow-left';
-import NextIcon from 'react-feather/dist/icons/arrow-right';
-
 import logo from '../../static/bulkit/images/logos/organic-man-landscape-dark.png';
-
-const metaIcons = {
-  calendar: CalendarIcon,
-  user: UserIcon,
-  tag: TagIcon,
-};
-
-const nextPrevIcons = {
-  next: NextIcon,
-  prev: PrevIcon,
-};
 
 const PostTemplate = props => {
   const {
@@ -49,12 +34,11 @@ const PostTemplate = props => {
       post: {
         excerpt,
         html: postHTML,
-        frontmatter: { title, categories, authorName, cover },
+        frontmatter: { title, categories, tags, authorName, cover },
         fields: { slug, prefix },
-      },
-      author: { html: authorHTML }
+      }
     },
-    pageContext: { next, prev },
+    pageContext: { suggested },
   } = props;
 
   const {
@@ -85,7 +69,7 @@ const PostTemplate = props => {
               <div className="columns is-centered is-vcentered">
                 <div className="column is-8">
                   <h2 className="subtitle is-5 pb-20 has-text-centered is-spaced">
-                    {categories && <Link to={`/${categories[0]}`} className={`category is-${categories[0]}`}>{categories[0]}</Link> }
+                    {categories && <Link to={`${config.categoryPath}/${categories[0]}`} className={`category is-${categories[0]}`}>{categories[0]}</Link> }
                     <a className="category is-expression" href="/category.html"></a>
                   </h2>
                   <Heading>
@@ -98,22 +82,22 @@ const PostTemplate = props => {
           </div>
         </div>
         <Image src={src} slant />
-        
         <Section customClass={'blog-section'}>
           <div className="container">
             <div className="columns is-centered">
-              <div className={'column is-10'}>
-                <div className="flex-card is-full-post no-padding-top no-padding-bottom">
-                  <Bodytext html={postHTML} />
-                </div>
+              <div className={'column is-9'}>
+                <Bodytext html={postHTML} />
+                <Comments slug={slug} siteUrl={siteUrl} />
               </div>
             </div>
           </div>
         </Section>
-
-        <NextPrev next={next} prev={prev} icons={nextPrevIcons} />
-        <Author html={authorHTML} />
+        <Author authorName={authorName} prefix={prefix} categories={categories} tags={tags} />
+        {suggested && <SuggestedPosts suggested={suggested} />}
       </Article>
+      <Subscribe type={'blog'} />
+      <Subscribe type={'tribe'} />
+      <Footer></Footer>
       <Seo
         url={`${siteUrl}${slug}`}
         language={siteLanguage}
@@ -127,8 +111,7 @@ const PostTemplate = props => {
 PostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
-  next: PropTypes.object,
-  prev: PropTypes.object,
+  suggested: PropTypes.object
 };
 
 export default PostTemplate;
@@ -146,6 +129,7 @@ export const query = graphql`
       frontmatter {
         title
         categories
+        tags
         authorName
         cover {
           childImageSharp {
@@ -155,16 +139,6 @@ export const query = graphql`
           }
         }
       }
-    }
-    author: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/author/" }
-    ) {
-      html
-    }
-    copyright: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/copyright/" }
-    ) {
-      html
     }
   }
 `;
