@@ -6,6 +6,8 @@ dotenv.config({
 })
 
 module.exports = {
+  // Note: This is only while gatsby is hosted within static site and it must *not* have a trailing slash.
+  pathPrefix: `/blog`,
   siteMetadata: {
     title: config.siteTitle,
     siteUrl: config.siteUrl,

@@ -10,12 +10,12 @@ const menu = [
     { label: 'A Supportive Tribe', to: '/#communities' },
     { label: 'Powerful Gatherings', to: '/#gatherings' }
   ]},
-  { label: 'Blog', to: '/blog', subMenu: [
-    { label: 'Featured Articles', to: '/blog' },
-    { label: 'Paradigm', to: '/blog' },
-    { label: 'Surrealism', to: '/blog' },
-    { label: 'Expression', to: '/blog' },
-    { label: 'Stories', to: '/blog' }
+  { label: 'Blog', to: '/', subMenu: [
+    { label: 'Featured Articles', to: '/' },
+    { label: 'Paradigm', to: '/' },
+    { label: 'Surrealism', to: '/' },
+    { label: 'Expression', to: '/' },
+    { label: 'Stories', to: '/' }
   ]},
   { label: 'Support', to: '/#', subMenu: [
     { label: 'Live Chat', to: '/#' },

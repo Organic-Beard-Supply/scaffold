@@ -188,16 +188,21 @@ gulp.task('copy-images', () => {
 });
 
 // Erases blog static
-gulp.task('clean-blog', () => { 
+gulp.task('clean-blog-assets', () => { 
   return rimraf('blog/static/bulkit') 
 });
 
-// Copy bulkit assets to blog
-gulp.task('copy-blog', () => { 
+// Copy bulkit assets to /blog
+gulp.task('copy-assets-to-blog', () => { 
   return setTimeout(() => {
     return gulp.src(['_site/assets/**/*']).pipe(gulp.dest('./blog/static/bulkit'));
   }, 100) //timeout necessary to ensure all fonts are copied over
 });
+
+// Copy built blog to _site
+gulp.task('copy-blog', () => {
+  return gulp.src(['blog/public/**/*']).pipe(gulp.dest('_site/blog'));
+})
 
 gulp.task('init', ['setupBulma']);
 gulp.task('build', [
@@ -210,7 +215,9 @@ gulp.task('build', [
     'compile-sass-bulma', 
     'compile-scss-om', 
     'compile-html', 
-    'copy-images'
+    'copy-images',
+    'copy-blog'
   ]);
-gulp.task('build-blog', (callback) => { runSequence('clean-blog', 'build', 'copy-blog', callback) });
+
+gulp.task('build-blog', (callback) => { runSequence('clean-blog-assets', 'build', 'copy-assets-to-blog', callback) });
 gulp.task('default', ['server', 'watch']);

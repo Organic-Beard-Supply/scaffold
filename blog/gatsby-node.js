@@ -100,7 +100,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         const items = result.data.allMarkdownRemark.edges;
 
-        console.log('items: ', items);
+        // console.log('items: ', items);
 
         const categorySet = new Set();
         const tagSet = new Set();
@@ -130,7 +130,7 @@ exports.createPages = ({ graphql, actions }) => {
         const categoryList = Array.from(categorySet);
         categoryList.map(category => {
           createPage({
-            path: `/${process.env.CATEGORY_PATH}/${kebabCase(category)}/`,
+            path: `${process.env.CATEGORY_PATH}/${kebabCase(category)}/`,
             component: categoryTemplate,
             context: {
               category,
