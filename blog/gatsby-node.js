@@ -66,6 +66,9 @@ exports.createPages = ({ graphql, actions }) => {
     const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
     const tagTemplate = path.resolve('./src/templates/TagTemplate.js');
 
+    //Pair this down to only pass information that's needed, then query in component
+    //via https://github.com/gatsbyjs/gatsby/issues/8156#issuecomment-421641619
+
     resolve(
       graphql(`
         {
@@ -77,6 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
             edges {
               node {
                 fileAbsolutePath
+                excerpt(pruneLength: 150)
                 fields {
                   slug
                   prefix
@@ -85,6 +89,7 @@ exports.createPages = ({ graphql, actions }) => {
                 frontmatter {
                   title
                   subTitle
+                  authorName
                   categories
                   tags
                 }
@@ -156,7 +161,9 @@ exports.createPages = ({ graphql, actions }) => {
         posts.map(({ node }) => {
           const slug = node.fields.slug;
           
-          //add more intelligence to this. i.e. same category, tag, etc.
+          //update with a random selection, not just the first 3 posts
+          //then, add more intelligence like same categories, tags, etc.
+          //...also, look into how to include cover photo either here or in component
           const filtered = posts.filter(({node}) => node.fields.slug !== slug);
           const suggested = drop(filtered, filtered.length - 3);
 

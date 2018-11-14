@@ -1,6 +1,10 @@
 import { css } from 'emotion';
 
-const suggestedPosts = css``;
+const suggestedPosts = css`
+  .title.main-title {
+    padding: 40px 0;
+  }
+`;
 
 // const article = css`
 //   max-width: 600px;
