@@ -22,14 +22,16 @@ const Avatar = props => {
         <span>{name}</span>
         <div>
           {prefix && <span>Last updated on {prefix}</span>}
-          {categories && (
-            <span> <i className={'fa fa-circle'}></i> {categories.map(category => {
-              return <Link to={`/categories/${category}`} key={category} className={'category is-' + category}>
+          {categories && categories.map((category, index) => {
+            return (
+              <span key={index}>
+                <i className={'fa fa-circle'}></i> 
+                <Link to={`/category/${category}`} className={'category is-' + category}>
                   {category}
                 </Link>
-              })}
-            </span>
-          )}
+              </span>
+            )
+          })}
         </div>
       </div>
     </div>

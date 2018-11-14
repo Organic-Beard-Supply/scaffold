@@ -2,7 +2,7 @@
 title: Two things are infinite the universe and human stupidity
 subTitle: And I'm not sure about the universe.
 categories: ["sayings"]
-tags: []
+tags: ['tag']
 cover: photo-1490474418585-ba9bad8fd0ea.jpg
 authorName: Joel Serino
 ---

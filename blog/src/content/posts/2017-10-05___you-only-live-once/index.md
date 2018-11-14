@@ -2,7 +2,7 @@
 title: You only live once
 subTitle: But if you do it right, once is enough
 categories: ["sayings"]
-tags: []
+tags: ["test"]
 cover: photo-1456518563096-0ff5ee08204e.jpg
 authorName: Michael Levitin
 ---

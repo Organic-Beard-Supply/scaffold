@@ -15,7 +15,7 @@ const FeaturedPost = props => {
   } = props;
 
   const {
-    frontmatter: { title, categories, subTitle, cover, authorName },
+    frontmatter: { title, categories, cover, authorName },
     fields: { slug, prefix },
     excerpt
   } = item;

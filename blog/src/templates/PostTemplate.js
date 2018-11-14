@@ -10,16 +10,16 @@ import Article from 'components/Article';
 import Author from 'components/Author';
 import Avatar from 'components/Avatar';
 import Branding from 'components/Branding';
-import Bodytext from '@react-website-themes/default/components/Bodytext';
+import Bodytext from 'components/Bodytext';
 import Comments from 'components/Comments';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
-import Heading from '@react-website-themes/default/components/Heading';
+import Heading from 'components/Heading';
 import Image from 'components/Image';
 import Layout from 'components/Layout';
 import Menu from 'components/Menu';
 import Section from 'components/Section';
-import Seo from '@react-website-themes/default/components/Seo';
+import Seo from 'components/Seo';
 import Subscribe from 'components/Subscribe'
 import SuggestedPosts from 'components/SuggestPosts'
 

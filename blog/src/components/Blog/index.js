@@ -70,13 +70,18 @@ const Blog = props => {
                 <small>
                   Posted
                   {categories && (
-                    <span> in {categories.map(category => {
-                      return <Link to={`/categories/${category}`} key={category} className={'category is-' + category}>
-                          {category}
-                        </Link>
-                      })}
+                    <span> in {categories.map((category, index) => {
+                      return (
+                        <span key={index}>
+                          <Link to={`/category/${category}`} className={'category is-' + category}>
+                            {category}
+                          </Link>
+                          {index !== (categories.length - 1) ? ', ' : ''}
+                        </span>
+                      )
+                    })}
                     </span>
-                  )} 
+                  )}
                   {prefix && ( <span> on {prefix}</span> )}
                 </small>
                 <p>{excerpt}</p>
