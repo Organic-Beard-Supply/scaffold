@@ -39,14 +39,14 @@ const BlogPage = props => {
     headerTitle,
     headerSubTitle,
     siteUrl,
-    siteTitle,
+    siteTitlePostfix,
     siteDescription,
     siteLanguage,
   } = config;
 
   return (
     <Layout>
-      <Hero>
+      <Hero backgroundImage={'https://source.unsplash.com/4flhKx1sUdE/1920x1080'}>
         <Header light stuck dark>
           <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
           <Menu items={menuItems} buttonStyle={'btn-outlined light-btn'} />
@@ -62,7 +62,7 @@ const BlogPage = props => {
                 <Heading title="Featured Articles" customStyle={'title dark-text text-bold main-title is-2 no-padding-top'} />
               </div>
               <Blog items={posts}/>
-              <Pagination />
+              {/* <Pagination /> */}
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ const BlogPage = props => {
       <Seo
         url={siteUrl}
         language={siteLanguage}
-        title={siteTitle}
+        title={`Blog${siteTitlePostfix}`}
         description={siteDescription}
       />
     </Layout>

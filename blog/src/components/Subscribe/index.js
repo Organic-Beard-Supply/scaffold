@@ -52,7 +52,7 @@ const Subscribe = props => {
               <div className={'section-title-wrapper no-padding'}>
                 <Heading title="Discover. Connect. Serve." customStyle={'title light-text text-bold main-title is-1 no-padding-top'} />
               </div>
-              <h3 className={'subtitle light-text'}>
+              <h3 className={'subtitle light-text pb-30'}>
                 A tribe of like minded men empowering each other by sharing valuable insight, ideas, challenges, stories, and vulnerabilities.
               </h3>
               <p>

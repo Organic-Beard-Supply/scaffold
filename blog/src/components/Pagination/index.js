@@ -5,11 +5,11 @@ import { cx } from 'emotion';
 import style from './styles';
 
 const Pagination = props => {
-  const { themeStyle = style, customStyle = '' } = props;
+  const { totalCount, themeStyle = style, customStyle = '' } = props;
 
   return (
     <div className={cx(themeStyle, customStyle)}>
-      <p className={'has-text-centered pb-30'}>Showing 1 – 8 of 245 Articles</p>  
+      <p className={'has-text-centered pb-30'}>Showing 1 – 8 of {totalCount} Article{totalCount > 1 ? 's' : ''}</p>  
       <div className={'columns is-centered'}>
         <div className={'column is-narrow'}>
           <nav className={'pagination is-centered is-medium'} role='navigation' aria-label='pagination'>

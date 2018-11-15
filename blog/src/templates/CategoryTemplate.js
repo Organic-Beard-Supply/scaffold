@@ -1,23 +1,29 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import TagIcon from 'react-feather/dist/icons/tag';
 
 import 'prismjs/themes/prism-okaidia.css';
 import '../styles/variables';
 import '../styles/global';
 
-import Article from '@react-website-themes/default/components/Article';
-import Branding from '@react-website-themes/default/components/Branding';
-import Header from '@react-website-themes/default/components/Header';
-import Heading from '@react-website-themes/default/components/Heading';
-import Layout from '@react-website-themes/default/components/Layout';
-import List from '@react-website-themes/default/components/List';
-import Menu from '@react-website-themes/default/components/Menu';
-import Seo from '@react-website-themes/default/components/Seo';
+import Blog from 'components/Blog';
+import Branding from 'components/Branding';
+import FeaturedPost from 'components/FeaturedPost';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import Heading from 'components/Heading';
+import Hero from 'components/Hero';
+import Layout from 'components/Layout';
+import Menu from 'components/Menu';
+// import Pagination from 'components/Pagination';
+import Section from 'components/Section';
+import Seo from 'components/Seo';
+import Subscribe from 'components/Subscribe'
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
+
+import logo from '../../static/bulkit/images/logos/organic-man-logo-white.png';
 
 const PageTemplate = props => {
   const {
@@ -40,26 +46,34 @@ const PageTemplate = props => {
 
   return (
     <Layout>
-      <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
-      </Header>
-      <Article>
-        <Heading>
-          <span>Posts in category</span> <TagIcon />
-          <h1>{category}</h1>
-          <p className="meta">
-            There {totalCount > 1 ? 'are' : 'is'} <strong>{totalCount}</strong>{' '}
-            post
-            {totalCount > 1 ? 's' : ''} in the category.
-          </p>
-        </Heading>
-        <List items={items} />
-      </Article>
+      <Hero backgroundImage={'https://source.unsplash.com/07uiqD9LS6U/1920x1080'}>
+        <Header light stuck dark>
+          <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
+          <Menu items={menuItems} buttonStyle={'btn-outlined light-btn'} />
+        </Header>
+        {/* Update FeaturedPost with "Featured in [category]" instead of default "Featured Article" */}
+        <FeaturedPost item={items[0]} />
+      </Hero>
+      <Section size={'is-medium'} customClass={'blog-section'}>
+        <div className={'container'}>
+          <div className={'columns is-centered'}>
+            <div className={'column is-11'}>
+              <div className={'section-title-wrapper no-padding-top has-text-centered'}>
+                <Heading title={`Featured in "${category}"`} customStyle={'title dark-text text-bold main-title is-2 no-padding-top'} />
+              </div>
+              <Blog items={items}/>
+              {/* <Pagination totalCount={totalCount} /> */}
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Subscribe type={'blog'} />
+      <Subscribe type={'tribe'} />
+      <Footer></Footer>
       <Seo
         url={`${siteUrl}/${config.categoryPath}/${category}/`}
         language={siteLanguage}
-        title={`Posts in category: ${category}${siteTitlePostfix}`}
+        title={`${category}${siteTitlePostfix}`}
         description={siteDescription}
       />
     </Layout>
@@ -83,14 +97,23 @@ export const query = graphql`
       totalCount
       edges {
         node {
+          excerpt(pruneLength: 150)
           fields {
             slug
+            prefix
           }
-          excerpt
-          timeToRead
           frontmatter {
             title
+            subTitle
             categories
+            authorName
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 525) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

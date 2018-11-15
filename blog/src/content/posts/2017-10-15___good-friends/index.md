@@ -2,6 +2,8 @@
 title: Good friends, good books, and a sleepy conscience
 subTitle: This is the ideal life 
 cover: photo-1500531279542-fc8490c8ea4d.jpg
+categories: ['expression']
+tags: []
 authorName: Ethan Tran
 ---
 

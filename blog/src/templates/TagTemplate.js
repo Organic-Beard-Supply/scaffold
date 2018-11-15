@@ -1,13 +1,11 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import TagIcon from 'react-feather/dist/icons/tag';
 
 import 'prismjs/themes/prism-okaidia.css';
 import '../styles/variables';
 import '../styles/global';
 
-import Article from '@react-website-themes/default/components/Article';
 import Blog from 'components/Blog';
 import Branding from 'components/Branding';
 import FeaturedPost from 'components/FeaturedPost';
@@ -16,9 +14,8 @@ import Header from 'components/Header';
 import Heading from 'components/Heading';
 import Hero from 'components/Hero';
 import Layout from 'components/Layout';
-import List from '@react-website-themes/default/components/List';
 import Menu from 'components/Menu';
-import Pagination from 'components/Pagination';
+// import Pagination from 'components/Pagination';
 import Section from 'components/Section';
 import Seo from 'components/Seo';
 import Subscribe from 'components/Subscribe'
@@ -49,7 +46,7 @@ const PageTemplate = props => {
 
   return (
     <Layout>
-      <Hero>
+      <Hero backgroundImage={'https://source.unsplash.com/8yKRZzXh6kE/1920x1080'}>
         <Header light stuck dark>
           <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
           <Menu items={menuItems} buttonStyle={'btn-outlined light-btn'} />
@@ -62,33 +59,21 @@ const PageTemplate = props => {
           <div className={'columns is-centered'}>
             <div className={'column is-11'}>
               <div className={'section-title-wrapper no-padding-top has-text-centered'}>
-                <Heading title={`Posts in "${tag}"`} customStyle={'title dark-text text-bold main-title is-2 no-padding-top'} />
+                <Heading title={`Featured in "${tag}"`} customStyle={'title dark-text text-bold main-title is-2 no-padding-top'} />
               </div>
               <Blog items={items}/>
-              <Pagination />
+              {/* <Pagination totalCount={totalCount} /> */}
             </div>
           </div>
         </div>
       </Section>
-      <Article>
-        <Heading>
-          <span>Posts in tag</span> <TagIcon />
-          <h1>{tag}</h1>
-          <p className="meta">
-            There {totalCount > 1 ? 'are' : 'is'} <strong>{totalCount}</strong>{' '}
-            post
-            {totalCount > 1 ? 's' : ''} in the tag.
-          </p>
-        </Heading>
-        <List items={items} />
-      </Article>
       <Subscribe type={'blog'} />
       <Subscribe type={'tribe'} />
       <Footer></Footer>
       <Seo
         url={`${siteUrl}/${config.tagPath}/${tag}/`}
         language={siteLanguage}
-        title={`Posts in tag: ${tag}${siteTitlePostfix}`}
+        title={`${tag}${siteTitlePostfix}`}
         description={siteDescription}
       />
     </Layout>
