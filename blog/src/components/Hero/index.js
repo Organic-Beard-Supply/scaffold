@@ -18,8 +18,6 @@ const Hero = props => {
     backgroundPosition: '50% 0px'
   }
 
-  console.log(fixedBgStyle);
-
   return (
     <div className={cx(themeStyle, customStyle)} style={fixedBgStyle}>
       {children}    

@@ -25,7 +25,7 @@ const Author = props => {
             {categories && <p><strong>Category:</strong> {categories.map((category, index) => {
               return <span key={index}>{!!index ? ', ' : ''}<Link to={`${config.categoryPath}/${category}`}>{category}</Link></span>;
             })}</p>}
-            {tags && tags.length > 1 && (
+            {tags && tags.length > 0 && (
               <div className="tags">
                 <p><strong>Tags:</strong></p>
                 {tags.map((tag, index) => {

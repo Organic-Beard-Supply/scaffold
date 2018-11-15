@@ -1,6 +1,30 @@
 import { css } from 'emotion';
 
-const footer = css``;
+const footer = css`
+  h3 {
+    padding: 10px 0;
+    color: #444f60;
+    font-family: Nexa Bold,sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 0!important;
+    text-transform: uppercase;
+  }
+
+  ul {
+    font-size: 1rem;
+    line-height: 30px;
+
+    li {
+      a {
+        color: #98a9c3;
+        font-weight: 400;
+        transition: all .5s;
+      }
+    }
+  }
+`;
 
 // const footer = css`
 //   display: flex;

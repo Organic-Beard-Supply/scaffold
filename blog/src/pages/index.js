@@ -34,7 +34,7 @@ const BlogPage = props => {
   } = props;
 
   const posts = edges.map(edge => edge.node);
-
+  
   const {
     headerTitle,
     headerSubTitle,

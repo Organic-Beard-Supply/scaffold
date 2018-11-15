@@ -133,7 +133,7 @@ export const query = graphql`
         authorName
         cover {
           childImageSharp {
-            fluid(maxWidth: 525) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid
             }
           }

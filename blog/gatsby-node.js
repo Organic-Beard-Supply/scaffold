@@ -61,8 +61,8 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('./src/templates/PostTemplate.js');
     const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
+    const postTemplate = path.resolve('./src/templates/PostTemplate.js');
     const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
     const tagTemplate = path.resolve('./src/templates/TagTemplate.js');
 
@@ -157,7 +157,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create posts
         const posts = items.filter(item => item.node.fields.source === 'posts');
-        
         posts.map(({ node }) => {
           const slug = node.fields.slug;
           
@@ -179,9 +178,12 @@ exports.createPages = ({ graphql, actions }) => {
 
         // create pages
         const pages = items.filter(item => item.node.fields.source === 'pages');
-        pages.forEach(({ node }) => {
-          const slug = node.fields.slug;
-          const source = node.fields.source;
+        pages.map((page) => {
+          const {
+            node: {
+              fields: { slug, source }
+            } 
+          } = page;
 
           createPage({
             path: slug,
@@ -192,6 +194,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           });
         });
+
       })
     );
   });
