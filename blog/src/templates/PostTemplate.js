@@ -93,7 +93,7 @@ const PostTemplate = props => {
           </div>
         </Section>
         <Author authorName={authorName} prefix={prefix} categories={categories} tags={tags} />
-        {suggested && <SuggestedPosts suggested={suggested} />}
+        {suggested && suggested.length > 0 && <SuggestedPosts suggested={suggested} />}
       </Article>
       <Subscribe type={'blog'} />
       <Subscribe type={'tribe'} />

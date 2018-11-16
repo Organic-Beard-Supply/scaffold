@@ -17,4 +17,4 @@ Paragraph Text
 
 [link example](http://google.com)
 
-Image example: ![unsplash.com](./photo-1490474418585-ba9bad8fd0ea.jpg)
+Image example: ![Example](./example-post.jpg)

@@ -6,6 +6,7 @@ import { find } from 'lodash';
 
 import style from './styles';
 import authors from '../../content/meta/authors';
+import config from '../../content/meta/config';
 
 const Avatar = props => {
   const { themeStyle = style, customStyle = 'mcard-controls', authorName, categories, prefix } = props;
@@ -22,11 +23,11 @@ const Avatar = props => {
         <span>{name}</span>
         <div>
           {prefix && <span>Last updated on {prefix}</span>}
-          {categories && categories.map((category, index) => {
+          {categories && categories.length > 0 && categories.map((category, index) => {
             return (
               <span key={index}>
                 <i className={'fa fa-circle'}></i> 
-                <Link to={`/category/${category}`} className={'category is-' + category}>
+                <Link to={`${config.categoryPath}/${category}`} className={'category is-' + category}>
                   {category}
                 </Link>
               </span>

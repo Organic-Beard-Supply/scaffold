@@ -5,6 +5,7 @@ import { cx } from 'emotion';
 //import Waypoint from 'react-waypoint'; // consider @react-sticky https://github.com/captivationsoftware/react-sticky
 
 import style from './styles';
+import config from '../../content/meta/config';
 
 // const onWaypointEnter = () => {
 //   console.log('unstick: ');
@@ -30,7 +31,7 @@ const StickyNav = props => {
               
                 return (
                   <li className={'scrollnav-item'} key={slug}>
-                    <Link to={slug} className={'category is-slide ' + colorClass} activeClassName="active">
+                    <Link to={`${config.categoryPath}/${slug}`} className={'category is-slide ' + colorClass} activeClassName="active">
                       {label}
                     </Link>
                   </li>

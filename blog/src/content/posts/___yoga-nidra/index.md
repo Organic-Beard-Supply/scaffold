@@ -1,9 +1,9 @@
 ---
 title: Yoga Nidra (WIP)
-categories: ["add", "categories"]
-tags: ["add", "tags"]
+categories: ['healing']
+tags: []
 cover: example-post.jpg
-authorName: Add author name (!required)
+authorName: Tyler Goelz
 ---
 
 #Header1
@@ -16,4 +16,4 @@ Paragraph Text
 
 [link example](http://google.com)
 
-Image example: ![unsplash.com](./photo-1490474418585-ba9bad8fd0ea.jpg)
+Image example: ![unsplash.com](./example-post.jpg)

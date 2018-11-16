@@ -9,6 +9,7 @@ import authors from '../../content/meta/authors'
 //import Meta from '../Meta';
 
 import style from './styles';
+import config from '../../content/meta/config';
 
 const Blog = props => {
   const {
@@ -69,11 +70,11 @@ const Blog = props => {
                 )}
                 <small>
                   Posted
-                  {categories && (
+                  {categories && categories.length > 0 && (
                     <span> in {categories.map((category, index) => {
                       return (
                         <span key={index}>
-                          <Link to={`/category/${category}`} className={'category is-' + category}>
+                          <Link to={`${config.categoryPath}/${category}`} className={'category is-' + category}>
                             {category}
                           </Link>
                           {index !== (categories.length - 1) ? ', ' : ''}
@@ -88,10 +89,10 @@ const Blog = props => {
                 <div className="content-footer">
                   <div className="footer-details">
                     <Link to={slug} className="button is-link btn-upper">Read more</Link>
-                    <div className="comments-count ml-auto">
+                    {/* <div className="comments-count ml-auto">
                       <i className="im im-icon-Speach-Bubble11"></i>
                       <span className="stat">8</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

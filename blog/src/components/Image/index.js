@@ -19,7 +19,7 @@ const Image = props => {
       </div>
     );
   } else {
-    return <div></div>
+    return <img src={src} />
   }
 };
 

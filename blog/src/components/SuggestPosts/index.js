@@ -26,8 +26,8 @@ const SuggestedPosts = props => {
                 </h2>
               </div>
               <div className="columns">
-                {suggested.map(({ node }, index) => { 
-                  return <PostPreview key={index} post={node} />
+                {suggested.map((post, index) => { 
+                  return <PostPreview key={index} post={post} />
                 })}
               </div>
             </div>

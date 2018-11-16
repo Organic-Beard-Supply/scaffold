@@ -92,6 +92,13 @@ exports.createPages = ({ graphql, actions }) => {
                   authorName
                   categories
                   tags
+                  cover {
+                    childImageSharp {
+                      fluid {
+                        src
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -164,7 +171,7 @@ exports.createPages = ({ graphql, actions }) => {
           //then, add more intelligence like same categories, tags, etc.
           //...also, look into how to include cover photo either here or in component
           const filtered = posts.filter(({node}) => node.fields.slug !== slug);
-          const suggested = drop(filtered, filtered.length - 3);
+          const suggested = filtered.length > 3 ? drop(filtered, filtered.length - 3) : filtered;
 
           createPage({
             path: slug,
