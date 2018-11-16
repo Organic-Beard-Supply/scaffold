@@ -6,6 +6,7 @@ import { cx } from 'emotion';
 import Button from 'components/Button';
 
 import style from './styles';
+import sumo from '../../content/meta/config';
 
 const Menu = props => {
   const { items, themeStyle = style, customStyle = 'navbar-menu', buttonStyle } = props;
@@ -51,7 +52,7 @@ const Menu = props => {
       </div>
       <div className={'navbar-end'}>
         <div className={'navbar-item'}>
-          <Button customClass={cx('button button-signup btn-align', buttonStyle)} />
+          <Button clickTrigger={'join'} customClass={cx('button button-signup btn-align', buttonStyle)} />
         </div>
       </div>
     </nav>

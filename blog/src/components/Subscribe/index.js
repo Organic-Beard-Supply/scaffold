@@ -7,6 +7,7 @@ import Heading from 'components/Heading';
 import Section from 'components/Section';
 
 import style from './styles';
+import sumo from '../../content/meta/config';
 
 import bgImage from './paisley-pattern.png';
 
@@ -56,7 +57,7 @@ const Subscribe = props => {
                 A tribe of like minded men empowering each other by sharing valuable insight, ideas, challenges, stories, and vulnerabilities.
               </h3>
               <p>
-                <Button customClass={'button button-cta secondary-btn is-large raised'}></Button>
+                <Button clickTrigger={'join'} customClass={'button button-cta secondary-btn is-large raised'} />
               </p>
             </div>
           </div>

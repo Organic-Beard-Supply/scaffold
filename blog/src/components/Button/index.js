@@ -5,19 +5,40 @@ import { cx } from 'emotion';
 
 import style from './styles';
 
-const Button = props => {
-  const { themeStyle = style, customStyle = '', customClass } = props;
+import config from '../../content/meta/config';
 
+const Button = props => {
+  const { clickTrigger, text, themeStyle = style, customStyle = '', customClass } = props;
+
+  if (clickTrigger) {
+    let clickTriggerId;
+    let clickTriggerCTA;
+
+    if (clickTrigger === 'join') {
+      clickTriggerId = config.joinTribeId;
+      clickTriggerCTA = config.joinTribeCTA;
+    }
+    
+    return (
+      <a
+        className={cx(themeStyle, customStyle, customClass)} 
+        data-sumome-listbuilder-id={clickTriggerId}
+        >
+        {clickTriggerCTA}
+      </a>
+    );
+  } 
+  
   return (
-    <Link to="/" className={cx(themeStyle, customStyle, customClass)} data-sumome-listbuilder-id='2ddd0fec-63c8-476b-a2ac-a338290a63e0'>
-      Join The OM Tribe
+    <Link to="/" className={cx(themeStyle, customStyle, customClass)}>
+      {text}
     </Link>
   );
 };
 
 Button.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node,
+  text: PropTypes.string,
+  clickTrigger: PropTypes.string,
   themeStyle: PropTypes.string,
   customStyle: PropTypes.string,
 };

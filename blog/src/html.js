@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withPrefix } from 'gatsby'
 
 export default class HTML extends React.Component {
   render() {
@@ -22,6 +23,7 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script src={withPrefix('/sumo/index.js')}></script>
         </body>
       </html>
     );
